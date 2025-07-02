@@ -1,0 +1,9 @@
+langchain
+faiss-cpu
+pypdf
+beautifulsoup4
+tiktoken
+ollama
+fastapi
+uvicorn
+langchain-community

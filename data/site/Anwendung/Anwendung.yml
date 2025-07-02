@@ -1,0 +1,16 @@
+﻿site_name: Anwendung
+
+nav:
+  - 'Programmoberfläche und Fachbegriffe':
+    - 'Startbildschirm': 'Startbildschirm.md'
+    - 'Programmbereiche ': 'Programmbereiche.md'
+    - 'Eigenschaften': 'Eigenschaften.md'
+    - 'Maskenansichten und Standardmaske': 'Maskenansichten.md'
+    - 'Rechte': 'Rechte.md'
+    - 'Strukturbäume und Strukturen': 'Strukturbäume und Strukturen.md'
+    - 'Direktauswahlen': 'Direktauswahlen.md'
+  - 'Programmfunktionen':
+    - 'Ergebnisse anzeigen': 'Ergebnisse anzeigen.md'
+    - 'Daten erfassen': 'Daten erfassen.md'
+    - 'Strukturen pflegen': 'Strukturen pflegen.md'
+    - 'Daten austauschen': 'Daten austauschen.md'

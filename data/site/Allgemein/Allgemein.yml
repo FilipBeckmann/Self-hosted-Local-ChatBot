@@ -1,0 +1,10 @@
+﻿site_name: Allgemein
+
+nav:
+  - 'Allgemeine Hinweise': 'Allgemeine Hinweise.md'
+  - 'Starten des Programms': 'Starten des Programms.md'
+  - 'Anmeldung': 'Anmeldung.md'
+  - 'Navigation im Programm': 'Navigation im Programm.md'
+  - 'Meldungen': 'Meldungen.md'
+  - 'Programm beenden': 'Programm beenden.md'
+  - 'Installationshinweise': 'Installationshinweise.md'

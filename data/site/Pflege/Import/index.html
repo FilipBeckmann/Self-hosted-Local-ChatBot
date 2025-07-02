@@ -1,0 +1,3061 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Dateien/" rel="prev"/>
+<link href="../Ausgabe%20und%20Layout/" rel="next"/>
+<link href="../../_Images/HKS Informatik GmbH.ico" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.18" name="generator"/>
+<title>Import - Anwenderdokumentation</title>
+<link href="../../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<style>:root{--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 6a6 6 0 0 1 6 6c0 2.22-1.21 4.16-3 5.2V19a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6 6 0 0 1 6-6m2 15v1a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1h4m6-10h3v2h-3v-2M1 11h3v2H1v-2M13 1v3h-2V1h2M4.92 3.5l2.13 2.14-1.42 1.41L3.5 4.93 4.92 3.5m12.03 2.13 2.12-2.13 1.43 1.43-2.13 2.12-1.42-1.42Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>');}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/extra-style.vr6bd_wr.min.css" rel="stylesheet"/></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#import">
+          Zum Inhalt
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<!--Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.-->
+<!-- Determine base classes -->
+<!-- Header -->
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Kopfzeile" class="md-header__inner md-grid">
+<!-- Link to home -->
+<a aria-label="Anwenderdokumentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Anwenderdokumentation">
+<img alt="logo" id="logo_light_mode" src="../../_Images/Kosy Enterprise weiß mit blau.svg"/>
+<img alt="logo" id="logo_dark_mode" src="../../_Images/Kosy Enterprise weiß.svg"/>
+</a>
+<!-- Button to open drawer -->
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<!-- Header title -->
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis" id="site_name"> Anwenderdokumentation </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+             Import 
+          </span>
+</div>
+</div>
+</div>
+<!-- Color palette -->
+<!-- !!!!! ToDo: KE_M-7624: Darkmode-Button nach Darkmode-Überarbeitung wieder einbinden -->
+<!-- 
+    <form class="md-header__option" data-md-component="palette">
+         
+      <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="default"
+        data-md-color-primary="indigo"
+        data-md-color-accent="indigo"
+        
+        aria-label="Switch to dark mode"
+        
+        type="radio"
+        name="__palette"
+        id="__palette_1"
+      />
+      
+      <label
+        class="md-header__button md-icon"
+        title="Switch to dark mode"
+        for="__palette_2"
+        hidden
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+          
+      <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="slate"
+        data-md-color-primary="indigo"
+        data-md-color-accent="indigo"
+        
+        aria-label="Switch to light mode"
+        
+        type="radio"
+        name="__palette"
+        id="__palette_2"
+      />
+      
+      <label
+        class="md-header__button md-icon"
+        title="Switch to light mode"
+        for="__palette_1"
+        hidden
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+       
+    </form>
+     -->
+<!-- DropDown-Menu für die PDF-Dokumente -->
+<div class="dropdown"><img class="pdf-button-headerpng" src="../../_Images/PDF (modern).svg"/>
+<button class="dropbtn" title="PDF">
+<div class="buttoncontent"></div></button>
+<div class="dropdown-content">
+<a href="../../pdf/Kosy Enterprise - Anwenderhandbuch (23.06.2025).pdf" target="_blank"><p style="line-height: 1.3; margin:12px;"> Anwenderhandbuch</p></a>
+<a href="../../pdf/Kosy Enterprise - Funktionshandbuch (23.06.2025).pdf" target="_blank"><p style="line-height: 1.3; margin:12px;"> Funktionshandbuch</p></a>
+<a href="../../pdf/Kosy Enterprise History - Version 6.2.2.0 SR2 (23.06.2025).pdf" target="_blank"><p style="line-height: 1.3; margin:12px;"> History</p></a>
+</div>
+</div>
+<!-- Site language selector -->
+<div class="container">
+<!-- Button to open search modal -->
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<!-- Search interface -->
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Suche" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Suche" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Suche" class="md-search__options">
+<a aria-label="Teilen" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Teilen">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Zurücksetzen" class="md-search__icon md-icon" tabindex="-1" title="Zurücksetzen" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Repository information -->
+</div></nav>
+<!-- Navigation tabs (sticky) -->
+<nav aria-label="Hauptnavigation" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Allgemein/Allgemeine%20Hinweise/">
+          
+  
+    
+  
+  Allgemein
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Anwendung/Startbildschirm/">
+          
+  
+    
+  
+  Anwendung
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../Typen/">
+          
+  
+    
+  
+  Pflege
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../inhaltliche_Administration/Zuordnungen/">
+          
+  
+    
+  
+  inhaltliche Administration
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../technische_Administration/Einstellungen%20im%20Programm/">
+          
+  
+    
+  
+  technische Administration
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Funktionen/Verwaltung/">
+          
+  
+    
+  
+  Funktionen
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Anhang/Tastenkombinationen/">
+          
+  
+    
+  
+  Anhang
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../History/6.2.2.0/">
+          
+  
+    
+  
+  History
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Anwenderdokumentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Anwenderdokumentation">
+<img alt="logo" id="logo_light_mode" src="../../_Images/Kosy Enterprise weiß mit blau.svg"/>
+<img alt="logo" id="logo_dark_mode" src="../../_Images/Kosy Enterprise weiß.svg"/>
+</a>
+    Anwenderdokumentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Allgemein
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Allgemein
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Allgemein/Allgemeine%20Hinweise/">
+<span class="md-ellipsis">
+    Allgemeine Hinweise
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Allgemein/Starten%20des%20Programms/">
+<span class="md-ellipsis">
+    Starten des Programms
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Allgemein/Anmeldung/">
+<span class="md-ellipsis">
+    Anmeldung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Allgemein/Navigation%20im%20Programm/">
+<span class="md-ellipsis">
+    Navigation im Programm
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Allgemein/Meldungen/">
+<span class="md-ellipsis">
+    Meldungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Allgemein/Programm%20beenden/">
+<span class="md-ellipsis">
+    Programm beenden
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Allgemein/Installationshinweise/">
+<span class="md-ellipsis">
+    Installationshinweise
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Anwendung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Anwendung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Programmoberfläche und Fachbegriffe
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            Programmoberfläche und Fachbegriffe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Startbildschirm/">
+<span class="md-ellipsis">
+    Startbildschirm
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Programmbereiche/">
+<span class="md-ellipsis">
+    Programmbereiche 
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Eigenschaften/">
+<span class="md-ellipsis">
+    Eigenschaften
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Maskenansichten/">
+<span class="md-ellipsis">
+    Maskenansichten und Standardmaske
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Rechte/">
+<span class="md-ellipsis">
+    Rechte
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Strukturb%C3%A4ume%20und%20Strukturen/">
+<span class="md-ellipsis">
+    Strukturbäume und Strukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Direktauswahlen/">
+<span class="md-ellipsis">
+    Direktauswahlen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Programmfunktionen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Programmfunktionen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Ergebnisse%20anzeigen/">
+<span class="md-ellipsis">
+    Ergebnisse anzeigen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Daten%20erfassen/">
+<span class="md-ellipsis">
+    Daten erfassen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Strukturen%20pflegen/">
+<span class="md-ellipsis">
+    Strukturen pflegen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anwendung/Daten%20austauschen/">
+<span class="md-ellipsis">
+    Daten austauschen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
+    Pflege
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Pflege
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Personalisierung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+            Personalisierung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Typen/">
+<span class="md-ellipsis">
+    Typen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Dateiattribute/">
+<span class="md-ellipsis">
+    Dateiattribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Listenarten%20und%20Listenansichten/">
+<span class="md-ellipsis">
+    Listenarten/Listenansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Dimensionsfelder/">
+<span class="md-ellipsis">
+    Dimensionsfelder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Buchungsfelder/">
+<span class="md-ellipsis">
+    Buchungsfelder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Sammlungen%20und%20Sammlungsauswahlen/">
+<span class="md-ellipsis">
+    Sammlungen/Sammlungsauswahlen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Feldvorlagen/">
+<span class="md-ellipsis">
+    Feldvorlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pers%C3%B6nliche%20Ansichten/">
+<span class="md-ellipsis">
+    persönliche Ansichten
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Modellierung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Modellierung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Dimensionen/">
+<span class="md-ellipsis">
+    Dimensionen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Dateien/">
+<span class="md-ellipsis">
+    Dateien
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Import
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Import
+  </span>
+</a>
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ubersicht">
+<span class="md-ellipsis">
+      Übersicht
+    </span>
+</a>
+<nav aria-label="Übersicht" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datenquelle">
+<span class="md-ellipsis">
+      Datenquelle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zieltabelle">
+<span class="md-ellipsis">
+      Zieltabelle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zieldatensatz">
+<span class="md-ellipsis">
+      Zieldatensatz
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#buchungsblock">
+<span class="md-ellipsis">
+      Buchungsblock
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datenbehandlung">
+<span class="md-ellipsis">
+      Datenbehandlung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referenzbehandlung">
+<span class="md-ellipsis">
+      Referenzbehandlung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feldaktualisierung">
+<span class="md-ellipsis">
+      Feldaktualisierung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aggregation">
+<span class="md-ellipsis">
+      Aggregation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#letzte-ausfuhrung">
+<span class="md-ellipsis">
+      Letzte Ausführung
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datenquelle_1">
+<span class="md-ellipsis">
+      Datenquelle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importstruktur">
+<span class="md-ellipsis">
+      Importstruktur
+    </span>
+</a>
+<nav aria-label="Importstruktur" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#allgemein-struktur">
+<span class="md-ellipsis">
+      Allgemein &amp; Struktur
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bezeichner">
+<span class="md-ellipsis">
+      Bezeichner
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#titel">
+<span class="md-ellipsis">
+      Titel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quelle">
+<span class="md-ellipsis">
+      Quelle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feldtyp">
+<span class="md-ellipsis">
+      Feldtyp
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anfang-und-lange">
+<span class="md-ellipsis">
+      Anfang und Länge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prafix">
+<span class="md-ellipsis">
+      Präfix
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suffix">
+<span class="md-ellipsis">
+      Suffix
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#umsetzgruppe">
+<span class="md-ellipsis">
+      Umsetzgruppe
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ziel">
+<span class="md-ellipsis">
+      Ziel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feldaktualisierung_1">
+<span class="md-ellipsis">
+      Feldaktualisierung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importelement-nach-oben-schichten">
+<span class="md-ellipsis">
+      Importelement nach oben schichten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#umsetzungen">
+<span class="md-ellipsis">
+      Umsetzungen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wertebehandlung-konten">
+<span class="md-ellipsis">
+      Wertebehandlung (Konten)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einlesen-von-mehreren-strukturebenen-in-einem-einlesevorgang">
+<span class="md-ellipsis">
+      Einlesen von mehreren Strukturebenen in einem Einlesevorgang
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#filterstruktur">
+<span class="md-ellipsis">
+      Filterstruktur
+    </span>
+</a>
+<nav aria-label="Filterstruktur" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nicht">
+<span class="md-ellipsis">
+      Nicht
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergleichsart">
+<span class="md-ellipsis">
+      Vergleichsart
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operator">
+<span class="md-ellipsis">
+      Operator
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergleichswert">
+<span class="md-ellipsis">
+      Vergleichswert
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gro-kleinschreibung-beachten">
+<span class="md-ellipsis">
+      Groß-Kleinschreibung beachten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aktiv">
+<span class="md-ellipsis">
+      Aktiv
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#auswahl-loschen">
+<span class="md-ellipsis">
+      Auswahl (Löschen)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Ausgabe%20und%20Layout/">
+<span class="md-ellipsis">
+    Ausgabe/Layout
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Verteilung/">
+<span class="md-ellipsis">
+    Verteilung
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Verfeinerung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Verfeinerung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Standards/">
+<span class="md-ellipsis">
+    Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Umsetzungen/">
+<span class="md-ellipsis">
+    Umsetzungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Ergebnisarten%20und%20Umrechnungen/">
+<span class="md-ellipsis">
+    Ergebnisarten/Umrechnungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Exportvorgaben/">
+<span class="md-ellipsis">
+    Exportvorgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Dateistrukturen/">
+<span class="md-ellipsis">
+    Dateistrukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Grafik/">
+<span class="md-ellipsis">
+    Grafik
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Berichte/">
+<span class="md-ellipsis">
+    Berichte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    inhaltliche Administration
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            inhaltliche Administration
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../inhaltliche_Administration/Zuordnungen/">
+<span class="md-ellipsis">
+    Zuordnungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../inhaltliche_Administration/Einstellungen/">
+<span class="md-ellipsis">
+    Einstellungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../inhaltliche_Administration/Benutzerverwaltung/">
+<span class="md-ellipsis">
+    Benutzerverwaltung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../inhaltliche_Administration/Berechtigungskonzept/">
+<span class="md-ellipsis">
+    Berechtigungskonzept
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../inhaltliche_Administration/Aufgaben/">
+<span class="md-ellipsis">
+    Aufgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../inhaltliche_Administration/Dashboards%20und%20Startseiten/">
+<span class="md-ellipsis">
+    Dashboards/Startseiten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../inhaltliche_Administration/Zeitpl%C3%A4ne/">
+<span class="md-ellipsis">
+    Zeitpläne
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../inhaltliche_Administration/Planung/">
+<span class="md-ellipsis">
+    Planung
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    technische Administration
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            technische Administration
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technische_Administration/Einstellungen%20im%20Programm/">
+<span class="md-ellipsis">
+    Einstellungen im Programm
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technische_Administration/Serveradministration/">
+<span class="md-ellipsis">
+    Serveradministration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technische_Administration/Onlinebericht/">
+<span class="md-ellipsis">
+    Onlinebericht
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Funktionen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Funktionen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Funktionen/Verwaltung/">
+<span class="md-ellipsis">
+    1 Verwaltung
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_1">
+<span class="md-nav__icon md-icon"></span>
+            1 Verwaltung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verwaltung/Module/">
+<span class="md-ellipsis">
+    1.1 Module
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verwaltung/Mandanten/">
+<span class="md-ellipsis">
+    1.2 Mandanten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verwaltung/Benutzer/">
+<span class="md-ellipsis">
+    1.3 Benutzer
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verwaltung/Gruppen/">
+<span class="md-ellipsis">
+    1.4 Gruppen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verwaltung/Typen/">
+<span class="md-ellipsis">
+    1.5 Typen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verwaltung/Rechte/">
+<span class="md-ellipsis">
+    1.6 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Funktionen/Dimensionen/">
+<span class="md-ellipsis">
+    2 Dimensionen
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_2">
+<span class="md-nav__icon md-icon"></span>
+            2 Dimensionen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dimensionen/Planungseinheiten/">
+<span class="md-ellipsis">
+    2.1 Planungseinheiten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dimensionen/Konten/">
+<span class="md-ellipsis">
+    2.2 Konten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dimensionen/Zeit/">
+<span class="md-ellipsis">
+    2.3 Zeit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dimensionen/Segmente/">
+<span class="md-ellipsis">
+    2.4 Segmente
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dimensionen/Buchungsfelder/">
+<span class="md-ellipsis">
+    2.5 Buchungsfelder
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Funktionen/Dateien/">
+<span class="md-ellipsis">
+    3 Dateien
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_3">
+<span class="md-nav__icon md-icon"></span>
+            3 Dateien
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dateien/%C3%9Cbersicht%20der%20Dateien/">
+<span class="md-ellipsis">
+    3.1 Übersicht der Dateien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dateien/Dateisammlungen/">
+<span class="md-ellipsis">
+    3.2 Dateisammlungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dateien/Dateistrukturen/">
+<span class="md-ellipsis">
+    3.3 Dateistrukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dateien/Dateiattribute/">
+<span class="md-ellipsis">
+    3.4 Dateiattribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dateien/Rechte%20auf%20Dateien/">
+<span class="md-ellipsis">
+    3.5 Rechte auf Dateien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dateien/Rechte%20auf%20Dateisammlungen/">
+<span class="md-ellipsis">
+    3.6 Rechte auf Dateisammlungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dateien/Rechte%20auf%20Dateistrukturen/">
+<span class="md-ellipsis">
+    3.7 Rechte auf Dateistrukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dateien/Rechte%20auf%20Dateiattribute/">
+<span class="md-ellipsis">
+    3.8 Rechte auf Dateiattribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Dateien/Dimensionszuordnungen/">
+<span class="md-ellipsis">
+    3.9 Dimensionszuordnungen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Funktionen/Eingabe/">
+<span class="md-ellipsis">
+    4 Eingabe
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_4">
+<span class="md-nav__icon md-icon"></span>
+            4 Eingabe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Eingabe/Dateneingabe/">
+<span class="md-ellipsis">
+    4.1 Dateneingabe
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Eingabe/Korrekturen/">
+<span class="md-ellipsis">
+    4.2 Korrekturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Eingabe/Standards/">
+<span class="md-ellipsis">
+    4.3 Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Eingabe/Schnellansichten/">
+<span class="md-ellipsis">
+    4.5 Schnellansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Eingabe/Planung/">
+<span class="md-ellipsis">
+    4.6 Planung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Eingabe/Rechte/">
+<span class="md-ellipsis">
+    4.7 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Funktionen/Verteilung/">
+<span class="md-ellipsis">
+    5 Verteilung
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_5">
+<span class="md-nav__icon md-icon"></span>
+            5 Verteilung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verteilung/Verteilungsschl%C3%BCssel/">
+<span class="md-ellipsis">
+    5.1 Verteilungsschlüssel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verteilung/Szenarien/">
+<span class="md-ellipsis">
+    5.2 Szenarien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verteilung/Saisonverteilung/">
+<span class="md-ellipsis">
+    5.3 Saisonverteilung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verteilung/Prim%C3%A4rkostenumlage/">
+<span class="md-ellipsis">
+    5.4 Primärkostenumlage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verteilung/Sekund%C3%A4rkostenumlage/">
+<span class="md-ellipsis">
+    5.5 Sekundärkostenumlage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verteilung/Verteilungs%C3%BCbersicht/">
+<span class="md-ellipsis">
+    5.6 Verteilungsübersicht
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Verteilung/Rechte/">
+<span class="md-ellipsis">
+    5.7 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/">
+<span class="md-ellipsis">
+    6 Ausgabe
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_6">
+<span class="md-nav__icon md-icon"></span>
+            6 Ausgabe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Ergebnisse/">
+<span class="md-ellipsis">
+    6.1 Ergebnisse
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Anteilstabelle/">
+<span class="md-ellipsis">
+    6.2 Anteilstabelle
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Hitliste/">
+<span class="md-ellipsis">
+    6.3 Hitliste
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/ABC-Analyse/">
+<span class="md-ellipsis">
+    6.4 ABC-Analyse
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Verteilungsansicht/">
+<span class="md-ellipsis">
+    6.5 Verteilungsansicht
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Grafiken/">
+<span class="md-ellipsis">
+    6.6 Grafiken
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Berichte/">
+<span class="md-ellipsis">
+    6.7 Berichte
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Schnellansichten/">
+<span class="md-ellipsis">
+    6.8 Schnellansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Dashboards/">
+<span class="md-ellipsis">
+    6.9 Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Startseiten/">
+<span class="md-ellipsis">
+    6.10 Startseiten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Ergebnisarten/">
+<span class="md-ellipsis">
+    6.11 Ergebnisarten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Ausgabe/Rechte/">
+<span class="md-ellipsis">
+    6.12 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Funktionen/Layout/">
+<span class="md-ellipsis">
+    7 Layout
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_7" id="__nav_7_7_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_7">
+<span class="md-nav__icon md-icon"></span>
+            7 Layout
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Listen/">
+<span class="md-ellipsis">
+    7.1 Listen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Direktauswahlen/">
+<span class="md-ellipsis">
+    7.2 Direktauswahlen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Sammlungsauswahlen/">
+<span class="md-ellipsis">
+    7.3 Sammlungsauswahlen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Listenformate/">
+<span class="md-ellipsis">
+    7.4 Listenformate
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Umrechnungen/">
+<span class="md-ellipsis">
+    7.5 Umrechnungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Exportvorgaben/">
+<span class="md-ellipsis">
+    7.6 Exportvorgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Kopf-%20und%20Fu%C3%9Fzeilen/">
+<span class="md-ellipsis">
+    7.7 Kopf- und Fußzeilen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Listenansichten/">
+<span class="md-ellipsis">
+    7.8 Listenansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Listenarten/">
+<span class="md-ellipsis">
+    7.9 Listenarten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Formatvorlagen/">
+<span class="md-ellipsis">
+    7.10 Formatvorlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Feldvorlagen/">
+<span class="md-ellipsis">
+    7.11 Feldvorlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Layout/Rechte/">
+<span class="md-ellipsis">
+    7.12 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Funktionen/Transfer/">
+<span class="md-ellipsis">
+    8 Transfer
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_8">
+<span class="md-nav__icon md-icon"></span>
+            8 Transfer
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Transfer/Importe/">
+<span class="md-ellipsis">
+    8.1 Importe
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Transfer/Umsetzungen/">
+<span class="md-ellipsis">
+    8.3 Umsetzungen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Funktionen/Extras/">
+<span class="md-ellipsis">
+    9 Extras
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_9">
+<span class="md-nav__icon md-icon"></span>
+            9 Extras
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Extras/Aufgaben/">
+<span class="md-ellipsis">
+    9.1 Aufgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Extras/Einstellungen/">
+<span class="md-ellipsis">
+    9.3 Einstellungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Extras/Onlinebericht/">
+<span class="md-ellipsis">
+    9.4 Onlinebericht
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/Extras/Expertenmodus%20ein-%20und%20ausschalten/">
+<span class="md-ellipsis">
+    Expertenmodus ein-/ausschalten
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Funktionen/10%20Hilfe/">
+<span class="md-ellipsis">
+    10 Hilfe
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Anhang
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Anhang
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Tastenkombinationen/">
+<span class="md-ellipsis">
+    Tastaturbefehle
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Platzhalter/">
+<span class="md-ellipsis">
+    Platzhalter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Zugriffsrechte/">
+<span class="md-ellipsis">
+    Zugriffsrechte
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/berechnungsrelevante_Felder/">
+<span class="md-ellipsis">
+    berechnungsrelevante Felder
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Rechenregelübersicht
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_5">
+<span class="md-nav__icon md-icon"></span>
+            Rechenregelübersicht
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Rechenregel%C3%BCbersicht/Wenn/">
+<span class="md-ellipsis">
+    Wenn
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Rechenregel%C3%BCbersicht/Wert%20und%20Eingabewert/">
+<span class="md-ellipsis">
+    Wert/Eingabewert
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Rechenregel%C3%BCbersicht/IstAktuellesElement/">
+<span class="md-ellipsis">
+    IstAktuellesElement
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Rechenregel%C3%BCbersicht/Versatz/">
+<span class="md-ellipsis">
+    Versatz
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Rechenregel%C3%BCbersicht/Kumulieren/">
+<span class="md-ellipsis">
+    Kumulieren
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Rechenregel%C3%BCbersicht/MittelwertSignifikant/">
+<span class="md-ellipsis">
+    MittelwertSignifikant
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Rechenregel%C3%BCbersicht/Summe/">
+<span class="md-ellipsis">
+    Summe
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Rechenregel%C3%BCbersicht/LetzterSignifikanterWert/">
+<span class="md-ellipsis">
+    LetzterSignifikanterWert
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Rechenregel%C3%BCbersicht/Runden/">
+<span class="md-ellipsis">
+    Runden
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Reguläre Ausdrücke
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_6">
+<span class="md-nav__icon md-icon"></span>
+            Reguläre Ausdrücke
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Regul%C3%A4re%20Ausdr%C3%BCcke/">
+<span class="md-ellipsis">
+    Allgemeines
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Vordefinierte%20Zeichenklassen/">
+<span class="md-ellipsis">
+    Vordefinierte Zeichenklassen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Wiederholungsfaktoren%20und%20Operatoren/">
+<span class="md-ellipsis">
+    Wiederholungsfaktoren/Operatoren
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Anwendungsbeispiele/">
+<span class="md-ellipsis">
+    Anwendungsbeispiele
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Startparameter/">
+<span class="md-ellipsis">
+    Startparameter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Anhang/Konfigurationseinstellungen%20%28Kosy.ini%29/">
+<span class="md-ellipsis">
+    Konfigurationseinstellungen (Kosy.ini)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    History
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            History
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.2.2.0/">
+<span class="md-ellipsis">
+    6.2.2.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.2.1.1/">
+<span class="md-ellipsis">
+    6.2.1.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.2.1.0/">
+<span class="md-ellipsis">
+    6.2.1.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.2.0.0/">
+<span class="md-ellipsis">
+    6.2.0.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.1.1.1/">
+<span class="md-ellipsis">
+    6.1.1.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.1.1.0/">
+<span class="md-ellipsis">
+    6.1.1.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.1.0.3/">
+<span class="md-ellipsis">
+    6.1.0.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.1.0.2/">
+<span class="md-ellipsis">
+    6.1.0.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.1.0.1/">
+<span class="md-ellipsis">
+    6.1.0.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.1.0.0/">
+<span class="md-ellipsis">
+    6.1.0.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.0.9/">
+<span class="md-ellipsis">
+    6.0.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.0.8/">
+<span class="md-ellipsis">
+    6.0.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.0.7/">
+<span class="md-ellipsis">
+    6.0.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.0.6/">
+<span class="md-ellipsis">
+    6.0.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.0.5/">
+<span class="md-ellipsis">
+    6.0.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.0.4/">
+<span class="md-ellipsis">
+    6.0.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.0.3/">
+<span class="md-ellipsis">
+    6.0.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.0.2/">
+<span class="md-ellipsis">
+    6.0.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.0.1/">
+<span class="md-ellipsis">
+    6.0.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/6.0.0/">
+<span class="md-ellipsis">
+    6.0.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.6.5/">
+<span class="md-ellipsis">
+    5.6.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.6.4/">
+<span class="md-ellipsis">
+    5.6.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.6.3/">
+<span class="md-ellipsis">
+    5.6.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.6.2/">
+<span class="md-ellipsis">
+    5.6.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.6.1/">
+<span class="md-ellipsis">
+    5.6.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.6.0/">
+<span class="md-ellipsis">
+    5.6.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.5.7/">
+<span class="md-ellipsis">
+    5.5.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.5.6/">
+<span class="md-ellipsis">
+    5.5.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.5.5/">
+<span class="md-ellipsis">
+    5.5.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.5.4/">
+<span class="md-ellipsis">
+    5.5.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.5.3/">
+<span class="md-ellipsis">
+    5.5.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.5.2/">
+<span class="md-ellipsis">
+    5.5.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.5.1/">
+<span class="md-ellipsis">
+    5.5.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.5.0/">
+<span class="md-ellipsis">
+    5.5.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.4.9/">
+<span class="md-ellipsis">
+    5.4.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.4.8/">
+<span class="md-ellipsis">
+    5.4.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.4.7/">
+<span class="md-ellipsis">
+    5.4.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.4.6/">
+<span class="md-ellipsis">
+    5.4.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.4.5/">
+<span class="md-ellipsis">
+    5.4.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.4.4/">
+<span class="md-ellipsis">
+    5.4.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.4.3/">
+<span class="md-ellipsis">
+    5.4.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.4.2/">
+<span class="md-ellipsis">
+    5.4.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.4.1/">
+<span class="md-ellipsis">
+    5.4.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.4.0/">
+<span class="md-ellipsis">
+    5.4.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.3.9/">
+<span class="md-ellipsis">
+    5.3.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.3.8/">
+<span class="md-ellipsis">
+    5.3.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.3.7/">
+<span class="md-ellipsis">
+    5.3.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.3.6/">
+<span class="md-ellipsis">
+    5.3.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.3.5/">
+<span class="md-ellipsis">
+    5.3.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.3.4/">
+<span class="md-ellipsis">
+    5.3.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.3.3/">
+<span class="md-ellipsis">
+    5.3.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.3.2/">
+<span class="md-ellipsis">
+    5.3.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.3.1/">
+<span class="md-ellipsis">
+    5.3.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.3.0/">
+<span class="md-ellipsis">
+    5.3.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.2.9/">
+<span class="md-ellipsis">
+    5.2.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.2.8/">
+<span class="md-ellipsis">
+    5.2.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.2.7/">
+<span class="md-ellipsis">
+    5.2.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.2.6/">
+<span class="md-ellipsis">
+    5.2.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.2.5/">
+<span class="md-ellipsis">
+    5.2.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.2.4/">
+<span class="md-ellipsis">
+    5.2.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.2.3/">
+<span class="md-ellipsis">
+    5.2.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.2.2/">
+<span class="md-ellipsis">
+    5.2.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.2.1/">
+<span class="md-ellipsis">
+    5.2.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.2.0/">
+<span class="md-ellipsis">
+    5.2.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.1.9/">
+<span class="md-ellipsis">
+    5.1.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.1.8/">
+<span class="md-ellipsis">
+    5.1.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.1.7/">
+<span class="md-ellipsis">
+    5.1.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.1.6/">
+<span class="md-ellipsis">
+    5.1.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.1.5/">
+<span class="md-ellipsis">
+    5.1.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.1.4/">
+<span class="md-ellipsis">
+    5.1.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.1.3/">
+<span class="md-ellipsis">
+    5.1.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.1.2/">
+<span class="md-ellipsis">
+    5.1.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.1.1/">
+<span class="md-ellipsis">
+    5.1.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.1.0/">
+<span class="md-ellipsis">
+    5.1.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.0.9/">
+<span class="md-ellipsis">
+    5.0.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.0.8/">
+<span class="md-ellipsis">
+    5.0.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.0.7/">
+<span class="md-ellipsis">
+    5.0.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.0.6/">
+<span class="md-ellipsis">
+    5.0.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.0.5/">
+<span class="md-ellipsis">
+    5.0.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.0.4/">
+<span class="md-ellipsis">
+    5.0.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.0.3/">
+<span class="md-ellipsis">
+    5.0.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.0.2/">
+<span class="md-ellipsis">
+    5.0.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.0.1/">
+<span class="md-ellipsis">
+    5.0.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../History/5.0.0/">
+<span class="md-ellipsis">
+    5.0.0
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ubersicht">
+<span class="md-ellipsis">
+      Übersicht
+    </span>
+</a>
+<nav aria-label="Übersicht" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datenquelle">
+<span class="md-ellipsis">
+      Datenquelle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zieltabelle">
+<span class="md-ellipsis">
+      Zieltabelle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zieldatensatz">
+<span class="md-ellipsis">
+      Zieldatensatz
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#buchungsblock">
+<span class="md-ellipsis">
+      Buchungsblock
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datenbehandlung">
+<span class="md-ellipsis">
+      Datenbehandlung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referenzbehandlung">
+<span class="md-ellipsis">
+      Referenzbehandlung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feldaktualisierung">
+<span class="md-ellipsis">
+      Feldaktualisierung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aggregation">
+<span class="md-ellipsis">
+      Aggregation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#letzte-ausfuhrung">
+<span class="md-ellipsis">
+      Letzte Ausführung
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datenquelle_1">
+<span class="md-ellipsis">
+      Datenquelle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importstruktur">
+<span class="md-ellipsis">
+      Importstruktur
+    </span>
+</a>
+<nav aria-label="Importstruktur" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#allgemein-struktur">
+<span class="md-ellipsis">
+      Allgemein &amp; Struktur
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bezeichner">
+<span class="md-ellipsis">
+      Bezeichner
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#titel">
+<span class="md-ellipsis">
+      Titel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quelle">
+<span class="md-ellipsis">
+      Quelle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feldtyp">
+<span class="md-ellipsis">
+      Feldtyp
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anfang-und-lange">
+<span class="md-ellipsis">
+      Anfang und Länge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prafix">
+<span class="md-ellipsis">
+      Präfix
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suffix">
+<span class="md-ellipsis">
+      Suffix
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#umsetzgruppe">
+<span class="md-ellipsis">
+      Umsetzgruppe
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ziel">
+<span class="md-ellipsis">
+      Ziel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feldaktualisierung_1">
+<span class="md-ellipsis">
+      Feldaktualisierung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importelement-nach-oben-schichten">
+<span class="md-ellipsis">
+      Importelement nach oben schichten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#umsetzungen">
+<span class="md-ellipsis">
+      Umsetzungen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wertebehandlung-konten">
+<span class="md-ellipsis">
+      Wertebehandlung (Konten)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einlesen-von-mehreren-strukturebenen-in-einem-einlesevorgang">
+<span class="md-ellipsis">
+      Einlesen von mehreren Strukturebenen in einem Einlesevorgang
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#filterstruktur">
+<span class="md-ellipsis">
+      Filterstruktur
+    </span>
+</a>
+<nav aria-label="Filterstruktur" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nicht">
+<span class="md-ellipsis">
+      Nicht
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergleichsart">
+<span class="md-ellipsis">
+      Vergleichsart
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operator">
+<span class="md-ellipsis">
+      Operator
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergleichswert">
+<span class="md-ellipsis">
+      Vergleichswert
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gro-kleinschreibung-beachten">
+<span class="md-ellipsis">
+      Groß-Kleinschreibung beachten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aktiv">
+<span class="md-ellipsis">
+      Aktiv
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#auswahl-loschen">
+<span class="md-ellipsis">
+      Auswahl (Löschen)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="import">Import</h1>
+<p>Die Importe erreichen Sie über die Funktion <em>[8.1] Transfer &gt; Importe</em>. Innerhalb dieser Funktion können Daten aus verschiedenen Basissystemen in <em>Kos<span class="kosy-Y">y</span> Enterprise</em> eingelesen werden. Dies erfolgt entweder über eine Textdatei (im Format .txt, .csv, .ktf, .prn etc.) oder über die direkte Anbindung einer Schnittstelle. Im letzten Fall fällt die Erstellung der Textdatei weg.</p>
+<h3 id="ubersicht">Übersicht</h3>
+<h4 id="datenquelle">Datenquelle</h4>
+<p>Entscheiden Sie über die Datenquelle, ob Sie eine Textdatei einlesen möchten oder eine Schnittstelle direkt in <em>Kos<span class="kosy-Y">y</span> Enterprise</em> integrieren möchten. Wählen Sie eine direkte Schnittstelle, so finden Sie in der <em>Registerkarte</em> Datenquelle eine Auswahlmöglichkeit, über welche Sie entscheiden können, welche Daten Sie aus Ihrem Basissystem auslesen möchten. Die Beschreibung der Spalten der Textdatei entfällt ebenso wie die Textdatei selbst. Wählen Sie eine Textdatei als Datenquelle, so finden Sie in der <em>Registerkarte</em> Datenquelle eine Vorschau Ihrer Textdatei.</p>
+<h4 id="zieltabelle">Zieltabelle</h4>
+<p>Die Zieltabelle definiert, in welchen Menüpunkt Sie Daten einlesen möchten. Sie sind nicht daran gebunden, Buchungssätze aus Ihrem Basissystem zu übernehmen. Es wäre ebenso denkbar, Verteilungsschlüssel für eine Datei einzulesen. Wählen Sie hier den Menüpunkt, in welchen Sie einlesen möchten. Handelt es sich bspw. um Buchungssätze, so wählen Sie den Menüpunkt <em>4.1 Buchungssätze zur Buchungsgruppe</em>.</p>
+<h4 id="zieldatensatz">Zieldatensatz</h4>
+<p>Der Zieldatensatz definiert, wohin Sie einlesen möchten. Entscheiden Sie hier, ob Sie Daten direkt einlesen möchten oder Buchungssätze bspw. in Standards oder Verteilungsschlüssel einlesen möchten. Lesen Sie Buchungssätze ein, so wählen Sie bitte den Menüpunkt &lt;<em>direkt&gt;</em>. Bleibt der Zieldatensatz &lt;<em>leer&gt;</em>, so werden keine Daten eingelesen. Es erscheint eine Fehlermeldung.</p>
+<div class="admonition warning">
+<p class="admonition-title">Hinweis</p>
+<p>Bitte beachten Sie, dass Standards oder Verteilungsschlüssel zunächst im jeweiligen Menüpunkt angelegt werden müssen, damit sie in der Auswahl erscheinen.</p>
+</div>
+<h4 id="buchungsblock">Buchungsblock</h4>
+<p>Beim Buchungsblock handelt es sich um eine Verfeinerung der Buchungsgruppe. Es ist somit möglich, mehrere Textdateien in <em>Kos<span class="kosy-Y">y</span> Enterprise</em> einzulesen, ohne dass diese sich während des Einleseprozesses gegenseitig beeinflussen. Der Buchungsblock wird vom Programm automatisch bei Anlage eines neuen Datensatzes fortlaufend nummeriert.</p>
+<p>Bei dem Buchungsblock „0“ handelt es sich um einen besonderen Buchungsblock, der nicht beim Importieren verwendet werden sollte. Manuelle Eingaben werden in den „reservierten“ Buchungsblock „0“ geschrieben.</p>
+<div class="admonition example">
+<p class="admonition-title">Beispiel</p>
+<p>Möchten Sie bspw. in eine Datei zwei Jahre einlesen und haben daher zwei Textdateien, so lesen Sie das erste Jahr in den Buchungsblock 1 ein und das zweite Jahr in den Buchungsblock 2. Somit werden die Einleseprozesse voneinander getrennt. Egal welche Datenbehandlung Sie gewählt haben, es können bspw. keine Daten aus dem anderen Jahr gelöscht werden.</p>
+</div>
+<h4 id="datenbehandlung">Datenbehandlung</h4>
+<p>Über die Datenbehandlung bestimmen Sie, wie mit neuen und bestehenden Datensätzen umgegangen wird. Die einzelnen Optionen werden im Folgenden kurz erläutert.</p>
+<p><em>1: nur vorhandene aktualisieren</em></p>
+<p>Wählen Sie „nur vorhandene aktualisieren", werden bereits bestehende Datensätze durch neue Datensätze ersetzt. Falls bei einem Element keine neuen Werte auftreten, bleiben die alten erhalten. Neue Elemente werden nicht angelegt.</p>
+<p><em>2: vorhandene aktualisieren, neue hinzufügen</em></p>
+<p>Möchten Sie, dass zusätzlich neue Datensätze hinzugefügt werden, so wählen Sie „vorhandene aktualisieren, neue hinzufügen". Hierbei werden bestehende Daten aktualisiert und neue Datensätze eingelesen.</p>
+<p><em>3: nur neue hinzufügen</em></p>
+<p>Die Einlesevariante „nur neue hinzufügen" führt dazu, dass ausschließlich Datensätze eingelesen werden, die zuvor nicht vorhanden waren. Bereits vorhandene Datensätze werden nicht verändert.</p>
+<p><em>4: nicht-importierte Datensätze löschen</em></p>
+<p>Wählen Sie die letzte Einlesevariante, wenn bereits bestehende Datensätze geändert und neue Datensätze hinzugefügt werden sollen. Datensätze, die keine Berücksichtigung finden, werden gelöscht.</p>
+<div class="admonition warning hinweis">
+<p class="admonition-title">Warning</p>
+<p>Ob ein Buchungssatz neu ist, wird vor allem an der Kombination der vier Dimensionen und an dem Wert festgemacht. Es wird aber auch geprüft ob der Datensatz während des aktuellen Importvorgangs schon geprüft wurde, sodass auch mehrere Buchungen mit demselben Wert auf derselben Kombination von Dimensionen eingelesen werden können.</p>
+</div>
+<h4 id="referenzbehandlung">Referenzbehandlung</h4>
+<p>Bei der Referenzbehandlung wird überprüft, ob der Bezugspunkt, in diesem Fall der über den Bezeichner identifizierte Stammsatz, für einen bestimmten Datensatz vorhanden ist. Hier entscheiden Sie, was mit Elementen passieren soll, deren Referenz fehlt.</p>
+<div class="admonition example">
+<p class="admonition-title">Beispiel</p>
+<p>Möchten Sie bspw. auf den Stammsatz P.PLAN einlesen, dieser ist aber nicht vorhanden, so fehlt die Referenz.</p>
+</div>
+<p><em>1: bei fehlender Referenz nicht importieren</em></p>
+<p>Fehlt der Bezugspunkt für ein Element, so wird der Datensatz nicht importiert.</p>
+<p><em>2: bei fehlender Referenz auf Dummy referenzieren</em></p>
+<p>Elemente mit fehlender Referenz werden unter einem Dummy-Element (künstlich erstelltes Element) angelegt. Beachten Sie hierbei, dass ein Datensatz nicht in allen Dimensionen ein Dummy-Element haben darf.</p>
+<p><em>3: fehlende Referenzelemente anlegen, vorhandene nicht aktualisieren</em></p>
+<p>Möchten Sie Elemente mit fehlender Referenz anlegen, jedoch bereits vorhandene Referenzen nicht ändern, so wählen Sie diese Option.</p>
+<p><em>4: fehlende Referenzelemente anlegen, vorhandene aktualisieren</em></p>
+<p>Neue Elemente mit fehlender Referenz werden angelegt, bestehende Referenzen werden erneuert.</p>
+<h4 id="feldaktualisierung">Feldaktualisierung</h4>
+<p>Für die unterschiedlichen Einstellungsvarianten wird im Folgenden angenommen, dass Sie für bestimmte Stammsätze Titel einlesen möchten. Die Feldaktualisierungen beziehen sich aber nicht ausschließlich auf das Feld Titel, sondern können sich auch auf Buchungsfeldinhalte beziehen.</p>
+<p><em>1: nicht importieren</em></p>
+<p>Titel werden nie eingelesen.</p>
+<p><em>2: nie aktualisieren</em></p>
+<p>Beim erstmaligen Erstellen eines Elementes werden neue Titel angelegt, danach findet nie wieder eine Aktualisierung statt.</p>
+<p><em>3: nur aktualisieren, falls der alte Wert leer oder „NULL" ist</em></p>
+<p>Ist ein Titelfeld leer oder hat es noch keinen Titel, so wird es aktualisiert. Ist bereits ein Titel definiert, so bleibt dieser bestehen.</p>
+<p><em>4: nur aktualisieren, falls der neue Wert nicht leer ist</em></p>
+<p>Ein bestehendes Titelfeld wird nur aktualisiert, wenn ein neuer Datensatz einen Titel liefert.</p>
+<p><em>5: nur aktualisieren, falls der neue Wert nicht „NULL" ist</em></p>
+<p>Ein bestehendes Titelfeld wird nur aktualisiert, wenn ein Datensatz die Information für einen Titel überhaupt enthält.</p>
+<p><em>6: immer aktualisieren</em></p>
+<p>Der Titel wird immer aktualisiert.</p>
+<div class="admonition warning">
+<p class="admonition-title">Hinweis</p>
+<p>Bei Importelementen, die solche Felder (wie Titel oder Buchungsfelder) beschreiben, können Sie in der Importstruktur individuell eine andere Einstellung für die Feldaktualisierung treffen. Ein Buchungstext sollte bspw. immer aktualisiert werden.</p>
+</div>
+<h4 id="aggregation">Aggregation</h4>
+<p>Hier entscheiden Sie wie verfahren werden soll, wenn mehrere Datensätze die selbe Kombination von Referenzen („Koordinaten“) haben , also auf die selbe Zelle geschrieben werden. Die Auswahlen werden anhand folgenden Beispiels erläutert.</p>
+<div class="admonition example">
+<p class="admonition-title">Beispiel</p>
+<p>Wir nehmen an, dass in Ihrer Einlesedatei vier Werte enthalten sind, welche sich alle auf die gleiche Planungseinheit-Konto-Zeit-Segment-Kombination beziehen. Es liegen folgende Werte in genau dieser Reihenfolge vor: 5, -7, 0, 6.</p>
+</div>
+<p><em>1: nicht aggregieren</em></p>
+<p>In Summe ergibt sich ein Wert von 4, jedoch finden Sie in der Buchungsansicht vier Buchungssätze mit den Werten 5, -7, 0 sowie 6. Die Buchungssätze werden nicht aggregiert.</p>
+<p><em>2: Summe bilden</em></p>
+<p>Lassen Sie die Summe bilden, so entsteht ein Wert von 4 und gleichzeitig finden Sie in der Ausgabe auch nur einen einzigen Buchungssatz mit diesem Wert.</p>
+<p>Bei dieser und den Varianten 5-12 werden keine Buchungsfelder gefüllt.</p>
+<p><em>3: ersten Wert verwenden</em></p>
+<p>Es wird der erste Wert mit dem entsprechenden Buchungssatz übernommen. Sie finden somit einen Wert von 5 in der Ausgabe vor.</p>
+<p><em>4: letzten Wert verwenden</em></p>
+<p>Es wird der letzte Wert mit dem entsprechenden Buchungssatz übernommen. Sie finden somit einen Wert von 6 in der Ausgabe vor.</p>
+<p><em>5: Minimum verwenden</em></p>
+<p>Es wird der kleinste Wert mit dem entsprechenden Buchungssatz übernommen. Sie finden somit einen Wert von -7 in der Ausgabe vor.</p>
+<p><em>6: Minimum der signifikanten Werte verwenden</em></p>
+<p>Es wird der kleinste signifikante (d.h. von null verschiedene) Wert mit dem entsprechenden Buchungssatz übernommen. Sie finden somit einen Wert von -7 in der Ausgabe vor.</p>
+<p><em>7: Minimum der absoluten Werte verwenden</em></p>
+<p>Es wird der kleinste absolute (d.h. ohne Beachtung des Vorzeichens) Wert mit dem entsprechenden Buchungssatz übernommen. Sie finden somit einen Wert von 0 in der Ausgabe vor.</p>
+<p><em>8: Maximum verwenden</em></p>
+<p>Es wird der größte Wert mit dem entsprechenden Buchungssatz übernommen. Sie finden somit einen Wert von 6 in der Ausgabe vor.</p>
+<p><em>9: Maximum der signifikanten Werte verwenden</em></p>
+<p>Es wird der größte signifikante (d.h. von null verschiedene) Wert mit dem entsprechenden Buchungssatz übernommen. Sie finden somit einen Wert von 6 in der Ausgabe vor.</p>
+<p><em>10: Maximum der absoluten Werte verwenden</em></p>
+<p>Es wird der größte absolute (d.h. ohne Beachtung des Vorzeichens) Wert mit dem entsprechenden Buchungssatz übernommen. Sie finden somit einen Wert von -7 in der Ausgabe vor.</p>
+<p><em>11: Durchschnitt bilden</em></p>
+<p>Aus den vorhandenen Werten wird der Durchschnitt gebildet. Es entsteht ein Wert von ( 5 - 7 + 0 + 6 ) / 4 = 1.</p>
+<p><em>12: Durchschnitt der signifikanten Werte bilden</em></p>
+<p>Aus den vorhandenen, signifikanten (d.h. von null verschiedenen) Werten wird der Durchschnitt gebildet. Es entsteht ein Wert von ( 5 - 7 + 6 ) / 3 ≈ 1,33.</p>
+<div class="admonition warning">
+<p class="admonition-title">Hinweis</p>
+<p>Die hier eingestellte Aggregation kann in der Importstruktur unter „Wertebehandlung (für Konten)“ überstimmt werden.</p>
+</div>
+<h4 id="letzte-ausfuhrung">Letzte Ausführung</h4>
+<p>Das Informationsfeld <strong>letzte Ausführung</strong> ermöglicht die Wahrung der Transparenz über Importprozesse. Hier erkennen Sie, wann der Importvorgang das letzte Mal ausgeführt wurde.</p>
+<h3 id="datenquelle_1">Datenquelle</h3>
+<p>Haben Sie in der <em>Registerkarte</em> Übersicht im Feld Datenquelle die Auswahl „Textdatei“ gewählt, so können Sie die Transferdatei auswählen, die Sie zuvor mit Hilfe der Schnittstelle ausgelesen haben. Auch der Import von Dateien im csv-Format ist möglich.
+Bei Textdateien mit fester Spaltenbreite können Sie außerdem definieren, welche Informationen in der Datenquelle enthalten sind.</p>
+<p>Wählen Sie hier im oberen Bereich der Maske Ihre Textdatei über das Ordnersymbol aus. Alternativ geben Sie den Transferpfad manuell ein. Die Benutzung einer Pfadvariable (siehe <strong><a href="../../../technische_Administration/Einstellungen_im_Programm/Pfadvariablen/">Abschnitt technische Administration &gt; Einstellungen im Programm &gt; Pfadvariablen</a></strong>) sowie einer Wildcard-Funktion sind möglich.</p>
+<p>Mit der Wildcard-Funktion können Sie dynamische Angaben für Textdateien machen. Setzen Sie ein Sternchen "*" in den Namen ein, dürfen an der Stelle beliebig viele beliebige Zeichen vorkommen. Der Rest des Namens (davor oder dahinter) muss aber mit dem Namen der Datei(en) übereinstimmen. Mit einem Fragezeichen "?" darf an der Stelle genau ein beliebiges Zeichen vorkommen.</p>
+<p>Ist eine Textdatei gewählt, werden die ersten 100 Zeilen als Vorschau angezeigt.</p>
+<div class="admonition example">
+<p class="admonition-title">Beispiel</p>
+<p>Besitzen Sie Textdateien mit der Betitelung guv1, guv2 sowie guv3, so geben Sie in den Transferpfad für den Namen der Textdatei "guv?" ein. <em>Kos<span class="kosy-Y">y</span> Enterprise</em> zeigt Ihnen alle drei Dateien an und wählt für die Vorschau die ersten 100 Zeilen der Gesamtdatei, die aus allen drei Textdateien besteht.</p>
+</div>
+<p>Bei Dateien ohne Trennzeichen und mit fester Spaltenbreite müssen Anfang und Länge jeder Spalte manuell angegeben werden. Hierzu legen Sie mit <img alt="Datensatz hinzufügen" class="img-textbody" src="../../_Images/Icons/Datensatz hinzufügen.png"> ein neues <strong>Textfeld</strong> an und beschreiben damit eine Spalte der Textdatei.</img></p>
+<p>Hierbei empfiehlt sich folgendes Vorgehen:</p>
+<p>Markieren Sie zunächst mit gedrückter <em>linker Maustaste</em> einen entsprechenden Bereich in der Vorschau (blauer Bereich). Legen Sie dann ein neues Feld an. Anfang und Länge des markierten Bereiches werden direkt in das neu angelegte Textfeld übernommen. Benennen Sie nun das Textfeld sprechend und wählen Sie einen sinnvollen Bezeichner, welcher nur einmal vergeben werden kann. Greifen Sie bspw. eine Kostenstelle ab, so benennen Sie das Feld mit dem Bezeichner <em>01_KST</em> und dem Titel <em>Kostenstelle</em>.</p>
+<p>Möchten Sie nachträglich Anfang oder Länge des Textfeldes ändern, so markieren Sie in der Vorschau den entsprechenden Bereich und führen Sie einen <em>Doppelklick</em> in das Feld Anfang oder Länge des entsprechenden Textfeldes aus.</p>
+<p>Möchten Sie direkt entscheiden, ob es sich bei dem abgegriffenen Feld um ein <em>Datum</em> oder einen <em>Text</em> handelt, so definieren Sie dies über die Spalte <strong>Feldtyp</strong>. Können oder möchten Sie keine Festlegung treffen, so lassen Sie den Feldtyp bitte auf &lt;<em>automatisch&gt;</em> stehen.</p>
+<div class="admonition warning">
+<p class="admonition-title">Hinweis</p>
+<p>Beschreiben Sie möglichst auch Felder, die Sie noch nicht auswerten wollen. Diese könnten für spätere Auswertungen interessant sein. Eine Aufstellung der Informationen unserer Schnittstellendateien stellen wir Ihnen auf Wunsch zur Verfügung. Zu einigen Schnittstellen finden Sie die Schnittstellenbeschreibung auch auf unserer Homepage zum Download.</p>
+</div>
+<p>Haben Sie in der <em>Registerkarte</em> Übersicht im Feld Datenquelle hingegen die <strong>Schnittstelle</strong> ausgewählt, so begleitet Sie hier ein Assistent durch die Ausleseeinstellungen für Ihr Basissystem. Die Beschreibung der Textdatei entfällt.</p>
+<h3 id="importstruktur">Importstruktur</h3>
+<p>In der <strong>Importstruktur</strong> bestimmen Sie, welche Informationen aus der Datenquelle in welche Elemente nach <em>Kos<span class="kosy-Y">y</span> Enterprise</em> importiert werden sollen.</p>
+<p>Hier starten Sie, indem Sie über das Ordnersymbol <img alt="Planungseinheiten" class="img-textbody" src="../../_Images/Icons/Planungseinheiten.png"> eine Importstruktur generieren. <em>Kos<span class="kosy-Y">y</span> Enterprise</em> legt daraufhin die meist verwendeten Importelemente an. Alternativ können Sie neue Importelemente mit <img alt="Datensatz hinzufügen" class="img-textbody" src="../../_Images/Icons/Datensatz hinzufügen.png"> anlegen oder über <img alt="Import" class="img-textbody" src="../../_Images/Icons/Import.png"> importieren.</img></img></img></p>
+<p>Standardmäßig werden Importelemente für <em>Wert, Kennzeichen, Planungseinheit (Stammsatz) [1] Bezeichner, Planungseinheit (Stammsatz) [1] Titel, Konto (Stammsatz) [1] Bezeichner</em> sowie <em>Zeiteinheit (Stammsatz) [1] Bezeichner</em> erstellt. Nun müssen die Quellelemente den Elementen der Importstruktur zugeordnet werden. Dafür ziehen Sie das entsprechende Quellelement mit <em>gedrückter linker Maustaste</em> auf das gewünschte Importelement. Grafisch dargestellt wird dies durch eine eingerückte Ordnerstruktur, wie Sie es in der <strong><a href="#Importstruktur">Abbildung „Importstruktur“</a></strong> sehen können.</p>
+<figure id="Importstruktur">
+<p><img alt="Importstruktur" src="../../_Images/Screenshots/Funktionen/Transfer/Dateiimporte.png" title="Dateiimporte"><br/>
+<small>Importstruktur</small></img></p>
+</figure>
+<p>Haben Sie einem Importelement ein Quellelement zugeordnet, so treffen Sie die weiteren Einstellungen über die Detailansicht der Importfelder. Treffen Sie zunächst die Einstellungen für das Oberelement z. B. <em>Planungseinheit (Stammsatz) [1] Bezeichner</em>, später für das untergeordnete Element z. B. die <em>Kostenstelle</em>. Die weiterführenden Erläuterungen werden sich für eine bessere Anschaubarkeit stets auf dieses Beispiel beziehen.</p>
+<p>Sie finden in der Detailansicht die <em>Registerkarten</em> <em>Allgemein &amp; Struktur, Umsetzungen</em> sowie ggf. <em>Wertebehandlung (für Konten)</em>, welche im Folgenden erläutert werden.</p>
+<h4 id="allgemein-struktur">Allgemein &amp; Struktur</h4>
+<h4 id="bezeichner"><em>Bezeichner</em></h4>
+<p>Der Bezeichner dient der eindeutigen Identifikation des Importfeldes. Der eigentliche Import ist jedoch nicht von der Wahl der Bezeichner abhängig.</p>
+<h4 id="titel"><em>Titel</em></h4>
+<p>In dem Datenfeld Titel ist es möglich, eine Bezeichnung für die Importfelder zu hinterlegen. Dies ist keine zwingende Angabe, dennoch sollte sie getätigt werden, damit Sie schnell eine treffende Zuordnung der Quellelemente zu den Importelementen tätigen können. Bei generierten Elementen vergibt <em>Kos<span class="kosy-Y">y</span> Enterprise</em> automatisch sinnvolle Titel.</p>
+<h4 id="quelle"><em>Quelle</em></h4>
+<p>Die Quelle definiert den Ort der zu importierenden Daten und ist gleichzusetzen mit den Quellelementen. Wählen Sie hierfür das entsprechende Importfeld als Quellelement aus. Wählen Sie bitte für die Ordnersymbole keine Quelle aus (hier z. B. <em>Planungseinheit (Stammsatz) [1] Bezeichner</em>), da die Informationen der darunter liegenden Elemente automatisch „hochgeschichtet“ werden.</p>
+<h4 id="feldtyp"><em>Feldtyp</em></h4>
+<p>Möchten Sie direkt entscheiden, ob es sich bei dem Importfeld um ein <em>Datum</em> oder einen <em>Text</em> handelt, so definieren Sie dies über die Spalte Feldtyp. Können oder möchten Sie keine Festlegung treffen, so lassen Sie den Feldtyp bitte auf \&lt;<em>automatisch&gt;</em> stehen.</p>
+<h4 id="anfang-und-lange"><em>Anfang und Länge</em></h4>
+<p>Beschneiden Sie über die Felder Anfang und Länge das von Ihnen gewählte Importfeld. Eine Länge von -1 bedeutet „unbegrenzt“.</p>
+<div class="admonition example">
+<p class="admonition-title">Beispiel</p>
+<p>Greift Ihr <strong>Importelement</strong> das Wort <em>„Kosy"</em> ab und Sie führen keine Änderungen bei Anfang und Länge durch, so wird das ganze Wort <em>„Kosy"</em> eingelesen. Ändern Sie den Anfang von <em>1</em> auf <em>2</em>, so wird nur noch <em>„osy"</em> eingelesen.</p>
+</div>
+<h4 id="prafix"><em>Präfix</em></h4>
+<p>Da Sie in der Datenquelle üblicherweise nur die Kurzbezeichnungen der Strukturelemente finden, müssen Sie für einen vollständigen Bezeichner noch ein Präfix vergeben (siehe <strong><a href="../../Anwendung/Eigenschaften/">Bezeichner</a></strong>). I.d.R. geschieht dies auf dem übergeordneten Element (z. B. <em>Planungseinheit (Stammsatz) [1] Bezeichner</em>). Bitte beachten Sie, dass die Bezeichner der vier Dimensionen jeweils ein Präfix benötigen, alle anderen Elemente verlangen kein Präfix.</p>
+<div class="admonition warning">
+<p class="admonition-title">Hinweis</p>
+<p>Benutzen Sie eine Umsetzgruppe, damit z. B. Ertragskonten das Präfix E. erhalten und Aufwandskonten das Präfix K., so ist die Angabe eines Präfix in diesem Feld nicht notwendig. Die Information erhält das Element über die <em>Umsetzgruppe.</em></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Hinweis</p>
+<p>Auch wenn das Feld „Präfix“ meist für die Definition eines Präfix im Sinne von „Typ plus Punkt“ benutzt wird, handelt es sich vielmehr um ein <ins>freies</ins> Textfeld, das dem eingelesenen oder hochgeschichteten Inhalt vorangestellt wird. Sie können hier bspw. auch „AUF.2023“ eintragen, dann wird für alle eingelesenen Aufträge die Kurzbezeichnung mit 2023 anfangen.</p>
+</div>
+<h4 id="suffix"><em>Suffix</em></h4>
+<p>Über das Feld Suffix fügen Sie eine gewünschte Zeichenfolge analog zum Präfix an die importierten Daten an.</p>
+<h4 id="umsetzgruppe"><em>Umsetzgruppe</em></h4>
+<p>Wählen Sie hier eine von Ihnen unter dem Menüpunkt <em>[8.3.1] Transfer &gt; Umsetzungen &gt; Mandantenumsetzungen</em> angelegte Umsetzgruppe. Die <em>Umsetzgruppe</em> können Sie in dem Reiter <em>"Umsetzungen"</em> bearbeiten.</p>
+<h4 id="ziel"><em>Ziel</em></h4>
+<p>Über das Auswahlfenster Ziel wählen Sie den Zielort des Importfeldes aus. Die von <em>Kos<span class="kosy-Y">y</span> Enterprise</em> generierten Elemente besitzen bereits ein Ziel, daher ist eine weitere Einstellung hier nicht notwendig. Das zugeordnete Quellelement (z. B. Kostenstelle) benötigt kein Ziel, da das übergeordnete Element das Ziel enthält.</p>
+<h4 id="feldaktualisierung_1"><em>Feldaktualisierung</em></h4>
+<p>Standardmäßig ist hier <em>"0 : Voreinstellungen verwenden"</em> eingestellt. Damit wird die von Ihnen getroffene Einstellung von der Registerkarte Übersicht übernommen (eine nähere Erläuterung finden Sie im <strong><a href="/Funktionen/Transfer/Importe/#ubersicht">Abschnitt Übersicht</a></strong>). Sie finden diese Einstellungsmöglichkeiten z. B. bei <em>Buchungsfeldern</em> oder <em>Titeln</em> und können darüber bei einzelnen Feldern von der in der Übersicht getroffenen Einstellung abweichen.</p>
+<h4 id="importelement-nach-oben-schichten"><em>Importelement nach oben schichten</em></h4>
+<p>Wenn die Option bei der Funktion <em>Importelemente nach oben schichten</em> nicht gesetzt ist, fließen die Inhalte der Unterelemente nicht mehr in das übergeordnete Element.</p>
+<h4 id="umsetzungen">Umsetzungen</h4>
+<p>In der <em>Registerkarte</em> Umsetzungen finden Sie die Umsetzungen der eingestellten Umsetzgruppe. Sie haben hier die Option der Überprüfung und möglichen Änderung Ihrer Umsetzung.</p>
+<figure>
+<p><img alt="Schulung KrS2 (11)" src="../../_Images/Screenshots/Pflege/Schulung KrS2 (11).png"/></p>
+</figure>
+<h4 id="wertebehandlung-konten">Wertebehandlung (Konten)</h4>
+<p>Sofern Erlöse oder Kosten nicht vorzeichengerecht ankommen, kann unter der Wertebehandlung eine entsprechende Anpassung vorgenommen werden. Falls Sie das Importelement <em>Kennzeichen</em> nutzen, kann die Umkehrung des Vorzeichens von der Belegung dieses Feldes abhängig gemacht werden. Dabei ist es möglich mehrere Kennzeichen abzufragen, in dem man pro Kennzeichen einen Datensatz anlegt. Typische Kennzeichen sind <em>S</em> für Soll und <em>H</em> für Haben. Möchten Sie die Einstellung der in der <em>Registerkarte</em> Übersicht im Feld Aggregation getroffenen Auswahl überstimmen, so können Sie dies hier über die Spalte Aggregation vornehmen. Ist dies nicht der Fall, so wählen Sie die Einstellung 0: Aggregation nicht verändern. Eine Erläuterung aller weiteren Einstellungsvarianten finden Sie im <strong><a href="/Funktionen/Transfer/Importe/#ubersicht">Abschnitt Übersicht</a></strong>.</p>
+<h4 id="einlesen-von-mehreren-strukturebenen-in-einem-einlesevorgang">Einlesen von mehreren Strukturebenen in einem Einlesevorgang</h4>
+<p>Möchten Sie durch <em>Kos<span class="kosy-Y">y</span> Enterprise</em> mehrere Ebenen einer Struktur generieren lassen, z. B. die Kunden unter den Tarifen darstellen, so erstellen Sie hier ein weiteres Importfeld: Planungseinheit (Stammsatz) [2]: Bezeichner. Alle importierten Datensätze erhalten nun <ins>zwei</ins> Verweise auf Planungseinheiten-Stammsätze. Damit können Sie für das Beispiel vier verschiedene Strukturen erzeugen: nur Tarife, nur Kunden, Kunden unter Tarifen und Tarife unter Kunden (letzteres ist i.d.R. nicht sinnvoll).</p>
+<div class="admonition warning">
+<p class="admonition-title">Hinweis</p>
+<p>Parallel können bis zu <strong><ins>vier Stammsätze je Dimension</ins></strong> importiert werden.</p>
+</div>
+<h3 id="filterstruktur">Filterstruktur</h3>
+<p>Sollten Sie nicht alle Datensätze aus der Schnittstellendatei benötigen, können Sie mit den Einstellungen auf dieser <em>Registerkarte</em> Datensätze herausfiltern. Es werden dann nur die Sätze übernommen, die die angegebenen Bedingungen erfüllen. Es können beliebig viele Filter angelegt werden, die alle mit <em>UND</em> oder <em>ODER</em> verknüpft werden.</p>
+<p>Legen Sie zunächst mit <img alt="Datensatz hinzufügen" class="img-textbody" src="../../_Images/Icons/Datensatz hinzufügen.png"/> ein neues Filterelement an oder importieren Sie mit <img alt="Import" class="img-textbody" src="../../_Images/Icons/Import.png"/> zuvor exportierte Filterelemente. Hinterlegen Sie für ein Filterelement einen Bezeichner, einen sprechenden Titel sowie ein Quell- oder Importelement. Legen Sie ein zweites Filterelement an, so entscheiden Sie noch, ob es sich in Verbindung zum ersten Filterelement um eine <em>UND-</em> oder um eine <em>ODER</em>-Verknüpfung handeln soll.</p>
+<p>Haben Sie ein Filterelement auf diese Weise angelegt, so finden Sie im rechten Teil der Bildschirmansicht eine Detailansicht. Die Möglichkeiten werden hier kurz erläutert.</p>
+<h4 id="nicht">Nicht</h4>
+<p>Möchten Sie mit dem Filter etwas ausschließen, so setzen Sie die Option Nicht. Damit werden alle Buchungen eingelesen, die der Bedingung <ins>nicht</ins> entsprechen.</p>
+<h4 id="vergleichsart">Vergleichsart</h4>
+<p>Entscheiden Sie, ob Sie auf eine Zeichenkette, einen regulären Ausdruck, eine Zahl oder ein Datum prüfen möchten.</p>
+<h4 id="operator">Operator</h4>
+<p>Entscheiden Sie hier, ob der Vergleichswert z. B. gleich dem Importelement sein soll, diesen nur beinhalten soll oder größer oder kleiner sein soll als dieser.</p>
+<h4 id="vergleichswert">Vergleichswert</h4>
+<p>Geben Sie hier den Wert der Bedingung ein (z. B. eine Kostenstelle). Reguläre Ausdrücke sind ebenfalls möglich, sofern die Vergleichsart entsprechend eingestellt ist.</p>
+<h4 id="gro-kleinschreibung-beachten">Groß-Kleinschreibung beachten</h4>
+<p>Entscheiden Sie hier, ob bei der Überprüfung des Filters die Groß-Kleinschreibung beachtet werden soll.</p>
+<h4 id="aktiv">Aktiv</h4>
+<p>Möchten Sie, dass Ihr Filter deaktiviert, aber nicht gelöscht wird, so entfernen Sie bitte hier den Haken.</p>
+<div class="admonition warning">
+<p class="admonition-title">Hinweis</p>
+<p>Wenn Sie mehrere Filter „klammern“ wollen, so legen Sie zu diesem Zwecke Zwischenknoten an.</p>
+</div>
+<h3 id="auswahl-loschen">Auswahl (Löschen)</h3>
+<p>Möchten Sie beim Import nur Werte löschen, die bestimmte Stammsätze als Referenz haben, so nutzen Sie Auswahl (Löschen). Hierbei markieren Sie die Elemente, die Sie leeren möchten. Sind keine Elemente markiert, so werden alle Buchungen des eingestellten Buchungsblocks (abhängig von der Datenbehandlung) gelöscht.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Zurück zum Seitenanfang
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Fußzeile" class="md-footer__inner md-grid">
+<a aria-label="Zurück: Dateien" class="md-footer__link md-footer__link--prev" href="../Dateien/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Zurück
+              </span>
+<div class="md-ellipsis">
+                Dateien
+              </div>
+</div>
+</a>
+<a aria-label="Weiter: Ausgabe/Layout" class="md-footer__link md-footer__link--next" href="../Ausgabe%20und%20Layout/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Weiter
+              </span>
+<div class="md-ellipsis">
+                Ausgabe/Layout
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.footer", "navigation.instant", "navigation.top", "navigation.indexes", "toc.follow", "content.code.copy", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+<script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+<script src="../../javascripts/extra.js"></script>
+</body>
+</html>

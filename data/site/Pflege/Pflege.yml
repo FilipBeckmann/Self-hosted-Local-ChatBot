@@ -1,0 +1,26 @@
+﻿site_name: Pflege
+
+nav:
+  - 'Personalisierung':
+    - 'Typen': 'Typen.md'
+    - 'Dateiattribute': 'Dateiattribute.md'
+    - 'Listenarten/Listenansichten': 'Listenarten und Listenansichten.md'
+    - 'Dimensionsfelder': 'Dimensionsfelder.md'
+    - 'Buchungsfelder': 'Buchungsfelder.md'
+    - 'Sammlungen/Sammlungsauswahlen': 'Sammlungen und Sammlungsauswahlen.md'
+    - 'Feldvorlagen': 'Feldvorlagen.md'
+    - 'persönliche Ansichten': 'persönliche Ansichten.md'
+  - 'Modellierung':
+    - 'Dimensionen': 'Dimensionen.md'
+    - 'Dateien': 'Dateien.md'
+    - 'Import': 'Import.md'
+    - 'Ausgabe/Layout': 'Ausgabe und Layout.md'
+    - 'Verteilung': 'Verteilung.md'
+  - 'Verfeinerung':
+    - 'Standards': 'Standards.md'
+    - 'Umsetzungen': 'Umsetzungen.md'
+    - 'Ergebnisarten/Umrechnungen': 'Ergebnisarten und Umrechnungen.md'
+    - 'Exportvorgaben': 'Exportvorgaben.md'
+    - 'Dateistrukturen': 'Dateistrukturen.md'
+    - 'Grafik': 'Grafik.md'
+    - 'Berichte': 'Berichte.md'

@@ -1,0 +1,31 @@
+﻿site_name: Anhang
+
+nav:
+  - 'Tastaturbefehle': 'Tastenkombinationen.md'
+
+  - 'Platzhalter': 'Platzhalter.md'
+
+  - 'Zugriffsrechte': 'Zugriffsrechte.md'
+
+  - 'berechnungsrelevante Felder': 'berechnungsrelevante_Felder.md'
+
+  - 'Rechenregelübersicht':
+    - 'Wenn': 'Rechenregelübersicht/Wenn.md'
+    - 'Wert/Eingabewert': 'Rechenregelübersicht/Wert und Eingabewert.md'
+    - 'IstAktuellesElement': 'Rechenregelübersicht/IstAktuellesElement.md'
+    - 'Versatz': 'Rechenregelübersicht/Versatz.md'
+    - 'Kumulieren': 'Rechenregelübersicht/Kumulieren.md'
+    - 'MittelwertSignifikant': 'Rechenregelübersicht/MittelwertSignifikant.md'
+    - 'Summe': 'Rechenregelübersicht/Summe.md'
+    - 'LetzterSignifikanterWert': 'Rechenregelübersicht/LetzterSignifikanterWert.md'
+    - 'Runden': 'Rechenregelübersicht/Runden.md'
+
+  - 'Reguläre Ausdrücke':
+    - 'Allgemeines': 'Reguläre Ausdrücke/Reguläre Ausdrücke.md'
+    - 'Vordefinierte Zeichenklassen': 'Reguläre Ausdrücke/Vordefinierte Zeichenklassen.md'
+    - 'Wiederholungsfaktoren/Operatoren': 'Reguläre Ausdrücke/Wiederholungsfaktoren und Operatoren.md'
+    - 'Anwendungsbeispiele': 'Reguläre Ausdrücke/Anwendungsbeispiele.md'
+
+  - 'Startparameter': 'Startparameter.md'
+
+  - 'Konfigurationseinstellungen (Kosy.ini)': 'Konfigurationseinstellungen (Kosy.ini).md'

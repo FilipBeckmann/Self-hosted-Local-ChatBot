@@ -1,0 +1,95 @@
+site_name: Funktionen
+
+nav:
+  - '1 Verwaltung':
+    - 'Verwaltung/index.md'
+    - '1.1 Module': 'Verwaltung/Module.md'
+    - '1.2 Mandanten': 'Verwaltung/Mandanten.md'
+    - '1.3 Benutzer': 'Verwaltung/Benutzer.md'
+    - '1.4 Gruppen': 'Verwaltung/Gruppen.md'
+    - '1.5 Typen': 'Verwaltung/Typen.md'
+    - '1.6 Rechte': 'Verwaltung/Rechte.md'
+
+  - '2 Dimensionen':
+    - 'Dimensionen/index.md'
+    - '2.1 Planungseinheiten': 'Dimensionen/Planungseinheiten.md'
+    - '2.2 Konten': 'Dimensionen/Konten.md'
+    - '2.3 Zeit': 'Dimensionen/Zeit.md'
+    - '2.4 Segmente': 'Dimensionen/Segmente.md'
+    - '2.5 Buchungsfelder': 'Dimensionen/Buchungsfelder.md'
+
+  - '3 Dateien':
+    - 'Dateien/index.md'
+    - '3.1 Übersicht der Dateien': 'Dateien/Übersicht der Dateien.md'
+    - '3.2 Dateisammlungen': 'Dateien/Dateisammlungen.md'
+    - '3.3 Dateistrukturen': 'Dateien/Dateistrukturen.md'
+    - '3.4 Dateiattribute': 'Dateien/Dateiattribute.md'
+    - '3.5 Rechte auf Dateien': 'Dateien/Rechte auf Dateien.md'
+    - '3.6 Rechte auf Dateisammlungen': 'Dateien/Rechte auf Dateisammlungen.md'
+    - '3.7 Rechte auf Dateistrukturen': 'Dateien/Rechte auf Dateistrukturen.md'
+    - '3.8 Rechte auf Dateiattribute': 'Dateien/Rechte auf Dateiattribute.md'
+    - '3.9 Dimensionszuordnungen': 'Dateien/Dimensionszuordnungen.md'
+
+  - '4 Eingabe':
+    - 'Eingabe/index.md'
+    - '4.1 Dateneingabe': 'Eingabe/Dateneingabe.md'
+    - '4.2 Korrekturen': 'Eingabe/Korrekturen.md'
+    - '4.3 Standards': 'Eingabe/Standards.md'
+    - '4.5 Schnellansichten': 'Eingabe/Schnellansichten.md'
+    - '4.6 Planung': 'Eingabe/Planung.md'
+    - '4.7 Rechte': 'Eingabe/Rechte.md'
+
+  - '5 Verteilung':
+    - 'Verteilung/index.md'
+    - '5.1 Verteilungsschlüssel': 'Verteilung/Verteilungsschlüssel.md'
+    - '5.2 Szenarien': 'Verteilung/Szenarien.md'
+    - '5.3 Saisonverteilung': 'Verteilung/Saisonverteilung.md'
+    - '5.4 Primärkostenumlage': 'Verteilung/Primärkostenumlage.md'
+    - '5.5 Sekundärkostenumlage': 'Verteilung/Sekundärkostenumlage.md'
+    - '5.6 Verteilungsübersicht': 'Verteilung/Verteilungsübersicht.md'
+    - '5.7 Rechte': 'Verteilung/Rechte.md'
+
+  - '6 Ausgabe':
+    - 'Ausgabe/index.md'
+    - '6.1 Ergebnisse': 'Ausgabe/Ergebnisse.md'
+    - '6.2 Anteilstabelle': 'Ausgabe/Anteilstabelle.md'
+    - '6.3 Hitliste': 'Ausgabe/Hitliste.md'
+    - '6.4 ABC-Analyse': 'Ausgabe/ABC-Analyse.md'
+    - '6.5 Verteilungsansicht': 'Ausgabe/Verteilungsansicht.md'
+    - '6.6 Grafiken': 'Ausgabe/Grafiken.md'
+    - '6.7 Berichte': 'Ausgabe/Berichte.md'
+    - '6.8 Schnellansichten': 'Ausgabe/Schnellansichten.md'
+    - '6.9 Dashboards': 'Ausgabe/Dashboards.md'
+    - '6.10 Startseiten': 'Ausgabe/Startseiten.md'
+    - '6.11 Ergebnisarten': 'Ausgabe/Ergebnisarten.md'
+    - '6.12 Rechte': 'Ausgabe/Rechte.md'
+
+  - '7 Layout':
+    - 'Layout/index.md'
+    - '7.1 Listen': 'Layout/Listen.md'
+    - '7.2 Direktauswahlen': 'Layout/Direktauswahlen.md'
+    - '7.3 Sammlungsauswahlen': 'Layout/Sammlungsauswahlen.md'
+    - '7.4 Listenformate': 'Layout/Listenformate.md'
+    - '7.5 Umrechnungen': 'Layout/Umrechnungen.md'
+    - '7.6 Exportvorgaben': 'Layout/Exportvorgaben.md'
+    - '7.7 Kopf- und Fußzeilen': 'Layout/Kopf- und Fußzeilen.md'
+    - '7.8 Listenansichten': 'Layout/Listenansichten.md'
+    - '7.9 Listenarten': 'Layout/Listenarten.md'
+    - '7.10 Formatvorlagen': 'Layout/Formatvorlagen.md'
+    - '7.11 Feldvorlagen': 'Layout/Feldvorlagen.md'
+    - '7.12 Rechte': 'Layout/Rechte.md'
+
+  - '8 Transfer':
+    - 'Transfer/index.md'
+    - '8.1 Importe': 'Transfer/Importe.md'
+    - '8.3 Umsetzungen': 'Transfer/Umsetzungen.md'
+
+  - '9 Extras':
+    - 'Extras/index.md'
+    - '9.1 Aufgaben': 'Extras/Aufgaben.md'
+    - '9.3 Einstellungen': 'Extras/Einstellungen.md'
+    - '9.4 Onlinebericht': 'Extras/Onlinebericht.md'
+    - 'Expertenmodus ein-/ausschalten': 'Extras/Expertenmodus ein- und ausschalten.md'
+
+  - '10 Hilfe': '10 Hilfe.md'
+

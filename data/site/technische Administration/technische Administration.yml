@@ -1,0 +1,6 @@
+﻿site_name: technische_Administration
+
+nav:
+  - 'Einstellungen im Programm': 'Einstellungen im Programm.md'
+  - 'Serveradministration': 'Serveradministration.md'
+  - 'Onlinebericht': 'Onlinebericht.md'

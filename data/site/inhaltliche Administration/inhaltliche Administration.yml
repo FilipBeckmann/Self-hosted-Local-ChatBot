@@ -1,0 +1,11 @@
+﻿site_name: inhaltliche_Administration
+
+nav:
+  - 'Zuordnungen': 'Zuordnungen.md'
+  - 'Einstellungen': 'Einstellungen.md'
+  - 'Benutzerverwaltung': 'Benutzerverwaltung.md'
+  - 'Berechtigungskonzept': 'Berechtigungskonzept.md'
+  - 'Aufgaben': 'Aufgaben.md'
+  - 'Dashboards/Startseiten': 'Dashboards und Startseiten.md'
+  - 'Zeitpläne': 'Zeitpläne.md'
+  - 'Planung': 'Planung.md'

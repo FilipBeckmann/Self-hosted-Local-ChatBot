@@ -1,0 +1,2823 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../../_Images/HKS Informatik GmbH.ico" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.18" name="generator"/>
+<title>5.6.4 - Anwenderdokumentation</title>
+<link href="../../../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<style>:root{--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 6a6 6 0 0 1 6 6c0 2.22-1.21 4.16-3 5.2V19a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6 6 0 0 1 6-6m2 15v1a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1h4m6-10h3v2h-3v-2M1 11h3v2H1v-2M13 1v3h-2V1h2M4.92 3.5l2.13 2.14-1.42 1.41L3.5 4.93 4.92 3.5m12.03 2.13 2.12-2.13 1.43 1.43-2.13 2.12-1.42-1.42Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>');}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/extra-style.vr6bd_wr.min.css" rel="stylesheet"/></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Zum Inhalt
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<!--Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.-->
+<!-- Determine base classes -->
+<!-- Header -->
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Kopfzeile" class="md-header__inner md-grid">
+<!-- Link to home -->
+<a aria-label="Anwenderdokumentation" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Anwenderdokumentation">
+<img alt="logo" id="logo_light_mode" src="../../../_Images/Kosy Enterprise weiß mit blau.svg"/>
+<img alt="logo" id="logo_dark_mode" src="../../../_Images/Kosy Enterprise weiß.svg"/>
+</a>
+<!-- Button to open drawer -->
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<!-- Header title -->
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis" id="site_name"> Anwenderdokumentation </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+             5.6.4 
+          </span>
+</div>
+</div>
+</div>
+<!-- Color palette -->
+<!-- !!!!! ToDo: KE_M-7624: Darkmode-Button nach Darkmode-Überarbeitung wieder einbinden -->
+<!-- 
+    <form class="md-header__option" data-md-component="palette">
+         
+      <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="default"
+        data-md-color-primary="indigo"
+        data-md-color-accent="indigo"
+        
+        aria-label="Switch to dark mode"
+        
+        type="radio"
+        name="__palette"
+        id="__palette_1"
+      />
+      
+      <label
+        class="md-header__button md-icon"
+        title="Switch to dark mode"
+        for="__palette_2"
+        hidden
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+          
+      <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="slate"
+        data-md-color-primary="indigo"
+        data-md-color-accent="indigo"
+        
+        aria-label="Switch to light mode"
+        
+        type="radio"
+        name="__palette"
+        id="__palette_2"
+      />
+      
+      <label
+        class="md-header__button md-icon"
+        title="Switch to light mode"
+        for="__palette_1"
+        hidden
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+       
+    </form>
+     -->
+<!-- DropDown-Menu für die PDF-Dokumente -->
+<div class="dropdown"><img class="pdf-button-headerpng" src="../../../_Images/PDF (modern).svg"/>
+<button class="dropbtn" title="PDF">
+<div class="buttoncontent"></div></button>
+<div class="dropdown-content">
+<a href="../../../pdf/Kosy Enterprise - Anwenderhandbuch (23.06.2025).pdf" target="_blank"><p style="line-height: 1.3; margin:12px;"> Anwenderhandbuch</p></a>
+<a href="../../../pdf/Kosy Enterprise - Funktionshandbuch (23.06.2025).pdf" target="_blank"><p style="line-height: 1.3; margin:12px;"> Funktionshandbuch</p></a>
+<a href="../../../pdf/Kosy Enterprise History - Version 6.2.2.0 SR2 (23.06.2025).pdf" target="_blank"><p style="line-height: 1.3; margin:12px;"> History</p></a>
+</div>
+</div>
+<!-- Site language selector -->
+<div class="container">
+<!-- Button to open search modal -->
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<!-- Search interface -->
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Suche" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Suche" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Suche" class="md-search__options">
+<a aria-label="Teilen" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Teilen">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Zurücksetzen" class="md-search__icon md-icon" tabindex="-1" title="Zurücksetzen" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Repository information -->
+</div></nav>
+<!-- Navigation tabs (sticky) -->
+<nav aria-label="Hauptnavigation" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+    
+  
+  Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Allgemein/Allgemeine%20Hinweise/">
+          
+  
+    
+  
+  Allgemein
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Anwendung/Startbildschirm/">
+          
+  
+    
+  
+  Anwendung
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Pflege/Typen/">
+          
+  
+    
+  
+  Pflege
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../inhaltliche_Administration/Zuordnungen/">
+          
+  
+    
+  
+  inhaltliche Administration
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../technische_Administration/Einstellungen%20im%20Programm/">
+          
+  
+    
+  
+  technische Administration
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Funktionen/Verwaltung/">
+          
+  
+    
+  
+  Funktionen
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Anhang/Tastenkombinationen/">
+          
+  
+    
+  
+  Anhang
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../6.2.2.0/">
+          
+  
+    
+  
+  History
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Anwenderdokumentation" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Anwenderdokumentation">
+<img alt="logo" id="logo_light_mode" src="../../../_Images/Kosy Enterprise weiß mit blau.svg"/>
+<img alt="logo" id="logo_dark_mode" src="../../../_Images/Kosy Enterprise weiß.svg"/>
+</a>
+    Anwenderdokumentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Allgemein
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Allgemein
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Allgemeine%20Hinweise/">
+<span class="md-ellipsis">
+    Allgemeine Hinweise
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Starten%20des%20Programms/">
+<span class="md-ellipsis">
+    Starten des Programms
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Anmeldung/">
+<span class="md-ellipsis">
+    Anmeldung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Navigation%20im%20Programm/">
+<span class="md-ellipsis">
+    Navigation im Programm
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Meldungen/">
+<span class="md-ellipsis">
+    Meldungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Programm%20beenden/">
+<span class="md-ellipsis">
+    Programm beenden
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Installationshinweise/">
+<span class="md-ellipsis">
+    Installationshinweise
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Anwendung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Anwendung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Programmoberfläche und Fachbegriffe
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            Programmoberfläche und Fachbegriffe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Startbildschirm/">
+<span class="md-ellipsis">
+    Startbildschirm
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Programmbereiche/">
+<span class="md-ellipsis">
+    Programmbereiche 
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Eigenschaften/">
+<span class="md-ellipsis">
+    Eigenschaften
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Maskenansichten/">
+<span class="md-ellipsis">
+    Maskenansichten und Standardmaske
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Rechte/">
+<span class="md-ellipsis">
+    Rechte
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Strukturb%C3%A4ume%20und%20Strukturen/">
+<span class="md-ellipsis">
+    Strukturbäume und Strukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Direktauswahlen/">
+<span class="md-ellipsis">
+    Direktauswahlen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Programmfunktionen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Programmfunktionen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Ergebnisse%20anzeigen/">
+<span class="md-ellipsis">
+    Ergebnisse anzeigen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Daten%20erfassen/">
+<span class="md-ellipsis">
+    Daten erfassen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Strukturen%20pflegen/">
+<span class="md-ellipsis">
+    Strukturen pflegen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Daten%20austauschen/">
+<span class="md-ellipsis">
+    Daten austauschen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Pflege
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Pflege
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Personalisierung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+            Personalisierung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Typen/">
+<span class="md-ellipsis">
+    Typen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Dateiattribute/">
+<span class="md-ellipsis">
+    Dateiattribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Listenarten%20und%20Listenansichten/">
+<span class="md-ellipsis">
+    Listenarten/Listenansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Dimensionsfelder/">
+<span class="md-ellipsis">
+    Dimensionsfelder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Buchungsfelder/">
+<span class="md-ellipsis">
+    Buchungsfelder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Sammlungen%20und%20Sammlungsauswahlen/">
+<span class="md-ellipsis">
+    Sammlungen/Sammlungsauswahlen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Feldvorlagen/">
+<span class="md-ellipsis">
+    Feldvorlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/pers%C3%B6nliche%20Ansichten/">
+<span class="md-ellipsis">
+    persönliche Ansichten
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Modellierung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Modellierung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Dimensionen/">
+<span class="md-ellipsis">
+    Dimensionen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Dateien/">
+<span class="md-ellipsis">
+    Dateien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Import/">
+<span class="md-ellipsis">
+    Import
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Ausgabe%20und%20Layout/">
+<span class="md-ellipsis">
+    Ausgabe/Layout
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Verteilung/">
+<span class="md-ellipsis">
+    Verteilung
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Verfeinerung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Verfeinerung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Standards/">
+<span class="md-ellipsis">
+    Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Umsetzungen/">
+<span class="md-ellipsis">
+    Umsetzungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Ergebnisarten%20und%20Umrechnungen/">
+<span class="md-ellipsis">
+    Ergebnisarten/Umrechnungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Exportvorgaben/">
+<span class="md-ellipsis">
+    Exportvorgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Dateistrukturen/">
+<span class="md-ellipsis">
+    Dateistrukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Grafik/">
+<span class="md-ellipsis">
+    Grafik
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Berichte/">
+<span class="md-ellipsis">
+    Berichte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    inhaltliche Administration
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            inhaltliche Administration
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Zuordnungen/">
+<span class="md-ellipsis">
+    Zuordnungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Einstellungen/">
+<span class="md-ellipsis">
+    Einstellungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Benutzerverwaltung/">
+<span class="md-ellipsis">
+    Benutzerverwaltung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Berechtigungskonzept/">
+<span class="md-ellipsis">
+    Berechtigungskonzept
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Aufgaben/">
+<span class="md-ellipsis">
+    Aufgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Dashboards%20und%20Startseiten/">
+<span class="md-ellipsis">
+    Dashboards/Startseiten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Zeitpl%C3%A4ne/">
+<span class="md-ellipsis">
+    Zeitpläne
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Planung/">
+<span class="md-ellipsis">
+    Planung
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    technische Administration
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            technische Administration
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../technische_Administration/Einstellungen%20im%20Programm/">
+<span class="md-ellipsis">
+    Einstellungen im Programm
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../technische_Administration/Serveradministration/">
+<span class="md-ellipsis">
+    Serveradministration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../technische_Administration/Onlinebericht/">
+<span class="md-ellipsis">
+    Onlinebericht
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Funktionen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Funktionen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/">
+<span class="md-ellipsis">
+    1 Verwaltung
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_1">
+<span class="md-nav__icon md-icon"></span>
+            1 Verwaltung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Module/">
+<span class="md-ellipsis">
+    1.1 Module
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Mandanten/">
+<span class="md-ellipsis">
+    1.2 Mandanten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Benutzer/">
+<span class="md-ellipsis">
+    1.3 Benutzer
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Gruppen/">
+<span class="md-ellipsis">
+    1.4 Gruppen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Typen/">
+<span class="md-ellipsis">
+    1.5 Typen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Rechte/">
+<span class="md-ellipsis">
+    1.6 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/">
+<span class="md-ellipsis">
+    2 Dimensionen
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_2">
+<span class="md-nav__icon md-icon"></span>
+            2 Dimensionen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/Planungseinheiten/">
+<span class="md-ellipsis">
+    2.1 Planungseinheiten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/Konten/">
+<span class="md-ellipsis">
+    2.2 Konten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/Zeit/">
+<span class="md-ellipsis">
+    2.3 Zeit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/Segmente/">
+<span class="md-ellipsis">
+    2.4 Segmente
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/Buchungsfelder/">
+<span class="md-ellipsis">
+    2.5 Buchungsfelder
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/">
+<span class="md-ellipsis">
+    3 Dateien
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_3">
+<span class="md-nav__icon md-icon"></span>
+            3 Dateien
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/%C3%9Cbersicht%20der%20Dateien/">
+<span class="md-ellipsis">
+    3.1 Übersicht der Dateien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Dateisammlungen/">
+<span class="md-ellipsis">
+    3.2 Dateisammlungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Dateistrukturen/">
+<span class="md-ellipsis">
+    3.3 Dateistrukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Dateiattribute/">
+<span class="md-ellipsis">
+    3.4 Dateiattribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Rechte%20auf%20Dateien/">
+<span class="md-ellipsis">
+    3.5 Rechte auf Dateien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Rechte%20auf%20Dateisammlungen/">
+<span class="md-ellipsis">
+    3.6 Rechte auf Dateisammlungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Rechte%20auf%20Dateistrukturen/">
+<span class="md-ellipsis">
+    3.7 Rechte auf Dateistrukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Rechte%20auf%20Dateiattribute/">
+<span class="md-ellipsis">
+    3.8 Rechte auf Dateiattribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Dimensionszuordnungen/">
+<span class="md-ellipsis">
+    3.9 Dimensionszuordnungen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/">
+<span class="md-ellipsis">
+    4 Eingabe
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_4">
+<span class="md-nav__icon md-icon"></span>
+            4 Eingabe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Dateneingabe/">
+<span class="md-ellipsis">
+    4.1 Dateneingabe
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Korrekturen/">
+<span class="md-ellipsis">
+    4.2 Korrekturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Standards/">
+<span class="md-ellipsis">
+    4.3 Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Schnellansichten/">
+<span class="md-ellipsis">
+    4.5 Schnellansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Planung/">
+<span class="md-ellipsis">
+    4.6 Planung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Rechte/">
+<span class="md-ellipsis">
+    4.7 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/">
+<span class="md-ellipsis">
+    5 Verteilung
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_5">
+<span class="md-nav__icon md-icon"></span>
+            5 Verteilung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Verteilungsschl%C3%BCssel/">
+<span class="md-ellipsis">
+    5.1 Verteilungsschlüssel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Szenarien/">
+<span class="md-ellipsis">
+    5.2 Szenarien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Saisonverteilung/">
+<span class="md-ellipsis">
+    5.3 Saisonverteilung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Prim%C3%A4rkostenumlage/">
+<span class="md-ellipsis">
+    5.4 Primärkostenumlage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Sekund%C3%A4rkostenumlage/">
+<span class="md-ellipsis">
+    5.5 Sekundärkostenumlage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Verteilungs%C3%BCbersicht/">
+<span class="md-ellipsis">
+    5.6 Verteilungsübersicht
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Rechte/">
+<span class="md-ellipsis">
+    5.7 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/">
+<span class="md-ellipsis">
+    6 Ausgabe
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_6">
+<span class="md-nav__icon md-icon"></span>
+            6 Ausgabe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Ergebnisse/">
+<span class="md-ellipsis">
+    6.1 Ergebnisse
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Anteilstabelle/">
+<span class="md-ellipsis">
+    6.2 Anteilstabelle
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Hitliste/">
+<span class="md-ellipsis">
+    6.3 Hitliste
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/ABC-Analyse/">
+<span class="md-ellipsis">
+    6.4 ABC-Analyse
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Verteilungsansicht/">
+<span class="md-ellipsis">
+    6.5 Verteilungsansicht
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Grafiken/">
+<span class="md-ellipsis">
+    6.6 Grafiken
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Berichte/">
+<span class="md-ellipsis">
+    6.7 Berichte
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Schnellansichten/">
+<span class="md-ellipsis">
+    6.8 Schnellansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Dashboards/">
+<span class="md-ellipsis">
+    6.9 Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Startseiten/">
+<span class="md-ellipsis">
+    6.10 Startseiten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Ergebnisarten/">
+<span class="md-ellipsis">
+    6.11 Ergebnisarten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Rechte/">
+<span class="md-ellipsis">
+    6.12 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Layout/">
+<span class="md-ellipsis">
+    7 Layout
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_7" id="__nav_7_7_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_7">
+<span class="md-nav__icon md-icon"></span>
+            7 Layout
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Listen/">
+<span class="md-ellipsis">
+    7.1 Listen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Direktauswahlen/">
+<span class="md-ellipsis">
+    7.2 Direktauswahlen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Sammlungsauswahlen/">
+<span class="md-ellipsis">
+    7.3 Sammlungsauswahlen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Listenformate/">
+<span class="md-ellipsis">
+    7.4 Listenformate
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Umrechnungen/">
+<span class="md-ellipsis">
+    7.5 Umrechnungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Exportvorgaben/">
+<span class="md-ellipsis">
+    7.6 Exportvorgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Kopf-%20und%20Fu%C3%9Fzeilen/">
+<span class="md-ellipsis">
+    7.7 Kopf- und Fußzeilen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Listenansichten/">
+<span class="md-ellipsis">
+    7.8 Listenansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Listenarten/">
+<span class="md-ellipsis">
+    7.9 Listenarten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Formatvorlagen/">
+<span class="md-ellipsis">
+    7.10 Formatvorlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Feldvorlagen/">
+<span class="md-ellipsis">
+    7.11 Feldvorlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Rechte/">
+<span class="md-ellipsis">
+    7.12 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Transfer/">
+<span class="md-ellipsis">
+    8 Transfer
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_8">
+<span class="md-nav__icon md-icon"></span>
+            8 Transfer
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Transfer/Importe/">
+<span class="md-ellipsis">
+    8.1 Importe
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Transfer/Umsetzungen/">
+<span class="md-ellipsis">
+    8.3 Umsetzungen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Extras/">
+<span class="md-ellipsis">
+    9 Extras
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_9">
+<span class="md-nav__icon md-icon"></span>
+            9 Extras
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Extras/Aufgaben/">
+<span class="md-ellipsis">
+    9.1 Aufgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Extras/Einstellungen/">
+<span class="md-ellipsis">
+    9.3 Einstellungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Extras/Onlinebericht/">
+<span class="md-ellipsis">
+    9.4 Onlinebericht
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Extras/Expertenmodus%20ein-%20und%20ausschalten/">
+<span class="md-ellipsis">
+    Expertenmodus ein-/ausschalten
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/10%20Hilfe/">
+<span class="md-ellipsis">
+    10 Hilfe
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Anhang
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Anhang
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Tastenkombinationen/">
+<span class="md-ellipsis">
+    Tastaturbefehle
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Platzhalter/">
+<span class="md-ellipsis">
+    Platzhalter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Zugriffsrechte/">
+<span class="md-ellipsis">
+    Zugriffsrechte
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/berechnungsrelevante_Felder/">
+<span class="md-ellipsis">
+    berechnungsrelevante Felder
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Rechenregelübersicht
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_5">
+<span class="md-nav__icon md-icon"></span>
+            Rechenregelübersicht
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Wenn/">
+<span class="md-ellipsis">
+    Wenn
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Wert%20und%20Eingabewert/">
+<span class="md-ellipsis">
+    Wert/Eingabewert
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/IstAktuellesElement/">
+<span class="md-ellipsis">
+    IstAktuellesElement
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Versatz/">
+<span class="md-ellipsis">
+    Versatz
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Kumulieren/">
+<span class="md-ellipsis">
+    Kumulieren
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/MittelwertSignifikant/">
+<span class="md-ellipsis">
+    MittelwertSignifikant
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Summe/">
+<span class="md-ellipsis">
+    Summe
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/LetzterSignifikanterWert/">
+<span class="md-ellipsis">
+    LetzterSignifikanterWert
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Runden/">
+<span class="md-ellipsis">
+    Runden
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Reguläre Ausdrücke
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_6">
+<span class="md-nav__icon md-icon"></span>
+            Reguläre Ausdrücke
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Regul%C3%A4re%20Ausdr%C3%BCcke/">
+<span class="md-ellipsis">
+    Allgemeines
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Vordefinierte%20Zeichenklassen/">
+<span class="md-ellipsis">
+    Vordefinierte Zeichenklassen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Wiederholungsfaktoren%20und%20Operatoren/">
+<span class="md-ellipsis">
+    Wiederholungsfaktoren/Operatoren
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Anwendungsbeispiele/">
+<span class="md-ellipsis">
+    Anwendungsbeispiele
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Startparameter/">
+<span class="md-ellipsis">
+    Startparameter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Konfigurationseinstellungen%20%28Kosy.ini%29/">
+<span class="md-ellipsis">
+    Konfigurationseinstellungen (Kosy.ini)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    History
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            History
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.2.2.0/">
+<span class="md-ellipsis">
+    6.2.2.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.2.1.1/">
+<span class="md-ellipsis">
+    6.2.1.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.2.1.0/">
+<span class="md-ellipsis">
+    6.2.1.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.2.0.0/">
+<span class="md-ellipsis">
+    6.2.0.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.1.1/">
+<span class="md-ellipsis">
+    6.1.1.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.1.0/">
+<span class="md-ellipsis">
+    6.1.1.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.0.3/">
+<span class="md-ellipsis">
+    6.1.0.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.0.2/">
+<span class="md-ellipsis">
+    6.1.0.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.0.1/">
+<span class="md-ellipsis">
+    6.1.0.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.0.0/">
+<span class="md-ellipsis">
+    6.1.0.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.9/">
+<span class="md-ellipsis">
+    6.0.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.8/">
+<span class="md-ellipsis">
+    6.0.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.7/">
+<span class="md-ellipsis">
+    6.0.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.6/">
+<span class="md-ellipsis">
+    6.0.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.5/">
+<span class="md-ellipsis">
+    6.0.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.4/">
+<span class="md-ellipsis">
+    6.0.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.3/">
+<span class="md-ellipsis">
+    6.0.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.2/">
+<span class="md-ellipsis">
+    6.0.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.1/">
+<span class="md-ellipsis">
+    6.0.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.0/">
+<span class="md-ellipsis">
+    6.0.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.5/">
+<span class="md-ellipsis">
+    5.6.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.4/">
+<span class="md-ellipsis">
+    5.6.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.3/">
+<span class="md-ellipsis">
+    5.6.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.2/">
+<span class="md-ellipsis">
+    5.6.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.1/">
+<span class="md-ellipsis">
+    5.6.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.0/">
+<span class="md-ellipsis">
+    5.6.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.7/">
+<span class="md-ellipsis">
+    5.5.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.6/">
+<span class="md-ellipsis">
+    5.5.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.5/">
+<span class="md-ellipsis">
+    5.5.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.4/">
+<span class="md-ellipsis">
+    5.5.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.3/">
+<span class="md-ellipsis">
+    5.5.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.2/">
+<span class="md-ellipsis">
+    5.5.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.1/">
+<span class="md-ellipsis">
+    5.5.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.0/">
+<span class="md-ellipsis">
+    5.5.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.9/">
+<span class="md-ellipsis">
+    5.4.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.8/">
+<span class="md-ellipsis">
+    5.4.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.7/">
+<span class="md-ellipsis">
+    5.4.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.6/">
+<span class="md-ellipsis">
+    5.4.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.5/">
+<span class="md-ellipsis">
+    5.4.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.4/">
+<span class="md-ellipsis">
+    5.4.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.3/">
+<span class="md-ellipsis">
+    5.4.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.2/">
+<span class="md-ellipsis">
+    5.4.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.1/">
+<span class="md-ellipsis">
+    5.4.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.0/">
+<span class="md-ellipsis">
+    5.4.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.9/">
+<span class="md-ellipsis">
+    5.3.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.8/">
+<span class="md-ellipsis">
+    5.3.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.7/">
+<span class="md-ellipsis">
+    5.3.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.6/">
+<span class="md-ellipsis">
+    5.3.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.5/">
+<span class="md-ellipsis">
+    5.3.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.4/">
+<span class="md-ellipsis">
+    5.3.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.3/">
+<span class="md-ellipsis">
+    5.3.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.2/">
+<span class="md-ellipsis">
+    5.3.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.1/">
+<span class="md-ellipsis">
+    5.3.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.0/">
+<span class="md-ellipsis">
+    5.3.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.9/">
+<span class="md-ellipsis">
+    5.2.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.8/">
+<span class="md-ellipsis">
+    5.2.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.7/">
+<span class="md-ellipsis">
+    5.2.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.6/">
+<span class="md-ellipsis">
+    5.2.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.5/">
+<span class="md-ellipsis">
+    5.2.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.4/">
+<span class="md-ellipsis">
+    5.2.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.3/">
+<span class="md-ellipsis">
+    5.2.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.2/">
+<span class="md-ellipsis">
+    5.2.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.1/">
+<span class="md-ellipsis">
+    5.2.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.0/">
+<span class="md-ellipsis">
+    5.2.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.9/">
+<span class="md-ellipsis">
+    5.1.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.8/">
+<span class="md-ellipsis">
+    5.1.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.7/">
+<span class="md-ellipsis">
+    5.1.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.6/">
+<span class="md-ellipsis">
+    5.1.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.5/">
+<span class="md-ellipsis">
+    5.1.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.4/">
+<span class="md-ellipsis">
+    5.1.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.3/">
+<span class="md-ellipsis">
+    5.1.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.2/">
+<span class="md-ellipsis">
+    5.1.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.1/">
+<span class="md-ellipsis">
+    5.1.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.0/">
+<span class="md-ellipsis">
+    5.1.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.9/">
+<span class="md-ellipsis">
+    5.0.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.8/">
+<span class="md-ellipsis">
+    5.0.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.7/">
+<span class="md-ellipsis">
+    5.0.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.6/">
+<span class="md-ellipsis">
+    5.0.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.5/">
+<span class="md-ellipsis">
+    5.0.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.4/">
+<span class="md-ellipsis">
+    5.0.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.3/">
+<span class="md-ellipsis">
+    5.0.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.2/">
+<span class="md-ellipsis">
+    5.0.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.1/">
+<span class="md-ellipsis">
+    5.0.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.0/">
+<span class="md-ellipsis">
+    5.0.0
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5647">
+<span class="md-ellipsis">
+      5.6.4.7
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5646">
+<span class="md-ellipsis">
+      5.6.4.6
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5645">
+<span class="md-ellipsis">
+      5.6.4.5
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5644">
+<span class="md-ellipsis">
+      5.6.4.4
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5643">
+<span class="md-ellipsis">
+      5.6.4.3
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5642">
+<span class="md-ellipsis">
+      5.6.4.2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5641">
+<span class="md-ellipsis">
+      5.6.4.1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5640">
+<span class="md-ellipsis">
+      5.6.4.0
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5640-rc6">
+<span class="md-ellipsis">
+      5.6.4.0 RC6
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5640-rc5">
+<span class="md-ellipsis">
+      5.6.4.0 RC5
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5640-rc4">
+<span class="md-ellipsis">
+      5.6.4.0 RC4
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5640-rc3">
+<span class="md-ellipsis">
+      5.6.4.0 RC3
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5640-rc2">
+<span class="md-ellipsis">
+      5.6.4.0 RC2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5640-rc1">
+<span class="md-ellipsis">
+      5.6.4.0 RC1
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="_1"></h1>
+<div class="pdf-button no-print"><button class="pdf-button"><a class="md-icon" href="../../pdf/Kosy Enterprise History - Release-Zweig 5.6.4.pdf" target="_blank" title="PDF"><img class="pdf-button" src="../../_Images/PDF.svg"/></a></button></div>
+<h2 id="5647"><span class="versionsNumber" id="5.6.4.7">5.6.4.7</span></h2>
+<p style="text-align: left">27.11.2017 11:50<span style="float:right;">Revision 55367</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Assistent: auch bei Änderung durch Auswahl von "Einstellung nicht verändern" sind die Buttons "Änderungen übernehmen" und "Änderungen verwerfen" aktiv (sodass insbesondere die aktuelle Änderung tatsächlich übernommen werden kann)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="feature">Startseiten: beim Anzeigen der Hauptmaske (durch das Schließen der aktuellen Funktion) werden auch die Startseiten (automatisch) aktualisiert; insbesondere werden dadurch unter "Ausgabe &gt; Startseiten" getätigte Änderungen sofort sichtbar</li>
+<li class="feature">Startseiten: falls die zuletzt gewählte Startseite nach dem Start von Kosy für den aktuellen Benutzer nicht mehr verfügbar ist, wird sie korrekterweise nicht (mehr) angezeigt</li>
+<li class="feature">Startseiten: in den Titeln von Kacheln werden Tilde-Zeichenfolgen für Zeilenumbrüche unterstützt</li>
+<li class="feature">Startseiten: während der Navigation in und aus Kachelordnern flackert das Steuerelement zur Auswahl der Startseiten nicht mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: vor dem Kopieren mehrerer Listen werden die Listen (zur Prüfung der Verwendung) nicht mehr einzeln fokussiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: nach einem Seitenumbruch hinter einem eingebundenen Dokument wird das vorherige Seitenlayout (Hochformat bzw. Querformat) (wieder) korrekt übernommen</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="bug">bei eingeschaltetem MultiThreading (siehe Konfigurationsdatei "Kosy.ini", Abschnitt "[Import]", Einstellung "MultiThreading=1") kommt es nicht mehr zu sporadischen Zugriffsverletzungen (beim Lesen von "TImportColumns.Import")</li>
+</ul>
+<h2 id="5646"><span class="versionsNumber" id="5.6.4.6">5.6.4.6</span></h2>
+<p style="text-align: left">20.11.2017 09:58<span style="float:right;">Revision 55195</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="feature">Installation &amp; Update: der Registry-Eintrag "Desktop Heap für Services" (in HKEY_LOCAL_MACHINE) wird (einmalig) automatisch auf einen Wert von 1536 angehoben (falls notwendig)</li>
+<li class="bug">beim Programmstart erscheint (durch eine verfrühte Aktualisierung der Schnellansichten) keine Zugriffsverletzung mehr</li>
+</ul>
+<h2 id="5645"><span class="versionsNumber" id="5.6.4.5">5.6.4.5</span></h2>
+<p style="text-align: left">17.11.2017 17:16<span style="float:right;">Revision 55179</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="feature">Platzhalter: die Performance beim Auswerten von Platzhaltern wurde optimiert; insbesondere werden durch "&lt;|&gt;" und durch Verweise auf nicht vorhandene Dimensionsfelder (durch einen Caching- Mechanismus) keine unnötigen Datenbankabfragen mehr ausgeführt</li>
+<li class="feature">Fortschrittsdialoge: sämtliche Fortschrittsdialoge starten (aus Performance-Gründen) immer zugeklappt; insbesondere wird der letzte vom Benutzer gewählte Klappzustand nicht (mehr) wiederhergestellt</li>
+<li class="feature">Fortschrittsdialoge: das Aufklappen der Fortschrittsdialoge ist nicht mehr animiert und dadurch deutlich schneller</li>
+<li class="feature">die Anmeldung und der Wechsel in einen Mandanten mit vielen Schnellansichten dauert nicht mehr mehrere Minuten; insbesondere bleibt bei der Anmeldung der Startbildschirm nicht mehr mehrere Minuten bei "89 %" stehen, falls solch ein Mandant (initial) geladen wird</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="feature">Schnellansichten: das Laden der Schnellansichten wurde signifikant beschleunigt</li>
+<li class="feature">Schnellansichten: die Schnellansichten werden nur (noch) aktualisiert, wenn der Bereich aufgeklappt ist</li>
+<li class="feature">Schnellansichten: die Schnellansichten werden bei Überschreitung von 30 Schnellansichten nur (noch) geladen und angezeigt, wenn der Anwender dies durch Anklicken des Buttons "jetzt aktualisieren" explizit wünscht</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">Optionen: bei Verwendung der Funktion "Verteilungsschlüssel kopieren" werden auch dann die Verteilungswerte kopiert, wenn in den zugehörigen Verteilungsschlüssel (bereits) die abgebenden Elemente ausgewählt wurden</li>
+<li class="bug">Zuordnungen: bei Verwendung der Funktion "Verteilungsschlüssel kopieren" wird hinter der Beschriftung "Verteilungsschlüssel zur Datei" der Name der Datei angezeigt (anstatt nichts)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Assistent: beim Bearbeiten eines Stammsatzes und bei der Auswahl der Zusatzspalten werden (zusätzlich zu den individuellen Dimensionsfeldern) lediglich die der Datei zugewiesenen globalen Dimensionsfelder (anstatt alle globalen Dimensionsfelder) angezeigt</li>
+<li class="feature">Ebby-Export: der KTF-Header wird nur noch dann hinzugefügt, wenn als Dateiendung ".ktf" gewählt ist; insbesondere wird der KTF-Header (zusätzlich zur Dateiendung ".csv") für die Dateiendungen ".txt" und ".prn" weggelassen</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.5 Verteilungsansicht</span></p>
+<ul>
+<li class="bug">auch bei Verwendung der Verteilungsschichtung "2 : vorberechnen" (in der zugehörigen Ergebnisart) werden die geschichteten Ergebnisse auf allen relevanten Elementen angezeigt (anstatt auf manchen Elementen nicht "geschichtet" zu werden)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="bug">Grafik: der Abstand zwischen der Grafik und er zugehörigen Wertetabelle wurde optimiert; insbesondere ist der Abstand nicht mehr "unnötig groß"</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Bericht: innerhalb der Bausteine vom Typ "Liste" und "Grafik" wird beim Wechsel der Datei die Liste resp. Grafik nur dann auf "&lt; leer &gt;" zurückgesetzt, wenn in der "neuen Datei" keine Liste resp. Grafik mit gleicher Kurzbezeichnung vorhanden ist</li>
+<li class="bug">Reportgenerator: beim Generieren bleibt Kosy nicht mehr u.U. mit der Meldung "Kosy® reagiert nicht" hängen, wenn Bausteine vom Typ "Dokument" die Option "neues Seitenlayout hinzufügen" verwenden; außerdem erscheint in diesem Fall nicht mehr u.U. die Warnung "Zu wenig Arbeitsspeicher."</li>
+<li class="bug">Reportgenerator: bei Verwendung der Option "aktuelle Formatvorlage beibehalten" werden auch Einstellungen für Bereiche und Tabellen (aus der zugehörige Feldvorlage) korrekt übernommen</li>
+<li class="feature">Reportgenerator: für Bausteine vom Typ "Grafik" wurde der Abstand zwischen der Grafik und er zugehörigen Wertetabelle optimiert; insbesondere ist der Abstand nicht mehr "unnötig groß"</li>
+<li class="feature">Reportgenerator: für Bausteine vom Typ "Dokument" werden bei Verwendung der Funktion "die […] markierten Bausteine generieren" die Platzhalter des zugehörigen Dokuments (korrekterweise) nur dann ersetzt, wenn der Baustein tatsächlich markiert ist</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.9 Dashboards</span></p>
+<ul>
+<li class="feature">für Widgets der Art "Text" wird in der Spalte "Art" korrekterweise "Text" angezeigt (anstatt "&lt; ??? &gt;")</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1 Aufgaben</span></p>
+<ul>
+<li class="feature">Export: der KTF-Header wird nur noch dann hinzugefügt, wenn als Dateiendung ".ktf" gewählt ist; insbesondere wird der KTF-Header (zusätzlich zur Dateiendung ".csv") für die Dateiendungen ".txt" und ".prn" weggelassen</li>
+</ul>
+<h2 id="5644"><span class="versionsNumber" id="5.6.4.4">5.6.4.4</span></h2>
+<p style="text-align: left">06.11.2017 16:40<span style="float:right;">Revision 55018</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: der Titel der Hauptspalte wird (wieder) über alle Unterspalten ausgedehnt (anstatt bei jeder Unterspalte wiederholt zu werden)</li>
+</ul>
+<h2 id="5643"><span class="versionsNumber" id="5.6.4.3">5.6.4.3</span></h2>
+<p style="text-align: left">06.11.2017 15:33<span style="float:right;">Revision 55013</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Berechnung: bei Verwendung der Berechnungsart "intelligent" erscheint keine Zugriffsverletzung im Schritt " 5.5 Aufbau der Basisabhängigkeiten" mehr</li>
+<li class="bug">beim Beenden von Kosy erscheint keine sporadische Zugriffsverletzung (durch Aktualisierung der Hauptmaske) mehr</li>
+<li class="bug">Berechnung: für Ergebnisarten ohne "primäre Buchungen" (z.B. "005 : nur Umlage") werden die Werte gemäß der Abbruchkriterien der zugehörigen Verteilungsarten (anstatt grundsätzlich auf zwei Nachkommastellen) gerundet; so wird bspw. bei Verwendung des Abbruchkriteriums "0,00005" auf vier Nachkommastellen gerundet</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">Kopiervorgang (Werte): die Formatierung der Meldungen über "fehlende Zuordnungen" wurde überarbeitet; insbesondere wird die Bezeichnung der Verbindungskette korrekterweise als "Quelldatei@Zieldatei" angezeigt (anstatt fälschlicherweise als "Zieldatei@Quelldatei")</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste. bei Eingabe einer Fließkommazahl ohne führende Null (z.B. ",12" oder "-,34") wird die Eingabe nicht mehr als Ganzzahl interpretiert (also z.B. "12" resp. " <span style="font-variant: small-caps; font-weight: bold">34"), sondern (korrekterweise) als Fließkommazahl (also z.B. "0,12" resp. "- 0,34")</span></li>
+<li class="bug">PDF-Export: beim Export einer Liste mit Unterspalten ragen die Beschriftungen der Hauptspalten nicht mehr nach oben aus der Liste heraus</li>
+<li class="bug">Liste: beim Öffnen einer Liste mit Unterspalten stürzt Kosy nicht mehr mit der Windows-Fehlermeldung "Kosy® funktioniert nicht mehr" ab, falls die Option "Spaltenansicht &gt; Verdichtungen" aktiv ist</li>
+<li class="bug">Ebby-Export: der Dateiname wird nicht mehr (ungewollt) um die Dateiendung ".ktf" erweitert, falls die verwendete Dateiendung auf dem aktuellen System keine registrierte Anwendung besitzt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe, 6.7 Berichte</span></p>
+<ul>
+<li class="bug">Liste: Schriftgrößen werden (am Bildschirm, im Druck, beim Tabellenkalkulation-Export und im Reportgenerator) korrekt umgerechnet</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe, 7.4 Listenformate</span></p>
+<ul>
+<li class="bug">Liste: innerhalb der Formatanweisungen wird die Einschränkung auf die Dimensionssammlung nur dann angewendet, wenn die Listendimension nicht auf "&lt; inaktiv &gt;" eingestellt ist; insbesondere werden die Formatanweisungen damit (wieder) "wie vor Version 5.6.4.0 RC1" ausgewertet</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: die Titelspalte für die Zeilenüberschriften wird (wieder) korrekt ermittelt</li>
+<li class="bug">Reportgenerator: in der Kopf- und Fußzeile werden Bilder und Logos über Platzhalter (z.B. "<mandant. bild="">") (wieder) korrekt dargestellt; insbesondere erscheint kein Fehlertext der Art "Das Bild kann nicht angezeigt werden." mehr</mandant.></li>
+</ul>
+<h2 id="5642"><span class="versionsNumber" id="5.6.4.2">5.6.4.2</span></h2>
+<p style="text-align: left">19.10.2017 11:03<span style="float:right;">Revision 54846</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Bildschirmfoto: die eingestellte Transparenz wird (wieder) auf das richtige Bildschirmfoto angewendet</li>
+<li class="bug">der Fortschrittsdialog bleibt nicht mehr u.U. "kurz vor dem Ende" stehen, wenn Kosy zu diesem Zeitpunkt nicht den Fokus besitzt; außerdem werden die Uhrzeiten im Fortschrittsdialog (wieder) korrekt aktualisiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">bei Änderung der Kurzbezeichnung im Assistenten erscheint die Abfrage zur Bestätigung (korrekterweise) nur noch einmal (anstatt zweimal)</li>
+<li class="bug">Liste: die Formatierungen zum Schriftschnitt (z.B. fett oder kursiv) werden im Spaltentitel auch dann vollständig angewendet, wenn Basisformatierungen (z.B. "Kurzbezeichnung fett" oder "Alternativtitel kursiv") enthalten sind</li>
+<li class="bug">Liste: im Spaltenbereich sind Unterelemente auch dann sichtbar, wenn nicht-sichtbare übergeordnete Elemente zuvor zugeklappt worden sind</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.2 Korrekturen</span></p>
+<ul>
+<li class="bug">das Tastenkürzel [Strg+Einf] zum Anlegen einer Korrektur mit Hilfe des Assistenten ist (wieder) funktionsfähig</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5.6 Verteilungsübersicht</span></p>
+<ul>
+<li class="bug">beim Wechsel auf die Registerkarte "Primärkostenumlage" erscheint keine Fehlermeldung "Assertion fehlgeschlagen (mTupleRoutines, Zeile 401)" mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Bericht: in Bausteinen vom Typ "Iteration" wird in den Direktauswahlen die Anzahl der ausgewählten Elemente korrekt angezeigt (anstatt stets "0")</li>
+<li class="bug">Reportgenerator: Platzhalter der Form "<liste.[…]>" werden stets korrekt ausgewertet (insbesondere dann, wenn sie im Kontext einer Liste verwendet werden)</liste.[…]></li>
+<li class="bug">Reportgenerator: Platzhalter innerhalb der Kopf- und Fußzeilen werden stets ad-hoc ersetzt, d.h. bei jedem Bereichsumbruch werden die die Platzhalter gemäß dem aktuellen Kontext ausgewertet</li>
+<li class="bug">Reportgenerator: das Ändern der Schriftart einer Liste erfolgt über die Formatvorlagen "Tabelleninhalt" oder "KosyTableContent"; außerdem kann die zuvor übliche Formatvorlage "KosyDefaultParagraph" wieder angewendet werden</li>
+<li class="bug">Reportgenerator: auch für Bausteine vom Typ "Iteration" wird eine ggf. definierte Feldvorlage korrekt angewendet</li>
+<li class="bug">Reportgenerator: für Bausteine vom Typ "Liste" wird die Einstellung "Unterelemente einrücken" (wieder) berücksichtigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.10 Startseiten</span></p>
+<ul>
+<li class="bug">Startseite: im Assistenten "neue Kachel anlegen und hinzufügen" wird der Schritt "5.2 Datei" (bzw. "5.2 Dashboard") korrekt positioniert; außerdem wird dieser Schritt initial mit den passenden Einträgen zum aktuellen Mandanten belegt (sofern im Schritt "5.1 Mandant" der Eintrag "&lt; automatisch &gt;" ausgewählt ist)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1.1 Dateiimporte</span></p>
+<ul>
+<li class="bug">Buchungssatzimport: der Abschluss des Imports "hängt" nicht mehr (bei voller CPU-Last von Kosy), wenn Kosy zu diesem Zeitpunkt nicht den Fokus besitzt</li>
+<li class="feature">das Caching der Dimensionsfeldinhalte wird (korrekterweise) gar nicht erst initialisiert, wenn aufgrund der verwendeten Einstellung zur "Aggregation" sowieso keine Dimensionsfeldinhalte importiert werden</li>
+</ul>
+<h2 id="5641"><span class="versionsNumber" id="5.6.4.1">5.6.4.1</span></h2>
+<p style="text-align: left">12.10.2017 18:34<span style="float:right;">Revision 54730</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Assistent: in den Auswahlboxen wird der aktuell gewählte Eintrag auch dann (wieder) sofort angezeigt, wenn es sich um den ersten Eintrag der Auswahlliste handelt; insbesondere bleibt in diesem Fall der angezeigte Inhalt zum gewählten Element nicht mehr leer</li>
+<li class="bug">eine Konvertierung der Datenbank auf Version 564 ist auch dann möglich, wenn gelöschte Dateiverbindungen in Mandantenaufgaben oder Mandantenimporten verwendet (d.h. referenziert) werden; insbesondere erscheint in diesem Fall keine Fehlermeldung der Art "ExecuteError in Zeile 33.447. Fehler: Die Datensatzreferenz ist ungültig. At Trigger 'K_TASK_CLT_CHKRECREF' …" mehr</li>
+<li class="bug">Berechnung: während der Berechnung wird der Maskenhintergrund nicht (mehr) irrtümlich aktualisiert; insbesondere wird die Berechnung nicht durch ungewolltes Neuzeichnen der Maske verlangsamt und es erscheint in diesem Fall keine sporadische Zugriffsverletzung mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.1 Planungsstrukturen, 2.2.1 Kontostrukturen, 2.3.1 Zeitstrukturen, 2.4.1 Segmentstrukturen</span></p>
+<ul>
+<li class="bug">Rechenregeln: bei der Verwendung mehrerer Monitore ragt das Fenster "Eingabehilfe" nicht mehr ggf. rechts über den aktuellen Monitor hinaus (auf den zweiten Monitor)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: Spalten können auch dann zusammengeklappt werden, wenn alle direkten Unterelemente nicht sichtbar sind; so kann z.B. die Zeiteinheit "J.GESAMT" auch dann zugeklappt werden, wenn die Quartale "Q.1" bis "Q.4" in den Spalten (z.B. über die Direktauswahl) nicht angezeigt werden (die Monate "M.01" bis "M.12" aber schon)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: die Formatierung der Endnotenzeichen wird nicht (mehr) mit einer Einrückung versehen; insbesondere sind die Endnotenzeichen in der Liste stets sichtbar</li>
+<li class="bug">Reportgenerator: auch die End- und Fußnoten werden (analog zu den Einträgen innerhalb der Liste) skaliert</li>
+<li class="bug">Reportgenerator: beim Generieren eines einzelnen Bausteins vom Typ "Liste" im Kontext mit einer Feldvorlage erscheint keine Fehlermeldung der Art "wrong call order in the constructor sequence" oder "Zugriffsverletzung bei Adresse 018C2C13 in Modul 'Kosy.exe'. Lesen von Adresse 00000004" mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.10 Startseiten</span></p>
+<ul>
+<li class="bug">Startseite: nach dem Hinzufügen einer Kachel erscheint keine sporadische Zugriffsverletzung mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1.2 Mandantenimporte, 8.3.1 Mandantenumsetzungen</span></p>
+<ul>
+<li class="bug">die automatische Zielsuche für Stammsätze funktioniert auch dann (wieder) korrekt, wenn nicht der gesamte Bezeichner umgesetzt wird, sondern die Kurzbezeichnung ohne Typ bzw. getrennt vom Typ importiert wird</li>
+<li class="bug">in den Mandantenumsetzungen können als Tabellenbezug auch die Tabellen "2.1.1 Planungseinheiten zur Planungsstruktur", "2.2.1 Konten zur Kontostruktur", "2.3.1 Zeiteinheiten zur Zeitstruktur" und "2.4.1 Segmente zur Segmentstruktur" verwendet werden; insbesondere ist damit in den Mandantenimporten eine automatische Zielsuche für Strukturelemente (d.h. für Stammsätze einer vorgegebenen Struktur) möglich</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1.1 Dateiaufgaben</span></p>
+<ul>
+<li class="bug">Dateiaufgaben: beim Exportieren der Ausgabewerte wird auch die allererste Zelle des Datenwürfels exportiert (sofern dieser Wert ungleich Null ist); insbesondere fehlt in der Ausgabedatei nicht mehr u.U. ein (einziger) Wert</li>
+</ul>
+<h2 id="5640"><span class="versionsNumber" id="5.6.4.0">5.6.4.0</span></h2>
+<p style="text-align: left">29.09.2017 19:35<span style="float:right;">Revision 54532</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Tabellenansichten: das gleichzeitige Löschen mehrerer Datensätze (sog. MultiDelete) ist auch über das Tastenkürzel [Entf] (wieder) möglich; insbesondere wird beim Löschen mehrerer markierter Datensätze auch in diesem Fall nicht nur der fokussierte Datensatz tatsächlich gelöscht</li>
+<li class="bug">Strukturansichten: beim Fokussieren von Strukturelementen über den Navigationsmodus werden zugeklappte Teilstrukturen (wieder) bei Bedarf automatisch aufgeklappt; insbesondere werden bei Verwendung der Suchfunktion die "gefundenen Strukturelement" (wieder) korrekt "angesprungen"</li>
+<li class="feature">Tabellenansichten &amp; Liste: Sichtbarkeit und Wählbarkeit der Buttons (und bevorzugten Aktion) "Pivot-Export" und "Liste als Pivot-Tabelle exportieren" überarbeitet</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="bug">Startseiten: fehlerhaftes Layout korrigiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">PDF-Export: bei Verwendung der Option "Schriftarten einbetten" werden die verwendeten Schriftarten vollständig eingebunden (anstatt nur "symbolweise"); insbesondere werden in diesem Fall auch Zierschriftarten (Wingdings, Webdings, …) im erstellten PDF-Dokument korrekt dargestellt</li>
+<li class="bug">Liste: bei der automatischen Größenanpassung der Spaltentitel werden die Größeneinstellungen der zugehörigen Formatanweisungen (wieder) beachtet; insbesondere funktioniert die Berechnung der Höhe der Spaltenüberschriften (wieder) korrekt</li>
+<li class="bug">Liste: der Planungsstatus kann auch ohne eine Lizenz für "erweiterte Planung" (wieder) gesetzt werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="bug">beim Import von Dimensionsfeldinhalten werden tatsächlich fehlerhafte Feldinhalte (z.B. Buchstaben beim Feldtyp "Zahl") korrekt erkannt, sodass sie im Report zum Import korrekt (als fehlerhaft) ausgegeben werden</li>
+</ul>
+<h2 id="5640-rc6"><span class="versionsNumber" id="5.6.4.0RC6">5.6.4.0 RC6</span></h2>
+<p style="text-align: left">22.09.2017 07:26<span style="float:right;">Revision 54372</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export werden durch Zusatzspalten versteckte Wertespalten (korrekterweise) nicht (mehr) exportiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="feature">neuen Platzhalter "&lt;[…].Verdichtung&gt;" hinzugefügt; hierüber kann (in allen vier Dimensionen des aktuellen Kontextes) z.B. mittels "<planungseinheit.verdichtung>" auf das Verdichtungselement der aktuellen Planungseinheit zurückgegriffen werden; dabei sind außerdem Schachtelungen der Art "<planungseinheit.verdichtung.verdichtung>" (etc.) möglich</planungseinheit.verdichtung.verdichtung></planungseinheit.verdichtung></li>
+<li class="bug">Reportgenerator: beim Export von Listen wird in den Zellen der Werte nicht mehr (irrtümlich) Hintergrundfarbe der zugehörigen Maske verwendet</li>
+<li class="bug">Reportgenerator: beim Export von Listen wird keine Zelle (irrtümlich) als "fokussiert" hervorgehoben</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.10 Startseiten</span></p>
+<ul>
+<li class="feature">Startseite: Anzeige und Bearbeitung der Kacheln (weiter) optimiert</li>
+</ul>
+<h2 id="5640-rc5"><span class="versionsNumber" id="5.6.4.0RC5">5.6.4.0 RC5</span></h2>
+<p style="text-align: left">08.09.2017 15:09<span style="float:right;">Revision 54249</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: innerhalb der Teilstruktur der Ad-hoc-Unterzeilen wird auf Verdichtungselementen der Plus- Button stets korrekt angezeigt</li>
+</ul>
+<h2 id="5640-rc4"><span class="versionsNumber" id="5.6.4.0RC4">5.6.4.0 RC4</span></h2>
+<p style="text-align: left">08.09.2017 01:14<span style="float:right;">Revision 54233</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Tabellenansichten: beim Ein- und Ausschalten des Ad-hoc-Filters werden Änderungen am aktuellen Datensatz zunächst gespeichert (sodass sie durch das Umschalten des Filters nicht verloren gehen)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="feature">Startseiten: Färbung des seitlichen Panels überarbeitet, sodass die Färbung auch nach einem Wechsel des Moduls angepasst wird</li>
+<li class="feature">Startseiten: Hintergrundfarbe und Schriftfarbe der Kacheln optimiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Dualanzeige: Position des Buttons "Synchronisation" korrigiert</li>
+<li class="bug">Buchungsansicht: der Ad-hoc-Filter kann in der Spalte "Wert" auch mit Dezimalzahlen verwendet werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: beim Generieren wird die Schriftart "Standard" korrekt angewendet</li>
+<li class="bug">Reportgenerator: die Einstellungen für Bausteine vom Typ "Inhaltsverzeichnis" werden korrekt angewendet</li>
+<li class="bug">Reportgenerator: beim Export von Listen wird die Option "Zeilenmenü &gt; … &gt; Filter &gt; nur signifikante Elemente") auch dann korrekt berücksichtigt, wenn Zusatzspalten vorhanden sind</li>
+<li class="bug">Reportgenerator: der Export von Grafiken ist auch für die Reihenarten "Kreis" und "Ring" möglich; insbesondere erscheint in diesem Fall keine leere Fläche mehr</li>
+</ul>
+<h2 id="5640-rc3"><span class="versionsNumber" id="5.6.4.0RC3">5.6.4.0 RC3</span></h2>
+<p style="text-align: left">07.09.2017 06:21<span style="float:right;">Revision 54153</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="feature">in den Auswahlboxen zur "Schriftart" sind auch Zierschriftarten (Wingdings, Webdings, …) (durch die Verwendung der Standardschriftart) lesbar</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.1 Übersicht der Dateien</span></p>
+<ul>
+<li class="bug">beim Bearbeiten von Dateien wird die (interne) Mandantenreferenz nicht mehr irrtümlich geändert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: im Kontextmenü "Standardformatierung" sind auch Formatierungen mit Zierschriftarten (Wingdings, Webdings, …) (durch die Verwendung der Standardschriftart) lesbar</li>
+<li class="bug">Liste: die Formatierung der Rahmen der Hauptspalten wird (wieder) korrekt auf die zugehörigen Unterspalten ausgedehnt</li>
+<li class="bug">Liste: die Listeneinstellungen werden (wieder) geladen</li>
+<li class="bug">Ad-hoc-Grafik: in den Grafiken vom Typ „Balken“ werden positive Zahlen nicht mehr (fälschlicherwiese) nach unten (anstatt nach oben) gezeichnet</li>
+<li class="bug">Ad-hoc-Grafik: Grafiken der Typen "Fläche" und "Linie" werden (wieder) angezeigt; insbesondere erscheint kein Fehlertext "Fehler: Die Eigenschaft "replace" eines undefinierten oder Nullverweises kann nicht abgerufen werden." mehr</li>
+<li class="bug">beim Wechsel von Mandant bzw. Datei entstehen (auch bei geöffneter Maske) keine unvollständigen Bildaktualisierungen (sog. Artefakte)</li>
+<li class="bug">Liste: bei Verwendung der Option "Spaltenmenü &gt; … &gt; Unterelemente einrücken" werden auch nicht-sichtbare Hauptspalten korrekt berücksichtigt</li>
+<li class="feature">Liste: bei eingeschalteter Dualanzeige "Zellnotizen &gt; Übersicht (aktuelles Blatt)" wird der Inhalt der Dualanzeige (korrekterweise) lediglich bei einer Änderung von Blatt oder Stapel erneut ermittelt; insbesondere führt ein Fokuswechsel der Zelle (korrekterweise) nicht (mehr) zu einer (unnötigen) Aktualisierung der Dualanzeige</li>
+<li class="feature">Liste: bei eingeschalteter Dualanzeige "Zellnotizen &gt; Übersicht (alle)" wird der Inhalt der Dualanzeige (korrekterweise) bei keinem Fokuswechsel neu ermittelt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="bug">neue Strukturelemente werden nicht mehr mit dem fehlerhafte Ziel "{ -1 } - ungültig" angelegt; außerdem kann das fehlerhafte Ziel "{ -1 } - ungültig" (wieder) in "&lt; leer &gt;" (o.a.) korrigiert werden</li>
+<li class="bug">Datenquelle: bei Verwendung der Datenquelle "1 : Schnittstelle" erscheint beim Wechsel der Schnittstellen-DLL (im Schritt "Basissystem") keine Zugriffsverletzung mehr</li>
+</ul>
+<h2 id="5640-rc2"><span class="versionsNumber" id="5.6.4.0RC2">5.6.4.0 RC2</span></h2>
+<p style="text-align: left">05.09.2017 22:29<span style="float:right;">Revision 54092</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Assistent: der Expertenmodus kann (wieder) aktiviert werden</li>
+<li class="bug">beim Programmstart erscheint (im Schritt "Die Hauptmaske wird aufgebaut…") keiner Fehlermeldung "RichClientExternal undefined" (durch die Anzeige der Startseiten) mehr</li>
+<li class="bug">Berechnung: beim Auf- und Zuklappen der Teilfortschritte des Fortschrittdialogs während der Berechnung erscheint keine Zugriffsverletzung mehr</li>
+<li class="bug">sporadische Zugriffsverletzung beim Maskenwechsel (zwischen Funktionen mit Listen) behoben</li>
+<li class="feature">Pivot-Export: die durch eine unvollständige Einrichtung des Pivot-Connectors bedingten Fehlermeldungen überarbeitet</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="feature">Startseiten: Darstellung der Startseiten und Kacheln überarbeitet</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: durch Formateinstellungen definierte Rahmen berücksichtigen die Option "Spaltenmenü &gt; … &gt; Unterelemente einrücken"; insbesondere werden die Rahmen nicht mehr über die eingerückte Spalte hinaus gezeichnet</li>
+<li class="bug">Liste: bei der Verwendung von Zusatzspalten in Unterspalten ragt der obere Bereich der Zusatzspalte nicht mehr in die Hauptspalte</li>
+<li class="bug">Liste: die individuellen Zeilenformatierungen werden (wieder) auch auf die Zusatzspalten angewendet</li>
+<li class="bug">Liste: die Darstellungsart "Ad-hoc-Unterzeilen" ist auch für Verdichtungselemente möglich, die durch Filtereinstellungen auf unterster Ebene angezeigt werden</li>
+<li class="bug">Liste: beim wiederholten Öffnen des Assistenten (z.B. zum Hinzufügen einer Zellnotiz) erscheint keine sporadische Zugriffsverletzung mehr</li>
+<li class="bug">Liste: bei Verwendung der Plus-Taste und Minus-Taste der Haupttastatur (nicht Ziffernblock) erscheint nicht mehr die Fehlermeldung "Node must not be nil.", falls ein Element der untersten Ebene fokussiert ist</li>
+<li class="bug">Liste: beim Drehen der Liste auf eine Ansicht mit Unterspalten wird die Liste (wieder) angezeigt</li>
+<li class="feature">Liste: die Meldung nach dem gleichzeitigen Bearbeiten mehrerer Werte (sog. MultiEdit) wurde überarbeitet; insbesondere erscheint im Erfolgsfall keine Meldung mehr</li>
+<li class="feature">Liste: in Zusatzspalten mit (aggregierten) Buchungsfeldinformationen wird (bei Überschreitung einer internen Grenze bzgl. der zugehörigen Kombinationen) nicht mehr "&lt; ??? &gt;" , sondern eine leere Zelle angezeigt</li>
+<li class="feature">Liste: der Button zur Anpassung auf die optimale Spaltenbreite berücksichtigt auch die Titelspalte; insbesondere unterscheidet sich bei Verwendung des Tastenkürzels [Strg-+] die Funktionalität der Plus-Taste der Haupttastatur nicht mehr von der Plus-Taste des Nummernblocks</li>
+<li class="feature">Liste: das Tastenkürzel [Umsch-+] passt (nur) die Breite der Titelspalte an; das Tastenkürzel [Strg+Umsch-+] passt (nur) die Breite der Wertespalten an</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe, 8.1 Importe</span></p>
+<ul>
+<li class="feature">fehlerhafte Verwendung des Wortes "Aggregierung" in "Aggregation" korrigiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.3 Standards, 5.1 Verteilungsschlüssel</span></p>
+<ul>
+<li class="bug">in der Registerkarte "Eingabe" wird die Option "Anzeige &gt; Filter" im Blatt und Stapel (korrekterweise) nicht ausgewertet, falls in Blatt resp. Stapel Auswahlen (z.B. "&lt; 129 Konten &gt;") verwendet werden; insbesondere wird in diesem Fall die Liste angezeigt (anstatt z.B. die irreführende Meldung "Es ist kein Blattelement ausgewählt.")</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="bug">die Grafiken können auch in der 64-Bit-Version (wieder) angezeigt werden; insbesondere erscheint beim Öffnen der Grafik nicht mehr die Windows-Fehlermeldung "Kosy® funktioniert nicht mehr"</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Detailansicht: die Auswahl der Dateien wird (wieder) passend zum ausgewählten Mandanten angeboten</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.10 Startseiten</span></p>
+<ul>
+<li class="feature">Startseite: Anzeige und Bearbeitung der Kacheln optimiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="feature">der Pivot-Export der Importvorgänge ist funktionsfähig</li>
+</ul>
+<h2 id="5640-rc1"><span class="versionsNumber" id="5.6.4.0RC1">5.6.4.0 RC1</span></h2>
+<p style="text-align: left">31.08.2017 23:50<span style="float:right;">Revision 53913</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Berechnung: es können (bestimmte) sehr große Dateien (mit ca. 35 Mrd. Zellen) in ca. 3 bis 4 Stunden (klassisch) berechnet werden; Hinweis: die Berechnungsart "intelligent" ist in diesen Fällen nicht geeignet, führt aber nicht mehr zu einem Programmabsturz im Schritt "Aufbau der Basisabhängigkeiten"</li>
+<li class="bug">Assistent: in der ausführlichen Ansicht werden ausgewählte Elemente (z.B. im Schritt "Direktauswahl") stets in der (korrekten) Reihenfolge der Auswahlbox angezeigt</li>
+<li class="feature">Berechnung: für die 64-Bit-Applikation wurde die Speicherverwaltung optimiert</li>
+<li class="feature">Datenbankkonvertierung: die Konvertierung der Datenbank wird in einem eigenen Thread ausgeführt; insbesondere erscheint bei laufzeitintensiven SQL-Anweisungen während der Konvertierung nicht mehr u.U. die Windows-Meldung "Die Anwendung reagiert nicht."</li>
+<li class="feature">Benutzerübersicht: neue Option "Pivot-Connector" hinzugefügt, um ausgewählten Benutzern die Möglichkeit zu geben, Daten einer Tabelle als Excel-Pivot-Tabellezu exportieren; Hinweis: für die Verwendung ist eine Erweiterung der Lizenz um die Funktionalität "Pivot-Connector" erforderlich</li>
+<li class="feature">Tabellenansichten: neue Funktion "PivotExport" zum Exportieren in eine Excel-Pivot-Tabelle hinzugefügt; Hinweis: für die Verwendung ist eine Erweiterung der Lizenz um die Funktionalität "Pivot-Connector" erforderlich</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="feature">Startseiten und Kacheln (analog zu den Schnellansichten) hinzugefügt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.4 Planungsfelder, 2.2.4 Kontofelder, 2.3.4 Zeitfelder, 2.4.4 Segmentfelder, 2.5.1</span> Übersicht der Buchungsfelder</p>
+<ul>
+<li class="bug">bei nicht-vorhandenem Office-Objekt wird in der Detailansicht (wieder) der Hinweis "Es ist kein Office- Objekt vorhanden." angezeigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 4.2 Korrekturen, 6 Ausgabe</span></p>
+<ul>
+<li class="feature">Buchungsansicht: der Ad-hoc-Filter kann auch in den Spalten "Buchungsblock", "Art", "Planungseinheit", "Konto", "Zeiteinheit" und "Segment" verwendet werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">wenn der Benutzer (an der Funktion, der Datei, dem Mandanten oder der Datenbank) nur Lesezugriff besitzt, wird auch das Bearbeiten von Dimensionsfeldinhalten und Zellnotizen unterbunden</li>
+<li class="bug">Liste: bei aktivierter Mehrfachauswahl (aka MultiEdit-Modus) im Spaltenbereich "mit Hervorhebung der Überschriften" werden die Knoten auch dann korrekt ausgewählt, wenn die Strukturdarstellung "Summen unten" aktiv ist oder Knoten zusätzlich aufgeklappt werden</li>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export wird der Schritt "Tabellenname" nicht mehr sporadisch an einer falschen Stelle (oder gar nicht) angezeigt</li>
+<li class="bug">Liste: falls eine Wertespalte (aufgrund der eingeschalteten Option "Spaltenmenü &gt; … &gt; Filter &gt; nur signifikante Elemente") ausgeblendet wird, werden auch die zugehörigen Zusatzspalten (korrekterweise) ausgeblendet</li>
+<li class="feature">Liste: neue Darstellungsdimension "Ad-hoc-Unterzeilen" hinzugefügt; genauer: durch das "Aufklappen" einer Zeile (der untersten Ebene) kann die aktuelle Blattstruktur als "Ad-hoc-Unterzeilen" eingeblendet werden</li>
+<li class="feature">Liste: neue Option "Spaltenmenü &gt; Anzeige &gt; Spalten &gt; Strukturdarstellung &gt; Unterelemente einrücken" hinzugefügt; insbesondere kann dadurch die Strukturierung der Elemente im Spaltenbereich visualisiert werden</li>
+<li class="feature">Liste: das Laden der Buchungstupel wurde beschleunigt; hierdurch ist insbesondere das "Scrollen" durch die Zeilen flüssiger</li>
+<li class="feature">neue Exportart "Daten als Pivot-Tabelle exportieren" hinzugefügt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe, 7.10 Formatvorlagen</span></p>
+<ul>
+<li class="feature">Liste: Spalten können jetzt (analog zu den Zeilen) auf- und zugeklappt werden; die vorherige Funktion "Klappzustand" wurde zu "Expansionszustand" umbenannt; Hinweis: bei Verwendung von Formatanweisungen werden Unterelemente zugeklappter Spalten ab sofort verborgen (anstatt wie vorher lediglich minimiert zu werden)</li>
+<li class="feature">Liste: die Formatierungsanweisung "freier Text" wurde um das Feld "Wert" erweitert, sodass der Text der Zelle verändert werden kann; insbesondere kann der Platzhalter "&lt;Wert&gt;" verwendet werden</li>
+<li class="feature">die Formatanweisungen wurden um die Spalte "Zusatzspalte" erweitert, sodass die Formatierung auch für die Zusatzspalten gesteuert werden kann</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="feature">für die Reihenarten "Linie", "Stufe", "Fläche", "Stufenfläche" und "Netz" neue Optionen "Linienart" und "Linienstärke" (in den Reiheneinstellungen) hinzugefügt</li>
+<li class="feature">neue Option "y-Achse invertieren" (in den Grafikeinstellungen) hinzugefügt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: die Vorschau einzelner Bausteine stimmt auch dann mit dem generierten Bericht überein, wenn (aufgrund einer neuen Kopf- und Fußzeile) ein Seitenumbruch vor dem ersten gewählten Baustein erfolgt</li>
+<li class="feature">Bausteintyp "Dokument" um die Option "Vorlagentyp" erweitert, sodass neben Feldvorlagen auch individuelle Feldvorlagen und externe Dateien verwendet werden können; Hinweis: hierbei werden Dateien im OpenDocument-Text- und OpenDocument-Spreadsheet-Format direkt eingebunden, Dateien im Microsoft Office-Format und PDF-Dokumente werden als OLE-Objekte eingebunden</li>
+<li class="feature">Bausteintyp "Liste" um die Option "Tabellenhöhe" erweitert, um Tabellen auf Seitenhöhe begrenzen zu können</li>
+<li class="feature">Bausteintyp "Liste" um die Option "Art der Skalierung" erweitert, sodass bei Bedarf eine prozentuale Skalierung angegeben werden kann; Hinweis: hierbei wird das Minimum aus dem Skalierungswert und der automatischen Breiten- und Höhenermittlung verwendet</li>
+<li class="feature">Bausteintyp "Dimensionsfeld" hinzugefügt, um (zusätzlich zu Platzhaltern der Form "<dimension. namedesdimenionsfeldes="">"; z.B. "<planungseinheit.kostenstellenverantwortlicher>") beliebige Dimensionsfeldinhalte (insbesondere Office-Objekte und PDF-Dokumente) in den Bericht einfügen zu können</planungseinheit.kostenstellenverantwortlicher></dimension.></li>
+<li class="feature">Bausteintyp "Iteration" um die Option "Iterationselemente einschränken" erweitert, so dass die Elemente einer Iteration auf den aktuellen Kontext eingeschränkt werden können; insbesondere sind dadurch Schachtelungen mit gleicher Dimension möglich</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.10 Startseiten, 6.12.4 Rechte auf Startseiten</span></p>
+<ul>
+<li class="feature">neue Funktionen zur Verwaltung von Startseiten und Kacheln hinzugefügt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">7.6 Exportvorgaben</span></p>
+<ul>
+<li class="bug">beim Export und Import der Exportvorgaben werden auch die Ebby-Einstellungen berücksichtigt</li>
+<li class="feature">Pivot-Einstellungen hinzugefügt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">7.6 Exportvorgaben, 9.1 Aufgaben</span></p>
+<ul>
+<li class="feature">beim Wechsel der Registerkarte flackert der Cursor nicht mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="bug">beim Öffnen der Registerkarte "Importstruktur" erscheint keine Assertion mehr, falls die Zieltabelle geändert wurde (und dadurch die Zielfelder nicht mehr zu aktuellen Tabellen passen)</li>
+<li class="feature">der Import von Dimensionsfeldinformationen wurde (durch Optimierung des Cachings) beschleunigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe, 9.1 Aufgaben</span></p>
+<ul>
+<li class="bug">falls ein im Feld "Zieldatensatz" verwendeter Datensatz (genauer: Benutzer, Gruppe, Datei, Grafik oder Ergebnisart) gelöscht wird, so wird bei allen relevanten Importen und Aufgaben dieser Zieldatensatz (korrekterweise) auf "&lt; unbekannt &gt;" aktualisiert; insbesondere erscheint in diesem Fall keine irreführende Fehlermeldungen der Art "Der Datensatz kann nicht gespeichert werden. Die Datenbank meldet folgende Ursache: Fehler: Die Datensatzreferenz ist ungültig. […]" mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1.3 Systemimporte, 8.3.2 Systemumsetzungen, 9.1.3 Systemumaufgaben</span></p>
+<ul>
+<li class="bug">auch die Tabelle "1.1.1 : Mandanten" kann als Zieltabelle gespeichert und verwendet werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1 Aufgaben</span></p>
+<ul>
+<li class="feature">neue Aufgabenart "Pivot-Export" hinzugefügt</li>
+</ul>
+<p>Diese Version enthält außerdem alle Änderungen der Version <a href="../5.6.3/#5635">5.6.3.5</a>.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Zurück zum Seitenanfang
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.footer", "navigation.instant", "navigation.top", "navigation.indexes", "toc.follow", "content.code.copy", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+<script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+<script src="../../../javascripts/extra.js"></script>
+</body>
+</html>

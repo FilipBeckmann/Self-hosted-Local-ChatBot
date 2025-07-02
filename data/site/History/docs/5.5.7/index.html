@@ -1,0 +1,3490 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../../_Images/HKS Informatik GmbH.ico" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.18" name="generator"/>
+<title>5.5.7 - Anwenderdokumentation</title>
+<link href="../../../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<style>:root{--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 6a6 6 0 0 1 6 6c0 2.22-1.21 4.16-3 5.2V19a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6 6 0 0 1 6-6m2 15v1a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1h4m6-10h3v2h-3v-2M1 11h3v2H1v-2M13 1v3h-2V1h2M4.92 3.5l2.13 2.14-1.42 1.41L3.5 4.93 4.92 3.5m12.03 2.13 2.12-2.13 1.43 1.43-2.13 2.12-1.42-1.42Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>');}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/extra-style.vr6bd_wr.min.css" rel="stylesheet"/></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Zum Inhalt
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<!--Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.-->
+<!-- Determine base classes -->
+<!-- Header -->
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Kopfzeile" class="md-header__inner md-grid">
+<!-- Link to home -->
+<a aria-label="Anwenderdokumentation" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Anwenderdokumentation">
+<img alt="logo" id="logo_light_mode" src="../../../_Images/Kosy Enterprise weiß mit blau.svg"/>
+<img alt="logo" id="logo_dark_mode" src="../../../_Images/Kosy Enterprise weiß.svg"/>
+</a>
+<!-- Button to open drawer -->
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<!-- Header title -->
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis" id="site_name"> Anwenderdokumentation </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+             5.5.7 
+          </span>
+</div>
+</div>
+</div>
+<!-- Color palette -->
+<!-- !!!!! ToDo: KE_M-7624: Darkmode-Button nach Darkmode-Überarbeitung wieder einbinden -->
+<!-- 
+    <form class="md-header__option" data-md-component="palette">
+         
+      <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="default"
+        data-md-color-primary="indigo"
+        data-md-color-accent="indigo"
+        
+        aria-label="Switch to dark mode"
+        
+        type="radio"
+        name="__palette"
+        id="__palette_1"
+      />
+      
+      <label
+        class="md-header__button md-icon"
+        title="Switch to dark mode"
+        for="__palette_2"
+        hidden
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+          
+      <input
+        class="md-option"
+        data-md-color-media=""
+        data-md-color-scheme="slate"
+        data-md-color-primary="indigo"
+        data-md-color-accent="indigo"
+        
+        aria-label="Switch to light mode"
+        
+        type="radio"
+        name="__palette"
+        id="__palette_2"
+      />
+      
+      <label
+        class="md-header__button md-icon"
+        title="Switch to light mode"
+        for="__palette_1"
+        hidden
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+       
+    </form>
+     -->
+<!-- DropDown-Menu für die PDF-Dokumente -->
+<div class="dropdown"><img class="pdf-button-headerpng" src="../../../_Images/PDF (modern).svg"/>
+<button class="dropbtn" title="PDF">
+<div class="buttoncontent"></div></button>
+<div class="dropdown-content">
+<a href="../../../pdf/Kosy Enterprise - Anwenderhandbuch (23.06.2025).pdf" target="_blank"><p style="line-height: 1.3; margin:12px;"> Anwenderhandbuch</p></a>
+<a href="../../../pdf/Kosy Enterprise - Funktionshandbuch (23.06.2025).pdf" target="_blank"><p style="line-height: 1.3; margin:12px;"> Funktionshandbuch</p></a>
+<a href="../../../pdf/Kosy Enterprise History - Version 6.2.2.0 SR2 (23.06.2025).pdf" target="_blank"><p style="line-height: 1.3; margin:12px;"> History</p></a>
+</div>
+</div>
+<!-- Site language selector -->
+<div class="container">
+<!-- Button to open search modal -->
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<!-- Search interface -->
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Suche" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Suche" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Suche" class="md-search__options">
+<a aria-label="Teilen" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Teilen">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Zurücksetzen" class="md-search__icon md-icon" tabindex="-1" title="Zurücksetzen" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Repository information -->
+</div></nav>
+<!-- Navigation tabs (sticky) -->
+<nav aria-label="Hauptnavigation" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+    
+  
+  Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Allgemein/Allgemeine%20Hinweise/">
+          
+  
+    
+  
+  Allgemein
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Anwendung/Startbildschirm/">
+          
+  
+    
+  
+  Anwendung
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Pflege/Typen/">
+          
+  
+    
+  
+  Pflege
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../inhaltliche_Administration/Zuordnungen/">
+          
+  
+    
+  
+  inhaltliche Administration
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../technische_Administration/Einstellungen%20im%20Programm/">
+          
+  
+    
+  
+  technische Administration
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Funktionen/Verwaltung/">
+          
+  
+    
+  
+  Funktionen
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Anhang/Tastenkombinationen/">
+          
+  
+    
+  
+  Anhang
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../6.2.2.0/">
+          
+  
+    
+  
+  History
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Anwenderdokumentation" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Anwenderdokumentation">
+<img alt="logo" id="logo_light_mode" src="../../../_Images/Kosy Enterprise weiß mit blau.svg"/>
+<img alt="logo" id="logo_dark_mode" src="../../../_Images/Kosy Enterprise weiß.svg"/>
+</a>
+    Anwenderdokumentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Allgemein
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Allgemein
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Allgemeine%20Hinweise/">
+<span class="md-ellipsis">
+    Allgemeine Hinweise
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Starten%20des%20Programms/">
+<span class="md-ellipsis">
+    Starten des Programms
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Anmeldung/">
+<span class="md-ellipsis">
+    Anmeldung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Navigation%20im%20Programm/">
+<span class="md-ellipsis">
+    Navigation im Programm
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Meldungen/">
+<span class="md-ellipsis">
+    Meldungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Programm%20beenden/">
+<span class="md-ellipsis">
+    Programm beenden
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Allgemein/Installationshinweise/">
+<span class="md-ellipsis">
+    Installationshinweise
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Anwendung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Anwendung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Programmoberfläche und Fachbegriffe
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            Programmoberfläche und Fachbegriffe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Startbildschirm/">
+<span class="md-ellipsis">
+    Startbildschirm
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Programmbereiche/">
+<span class="md-ellipsis">
+    Programmbereiche 
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Eigenschaften/">
+<span class="md-ellipsis">
+    Eigenschaften
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Maskenansichten/">
+<span class="md-ellipsis">
+    Maskenansichten und Standardmaske
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Rechte/">
+<span class="md-ellipsis">
+    Rechte
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Strukturb%C3%A4ume%20und%20Strukturen/">
+<span class="md-ellipsis">
+    Strukturbäume und Strukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Direktauswahlen/">
+<span class="md-ellipsis">
+    Direktauswahlen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Programmfunktionen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Programmfunktionen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Ergebnisse%20anzeigen/">
+<span class="md-ellipsis">
+    Ergebnisse anzeigen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Daten%20erfassen/">
+<span class="md-ellipsis">
+    Daten erfassen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Strukturen%20pflegen/">
+<span class="md-ellipsis">
+    Strukturen pflegen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anwendung/Daten%20austauschen/">
+<span class="md-ellipsis">
+    Daten austauschen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Pflege
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Pflege
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Personalisierung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+            Personalisierung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Typen/">
+<span class="md-ellipsis">
+    Typen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Dateiattribute/">
+<span class="md-ellipsis">
+    Dateiattribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Listenarten%20und%20Listenansichten/">
+<span class="md-ellipsis">
+    Listenarten/Listenansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Dimensionsfelder/">
+<span class="md-ellipsis">
+    Dimensionsfelder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Buchungsfelder/">
+<span class="md-ellipsis">
+    Buchungsfelder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Sammlungen%20und%20Sammlungsauswahlen/">
+<span class="md-ellipsis">
+    Sammlungen/Sammlungsauswahlen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Feldvorlagen/">
+<span class="md-ellipsis">
+    Feldvorlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/pers%C3%B6nliche%20Ansichten/">
+<span class="md-ellipsis">
+    persönliche Ansichten
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Modellierung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Modellierung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Dimensionen/">
+<span class="md-ellipsis">
+    Dimensionen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Dateien/">
+<span class="md-ellipsis">
+    Dateien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Import/">
+<span class="md-ellipsis">
+    Import
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Ausgabe%20und%20Layout/">
+<span class="md-ellipsis">
+    Ausgabe/Layout
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Verteilung/">
+<span class="md-ellipsis">
+    Verteilung
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Verfeinerung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Verfeinerung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Standards/">
+<span class="md-ellipsis">
+    Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Umsetzungen/">
+<span class="md-ellipsis">
+    Umsetzungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Ergebnisarten%20und%20Umrechnungen/">
+<span class="md-ellipsis">
+    Ergebnisarten/Umrechnungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Exportvorgaben/">
+<span class="md-ellipsis">
+    Exportvorgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Dateistrukturen/">
+<span class="md-ellipsis">
+    Dateistrukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Grafik/">
+<span class="md-ellipsis">
+    Grafik
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Pflege/Berichte/">
+<span class="md-ellipsis">
+    Berichte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    inhaltliche Administration
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            inhaltliche Administration
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Zuordnungen/">
+<span class="md-ellipsis">
+    Zuordnungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Einstellungen/">
+<span class="md-ellipsis">
+    Einstellungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Benutzerverwaltung/">
+<span class="md-ellipsis">
+    Benutzerverwaltung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Berechtigungskonzept/">
+<span class="md-ellipsis">
+    Berechtigungskonzept
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Aufgaben/">
+<span class="md-ellipsis">
+    Aufgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Dashboards%20und%20Startseiten/">
+<span class="md-ellipsis">
+    Dashboards/Startseiten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Zeitpl%C3%A4ne/">
+<span class="md-ellipsis">
+    Zeitpläne
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../inhaltliche_Administration/Planung/">
+<span class="md-ellipsis">
+    Planung
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    technische Administration
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            technische Administration
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../technische_Administration/Einstellungen%20im%20Programm/">
+<span class="md-ellipsis">
+    Einstellungen im Programm
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../technische_Administration/Serveradministration/">
+<span class="md-ellipsis">
+    Serveradministration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../technische_Administration/Onlinebericht/">
+<span class="md-ellipsis">
+    Onlinebericht
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Funktionen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Funktionen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/">
+<span class="md-ellipsis">
+    1 Verwaltung
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_1">
+<span class="md-nav__icon md-icon"></span>
+            1 Verwaltung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Module/">
+<span class="md-ellipsis">
+    1.1 Module
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Mandanten/">
+<span class="md-ellipsis">
+    1.2 Mandanten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Benutzer/">
+<span class="md-ellipsis">
+    1.3 Benutzer
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Gruppen/">
+<span class="md-ellipsis">
+    1.4 Gruppen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Typen/">
+<span class="md-ellipsis">
+    1.5 Typen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verwaltung/Rechte/">
+<span class="md-ellipsis">
+    1.6 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/">
+<span class="md-ellipsis">
+    2 Dimensionen
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_2">
+<span class="md-nav__icon md-icon"></span>
+            2 Dimensionen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/Planungseinheiten/">
+<span class="md-ellipsis">
+    2.1 Planungseinheiten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/Konten/">
+<span class="md-ellipsis">
+    2.2 Konten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/Zeit/">
+<span class="md-ellipsis">
+    2.3 Zeit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/Segmente/">
+<span class="md-ellipsis">
+    2.4 Segmente
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dimensionen/Buchungsfelder/">
+<span class="md-ellipsis">
+    2.5 Buchungsfelder
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/">
+<span class="md-ellipsis">
+    3 Dateien
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_3">
+<span class="md-nav__icon md-icon"></span>
+            3 Dateien
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/%C3%9Cbersicht%20der%20Dateien/">
+<span class="md-ellipsis">
+    3.1 Übersicht der Dateien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Dateisammlungen/">
+<span class="md-ellipsis">
+    3.2 Dateisammlungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Dateistrukturen/">
+<span class="md-ellipsis">
+    3.3 Dateistrukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Dateiattribute/">
+<span class="md-ellipsis">
+    3.4 Dateiattribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Rechte%20auf%20Dateien/">
+<span class="md-ellipsis">
+    3.5 Rechte auf Dateien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Rechte%20auf%20Dateisammlungen/">
+<span class="md-ellipsis">
+    3.6 Rechte auf Dateisammlungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Rechte%20auf%20Dateistrukturen/">
+<span class="md-ellipsis">
+    3.7 Rechte auf Dateistrukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Rechte%20auf%20Dateiattribute/">
+<span class="md-ellipsis">
+    3.8 Rechte auf Dateiattribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Dateien/Dimensionszuordnungen/">
+<span class="md-ellipsis">
+    3.9 Dimensionszuordnungen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/">
+<span class="md-ellipsis">
+    4 Eingabe
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_4">
+<span class="md-nav__icon md-icon"></span>
+            4 Eingabe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Dateneingabe/">
+<span class="md-ellipsis">
+    4.1 Dateneingabe
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Korrekturen/">
+<span class="md-ellipsis">
+    4.2 Korrekturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Standards/">
+<span class="md-ellipsis">
+    4.3 Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Schnellansichten/">
+<span class="md-ellipsis">
+    4.5 Schnellansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Planung/">
+<span class="md-ellipsis">
+    4.6 Planung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Eingabe/Rechte/">
+<span class="md-ellipsis">
+    4.7 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/">
+<span class="md-ellipsis">
+    5 Verteilung
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_5">
+<span class="md-nav__icon md-icon"></span>
+            5 Verteilung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Verteilungsschl%C3%BCssel/">
+<span class="md-ellipsis">
+    5.1 Verteilungsschlüssel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Szenarien/">
+<span class="md-ellipsis">
+    5.2 Szenarien
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Saisonverteilung/">
+<span class="md-ellipsis">
+    5.3 Saisonverteilung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Prim%C3%A4rkostenumlage/">
+<span class="md-ellipsis">
+    5.4 Primärkostenumlage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Sekund%C3%A4rkostenumlage/">
+<span class="md-ellipsis">
+    5.5 Sekundärkostenumlage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Verteilungs%C3%BCbersicht/">
+<span class="md-ellipsis">
+    5.6 Verteilungsübersicht
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Verteilung/Rechte/">
+<span class="md-ellipsis">
+    5.7 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/">
+<span class="md-ellipsis">
+    6 Ausgabe
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_6">
+<span class="md-nav__icon md-icon"></span>
+            6 Ausgabe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Ergebnisse/">
+<span class="md-ellipsis">
+    6.1 Ergebnisse
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Anteilstabelle/">
+<span class="md-ellipsis">
+    6.2 Anteilstabelle
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Hitliste/">
+<span class="md-ellipsis">
+    6.3 Hitliste
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/ABC-Analyse/">
+<span class="md-ellipsis">
+    6.4 ABC-Analyse
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Verteilungsansicht/">
+<span class="md-ellipsis">
+    6.5 Verteilungsansicht
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Grafiken/">
+<span class="md-ellipsis">
+    6.6 Grafiken
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Berichte/">
+<span class="md-ellipsis">
+    6.7 Berichte
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Schnellansichten/">
+<span class="md-ellipsis">
+    6.8 Schnellansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Dashboards/">
+<span class="md-ellipsis">
+    6.9 Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Startseiten/">
+<span class="md-ellipsis">
+    6.10 Startseiten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Ergebnisarten/">
+<span class="md-ellipsis">
+    6.11 Ergebnisarten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Ausgabe/Rechte/">
+<span class="md-ellipsis">
+    6.12 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Layout/">
+<span class="md-ellipsis">
+    7 Layout
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_7" id="__nav_7_7_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_7">
+<span class="md-nav__icon md-icon"></span>
+            7 Layout
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Listen/">
+<span class="md-ellipsis">
+    7.1 Listen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Direktauswahlen/">
+<span class="md-ellipsis">
+    7.2 Direktauswahlen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Sammlungsauswahlen/">
+<span class="md-ellipsis">
+    7.3 Sammlungsauswahlen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Listenformate/">
+<span class="md-ellipsis">
+    7.4 Listenformate
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Umrechnungen/">
+<span class="md-ellipsis">
+    7.5 Umrechnungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Exportvorgaben/">
+<span class="md-ellipsis">
+    7.6 Exportvorgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Kopf-%20und%20Fu%C3%9Fzeilen/">
+<span class="md-ellipsis">
+    7.7 Kopf- und Fußzeilen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Listenansichten/">
+<span class="md-ellipsis">
+    7.8 Listenansichten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Listenarten/">
+<span class="md-ellipsis">
+    7.9 Listenarten
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Formatvorlagen/">
+<span class="md-ellipsis">
+    7.10 Formatvorlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Feldvorlagen/">
+<span class="md-ellipsis">
+    7.11 Feldvorlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Layout/Rechte/">
+<span class="md-ellipsis">
+    7.12 Rechte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Transfer/">
+<span class="md-ellipsis">
+    8 Transfer
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_8">
+<span class="md-nav__icon md-icon"></span>
+            8 Transfer
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Transfer/Importe/">
+<span class="md-ellipsis">
+    8.1 Importe
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Transfer/Umsetzungen/">
+<span class="md-ellipsis">
+    8.3 Umsetzungen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Funktionen/Extras/">
+<span class="md-ellipsis">
+    9 Extras
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_9">
+<span class="md-nav__icon md-icon"></span>
+            9 Extras
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Extras/Aufgaben/">
+<span class="md-ellipsis">
+    9.1 Aufgaben
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Extras/Einstellungen/">
+<span class="md-ellipsis">
+    9.3 Einstellungen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Extras/Onlinebericht/">
+<span class="md-ellipsis">
+    9.4 Onlinebericht
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/Extras/Expertenmodus%20ein-%20und%20ausschalten/">
+<span class="md-ellipsis">
+    Expertenmodus ein-/ausschalten
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Funktionen/10%20Hilfe/">
+<span class="md-ellipsis">
+    10 Hilfe
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Anhang
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Anhang
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Tastenkombinationen/">
+<span class="md-ellipsis">
+    Tastaturbefehle
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Platzhalter/">
+<span class="md-ellipsis">
+    Platzhalter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Zugriffsrechte/">
+<span class="md-ellipsis">
+    Zugriffsrechte
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/berechnungsrelevante_Felder/">
+<span class="md-ellipsis">
+    berechnungsrelevante Felder
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Rechenregelübersicht
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_5">
+<span class="md-nav__icon md-icon"></span>
+            Rechenregelübersicht
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Wenn/">
+<span class="md-ellipsis">
+    Wenn
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Wert%20und%20Eingabewert/">
+<span class="md-ellipsis">
+    Wert/Eingabewert
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/IstAktuellesElement/">
+<span class="md-ellipsis">
+    IstAktuellesElement
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Versatz/">
+<span class="md-ellipsis">
+    Versatz
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Kumulieren/">
+<span class="md-ellipsis">
+    Kumulieren
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/MittelwertSignifikant/">
+<span class="md-ellipsis">
+    MittelwertSignifikant
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Summe/">
+<span class="md-ellipsis">
+    Summe
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/LetzterSignifikanterWert/">
+<span class="md-ellipsis">
+    LetzterSignifikanterWert
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Rechenregel%C3%BCbersicht/Runden/">
+<span class="md-ellipsis">
+    Runden
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Reguläre Ausdrücke
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_6">
+<span class="md-nav__icon md-icon"></span>
+            Reguläre Ausdrücke
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Regul%C3%A4re%20Ausdr%C3%BCcke/">
+<span class="md-ellipsis">
+    Allgemeines
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Vordefinierte%20Zeichenklassen/">
+<span class="md-ellipsis">
+    Vordefinierte Zeichenklassen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Wiederholungsfaktoren%20und%20Operatoren/">
+<span class="md-ellipsis">
+    Wiederholungsfaktoren/Operatoren
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Regul%C3%A4re%20Ausdr%C3%BCcke/Anwendungsbeispiele/">
+<span class="md-ellipsis">
+    Anwendungsbeispiele
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Startparameter/">
+<span class="md-ellipsis">
+    Startparameter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Anhang/Konfigurationseinstellungen%20%28Kosy.ini%29/">
+<span class="md-ellipsis">
+    Konfigurationseinstellungen (Kosy.ini)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    History
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            History
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.2.2.0/">
+<span class="md-ellipsis">
+    6.2.2.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.2.1.1/">
+<span class="md-ellipsis">
+    6.2.1.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.2.1.0/">
+<span class="md-ellipsis">
+    6.2.1.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.2.0.0/">
+<span class="md-ellipsis">
+    6.2.0.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.1.1/">
+<span class="md-ellipsis">
+    6.1.1.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.1.0/">
+<span class="md-ellipsis">
+    6.1.1.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.0.3/">
+<span class="md-ellipsis">
+    6.1.0.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.0.2/">
+<span class="md-ellipsis">
+    6.1.0.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.0.1/">
+<span class="md-ellipsis">
+    6.1.0.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.1.0.0/">
+<span class="md-ellipsis">
+    6.1.0.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.9/">
+<span class="md-ellipsis">
+    6.0.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.8/">
+<span class="md-ellipsis">
+    6.0.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.7/">
+<span class="md-ellipsis">
+    6.0.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.6/">
+<span class="md-ellipsis">
+    6.0.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.5/">
+<span class="md-ellipsis">
+    6.0.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.4/">
+<span class="md-ellipsis">
+    6.0.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.3/">
+<span class="md-ellipsis">
+    6.0.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.2/">
+<span class="md-ellipsis">
+    6.0.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.1/">
+<span class="md-ellipsis">
+    6.0.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../6.0.0/">
+<span class="md-ellipsis">
+    6.0.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.5/">
+<span class="md-ellipsis">
+    5.6.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.4/">
+<span class="md-ellipsis">
+    5.6.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.3/">
+<span class="md-ellipsis">
+    5.6.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.2/">
+<span class="md-ellipsis">
+    5.6.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.1/">
+<span class="md-ellipsis">
+    5.6.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.6.0/">
+<span class="md-ellipsis">
+    5.6.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.7/">
+<span class="md-ellipsis">
+    5.5.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.6/">
+<span class="md-ellipsis">
+    5.5.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.5/">
+<span class="md-ellipsis">
+    5.5.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.4/">
+<span class="md-ellipsis">
+    5.5.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.3/">
+<span class="md-ellipsis">
+    5.5.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.2/">
+<span class="md-ellipsis">
+    5.5.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.1/">
+<span class="md-ellipsis">
+    5.5.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.5.0/">
+<span class="md-ellipsis">
+    5.5.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.9/">
+<span class="md-ellipsis">
+    5.4.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.8/">
+<span class="md-ellipsis">
+    5.4.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.7/">
+<span class="md-ellipsis">
+    5.4.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.6/">
+<span class="md-ellipsis">
+    5.4.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.5/">
+<span class="md-ellipsis">
+    5.4.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.4/">
+<span class="md-ellipsis">
+    5.4.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.3/">
+<span class="md-ellipsis">
+    5.4.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.2/">
+<span class="md-ellipsis">
+    5.4.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.1/">
+<span class="md-ellipsis">
+    5.4.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.4.0/">
+<span class="md-ellipsis">
+    5.4.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.9/">
+<span class="md-ellipsis">
+    5.3.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.8/">
+<span class="md-ellipsis">
+    5.3.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.7/">
+<span class="md-ellipsis">
+    5.3.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.6/">
+<span class="md-ellipsis">
+    5.3.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.5/">
+<span class="md-ellipsis">
+    5.3.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.4/">
+<span class="md-ellipsis">
+    5.3.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.3/">
+<span class="md-ellipsis">
+    5.3.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.2/">
+<span class="md-ellipsis">
+    5.3.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.1/">
+<span class="md-ellipsis">
+    5.3.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.3.0/">
+<span class="md-ellipsis">
+    5.3.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.9/">
+<span class="md-ellipsis">
+    5.2.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.8/">
+<span class="md-ellipsis">
+    5.2.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.7/">
+<span class="md-ellipsis">
+    5.2.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.6/">
+<span class="md-ellipsis">
+    5.2.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.5/">
+<span class="md-ellipsis">
+    5.2.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.4/">
+<span class="md-ellipsis">
+    5.2.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.3/">
+<span class="md-ellipsis">
+    5.2.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.2/">
+<span class="md-ellipsis">
+    5.2.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.1/">
+<span class="md-ellipsis">
+    5.2.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.2.0/">
+<span class="md-ellipsis">
+    5.2.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.9/">
+<span class="md-ellipsis">
+    5.1.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.8/">
+<span class="md-ellipsis">
+    5.1.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.7/">
+<span class="md-ellipsis">
+    5.1.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.6/">
+<span class="md-ellipsis">
+    5.1.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.5/">
+<span class="md-ellipsis">
+    5.1.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.4/">
+<span class="md-ellipsis">
+    5.1.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.3/">
+<span class="md-ellipsis">
+    5.1.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.2/">
+<span class="md-ellipsis">
+    5.1.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.1/">
+<span class="md-ellipsis">
+    5.1.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.1.0/">
+<span class="md-ellipsis">
+    5.1.0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.9/">
+<span class="md-ellipsis">
+    5.0.9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.8/">
+<span class="md-ellipsis">
+    5.0.8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.7/">
+<span class="md-ellipsis">
+    5.0.7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.6/">
+<span class="md-ellipsis">
+    5.0.6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.5/">
+<span class="md-ellipsis">
+    5.0.5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.4/">
+<span class="md-ellipsis">
+    5.0.4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.3/">
+<span class="md-ellipsis">
+    5.0.3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.2/">
+<span class="md-ellipsis">
+    5.0.2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.1/">
+<span class="md-ellipsis">
+    5.0.1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../5.0.0/">
+<span class="md-ellipsis">
+    5.0.0
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55727">
+<span class="md-ellipsis">
+      5.5.7.27
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55726">
+<span class="md-ellipsis">
+      5.5.7.26
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55725">
+<span class="md-ellipsis">
+      5.5.7.25
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55724">
+<span class="md-ellipsis">
+      5.5.7.24
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55723">
+<span class="md-ellipsis">
+      5.5.7.23
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55722">
+<span class="md-ellipsis">
+      5.5.7.22
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55721">
+<span class="md-ellipsis">
+      5.5.7.21
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55720">
+<span class="md-ellipsis">
+      5.5.7.20
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55719">
+<span class="md-ellipsis">
+      5.5.7.19
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55718">
+<span class="md-ellipsis">
+      5.5.7.18
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55717">
+<span class="md-ellipsis">
+      5.5.7.17
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55716">
+<span class="md-ellipsis">
+      5.5.7.16
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55715">
+<span class="md-ellipsis">
+      5.5.7.15
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55714">
+<span class="md-ellipsis">
+      5.5.7.14
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55713">
+<span class="md-ellipsis">
+      5.5.7.13
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55712">
+<span class="md-ellipsis">
+      5.5.7.12
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55711">
+<span class="md-ellipsis">
+      5.5.7.11
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55710">
+<span class="md-ellipsis">
+      5.5.7.10
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5579">
+<span class="md-ellipsis">
+      5.5.7.9
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5578">
+<span class="md-ellipsis">
+      5.5.7.8
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5577">
+<span class="md-ellipsis">
+      5.5.7.7
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5576">
+<span class="md-ellipsis">
+      5.5.7.6
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5575">
+<span class="md-ellipsis">
+      5.5.7.5
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5574">
+<span class="md-ellipsis">
+      5.5.7.4
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5573">
+<span class="md-ellipsis">
+      5.5.7.3
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5572">
+<span class="md-ellipsis">
+      5.5.7.2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5571">
+<span class="md-ellipsis">
+      5.5.7.1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5570">
+<span class="md-ellipsis">
+      5.5.7.0
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5570-rc4">
+<span class="md-ellipsis">
+      5.5.7.0 RC4
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5570-rc3">
+<span class="md-ellipsis">
+      5.5.7.0 RC3
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5570-rc2">
+<span class="md-ellipsis">
+      5.5.7.0 RC2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5570-rc1">
+<span class="md-ellipsis">
+      5.5.7.0 RC1
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="_1"></h1>
+<div class="pdf-button no-print"><button class="pdf-button"><a class="md-icon" href="../../pdf/Kosy Enterprise History - Release-Zweig 5.5.7.pdf" target="_blank" title="PDF"><img class="pdf-button" src="../../_Images/PDF.svg"/></a></button></div>
+<h2 id="55727"><span class="versionsNumber" id="5.5.7.27">5.5.7.27</span></h2>
+<p style="text-align: left">27.10.2016 18:24<span style="float:right;">Revision 48699</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">das Generieren von Berichten (über den Start-Button) ist (wieder) möglich</li>
+</ul>
+<h2 id="55726"><span class="versionsNumber" id="5.5.7.26">5.5.7.26</span></h2>
+<p style="text-align: left">24.10.2016 18:22<span style="float:right;">Revision 48602</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">5 Verteilung</span></p>
+<ul>
+<li class="bug">Buchungsansicht: die Buchungssätze werden auch dann (wieder) angezeigt, wenn (in mindestens einer Dimension) die Zusatzauswahl verwendet wird (z.B. "&lt; x Zeiteinheiten &gt;"); insbesondere erscheint in diesem Fall beim Hinzufügen eines neuen Buchungssatzes keine Zugriffsverletzung mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6 Ausgabe</span></p>
+<ul>
+<li class="bug">Berechnung: die zwischengespeicherten Eingabewerte werden bei der Berechnung korrekterweise bereinigt und führen dadurch insbesondere nicht mehr zu fehlerhaften Werten in der Ausgabe</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="bug">für den Grafiktyp "Tacho" wurde die Reihenfolge der Wertebeschriftungen korrigiert; insbesondere entspricht die Reihenfolge der Werte der Reihenfolge von innen nach außen</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">das Generieren von Berichten (über den Start-Button) ist auch bei Lesezugriff möglich; insbesondere wird hierfür kein Änderungszugriff (mehr) benötigt</li>
+<li class="bug">Bericht: beim Drucken der Struktur erscheinen nicht mehr u.U. die Assertion 'Assistent wurde nicht korrekt gestartet.' (CommonUnits\mWizard, Zeile 4765) oder die Assertion 'Die Tabelle "&lt; … bitte wählen Sie eine Tabelle … &gt;" unterstützt diese Funktion nicht.' (mDatabaseCache, Zeile 4040)</li>
+</ul>
+<h2 id="55725"><span class="versionsNumber" id="5.5.7.25">5.5.7.25</span></h2>
+<p style="text-align: left">05.10.2016 18:23<span style="float:right;">Revision 48293</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">beim Erstellen der Masken werden die Icons (z.B. auf den Buttons) nur dann erzeugt, wenn sie tatsächlich benötigt werden; insbesondere wird damit die sporadische Fehlermeldung "EOutOfResource" umgangen</li>
+<li class="bug">Tabellenansichten: nach der Verschiebung einer Spalte von rechts nach links wird die neue Position auch dann zuverlässig gespeichert, wenn (links neben der vorherigen Position) Spalten ausgeblendet sind</li>
+<li class="feature">Strukturansichten: im Kontextmenü "Anzeige &gt; Filter" stehen nur noch solche Optionen zur Verfügung, die im aktuellen Kontext relevant sind; dadurch werden die Strukturen in vielen Fällen wesentlich schneller geladen</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="feature">Zuordnungen: die nicht relevanten Einträge im Kontextmenü "Anzeige &gt; Filter" (bzgl. der Option "aktiv" und "nur signifikante Elemente") wurden entfernt und werden nicht mehr ausgewertet; insbesondere dauert das Laden der Zuordnungen nicht mehr unnötig lange, wenn im Kontextmenü (z.B.) die Optionen "Anzeige &gt; Filter &gt; nur aktive Elemente" und "Anzeige &gt; Hervorhebung &gt; Filterelemente kleiner" gewählt sind</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: die Dimensionsfeldinhalte der Stammsätze können (wieder) gelöscht werden</li>
+<li class="bug">Buchungsansicht: das Speichern des (aller)ersten Buchungssatzes zu einem Stammsatz ist (wieder) möglich; insbesondere erscheint in diesem Fall keine Fehlermeldung der Art "[…] Violation of Foreign Key constraint 'FK_K_ACCOUNTING_DTPL' […] DTPLREF = 0" mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe, 6.7 Berichte</span></p>
+<ul>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: innerhalb der Listen wird die Zeilenhöhe nur dann automatisch ermittelt, wenn dies (über die zugehörige Formatvorlage) tatsächlich gewünscht ist</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="bug">Import: beim Direktimport erscheint beim Laden der Einstellungen keine Fehlermeldung der Art "Invalid XML Element: malformed tag found […]" mehr, falls in den Einstellungen (z.B. im Schritt "Bedingung") eines der Zeichen "&lt;" oder "&gt;" verwendet wird</li>
+</ul>
+<h2 id="55724"><span class="versionsNumber" id="5.5.7.24">5.5.7.24</span></h2>
+<p style="text-align: left">15.09.2016 18:50<span style="float:right;">Revision 47969</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Tabellenansichten: beim Abbrechen eines gerade hinzugefügten Datensatzes erscheint keine Zugriffsverletzung mehr</li>
+<li class="bug">Tabellenansichten: beim gleichzeitigen Bearbeiten mehrerer Datensätze führt die Prüfung auf "Verwendung" des ersten Datensatzes nicht mehr dazu, dass Kosy anschließend nicht mehr korrekt funktioniert (und nur noch durch "Kosy beenden" geschlossen werden kann)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.3 Planungseinheiten (Stammsätze), 2.2.3 Konto (Stammsätze), 2.3.3 Zeiteinheiten (Stammsätze), 2.4.3 Segmente (Stammsätze)</span></p>
+<ul>
+<li class="bug">beim Speichern von Dimensionsfeldinhalten (innerhalb der Tabellenansicht) erscheint keine sporadische Zugriffsverletzung mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: das Sperren von Dimensionsfeldinhalten während der Bearbeitung durch einen Benutzer arbeitet (wieder) korrekt, sodass eine Bearbeitung durch weitere Benutzer (wieder) unterbunden wird; insbesondere erscheint durch das "gleichzeitige Bearbeiten" von Dimensionsfeldinhalten desselben Stammsatzes (beim Öffnen und beim Speichern der Änderungen) keine Fehlermeldung der Art "[…] Lock Conflict on no wait transaction. Deadlock. […] At procedure 'INS_D_AFD_RICHTEXT' […]" mehr</li>
+<li class="bug">Liste: bei der Anzeige der Dimensionsfeldinhalte und Buchungsfeldinhalte im Hinweisfenster (aka Hint) werden auch die Einträge "&lt; Office-Objekt &gt;" und "&lt; PDF-Dokument &gt;" (wieder) angezeigt; insbesondere ist am Hinweisfenster (wieder) erkennbar, ob tatsächlich ein Inhalt vorhanden ist</li>
+<li class="bug">Buchungsansicht: beim Kopieren von Buchungssätzen in die Zwischenablage tritt keine sporadische Zugriffsverletzung mehr auf, falls einzelne Buchungssätze noch nicht angezeigt wurden; insbesondere ist das Kopieren von großen Datenmengen (wieder) möglich</li>
+<li class="bug">Liste: in der Dualanzeige "Zellinformationen &gt; Übersicht (aktuelle Zelle)" werden auch beim Wechsel von Blatt oder Stapel korrekt aktualisiert; insbesondere erscheint keine Fehlermeldung "Listenindex überschreitet das Maximum (-1)." mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Bericht: nach dem Speichern eines Bausteines springt der Assistent nicht mehr u.U. auf den ersten Schritt zurück</li>
+<li class="bug">Bericht: beim Laden der Struktur erscheint nicht mehr u.U. die Assertion 'Die Tabelle "Bausteine" unterstützt diese Funktion nicht.' (HKS.DatabaseCache.Base, Zeile 409), falls in einem der Bausteine Platzhalter verwendet werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1.1 Dateiimporte</span></p>
+<ul>
+<li class="bug">Buchungssatzimport: beim Hinzufügen von Strukturelementen über den Button "alle hinzufügen" (innerhalb der Picklist) erscheint keine Fehlermeldung der Art "DataSet not in Edit or Insert mode.()." mehr</li>
+</ul>
+<h2 id="55723"><span class="versionsNumber" id="5.5.7.23">5.5.7.23</span></h2>
+<p style="text-align: left">01.09.2016 21:20<span style="float:right;">Revision 47635</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: das Sperren von Buchungsfeldinhalten und Zellnotizen während der Bearbeitung durch einen Benutzer arbeitet (wieder) korrekt, sodass eine Bearbeitung durch weitere Benutzer (wieder) unterbunden wird; insbesondere erscheint durch das "gleichzeitige Bearbeiten" von Buchungsfeldinhalten und Zellnotizen derselben Zelle (beim Speichern der Änderungen) nicht mehr die Fehlermeldung "[…] Lock Conflict on no wait transaction. Deadlock. […] At procedure 'INS_ACT_AFD_OLE' […]"</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="feature">Reportgenerator: das Laden der Bausteine wurde beschleunigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1.1 Dateiaufgaben</span></p>
+<ul>
+<li class="bug">Buchungssatzexport: es werden (wieder) die zum Buchungssatz gehörenden Buchungsfeldinhalte exportiert</li>
+</ul>
+<h2 id="55722"><span class="versionsNumber" id="5.5.7.22">5.5.7.22</span></h2>
+<p style="text-align: left">30.08.2016 12:35<span style="float:right;">Revision 47574</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">beim Import von KTF-Dateien (in Tabellen, die grundsätzlich keine Zusatzfelder besitzen) erscheint nicht mehr die (irreführende) Fehlermeldung "Das System kann den angegebenen Pfad nicht finden."</li>
+</ul>
+<h2 id="55721"><span class="versionsNumber" id="5.5.7.21">5.5.7.21</span></h2>
+<p style="text-align: left">29.08.2016 20:31<span style="float:right;">Revision 47564</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Platzhalter mit Leerzeichen und die Platzhalter "&lt; leer &gt;", "&lt; automatisch &gt;" und "&lt;|&gt;" werden im RichText-Format auch dann ersetzt, wenn innerhalb der Platzhalter RichText-Formatierungen vorhanden sind</li>
+<li class="feature">der aktuelle Stand der Datenbank-Generatoren wird im Versionshinweis unter "Datenbank &gt; Generatoren" angezeigt; beim Programmstart wird der aktuelle Stand der Datenbank-Generatoren geprüft; bei Überschreitung einer Grenze (50 %) erscheint eine Warnung im Tray, bei Überschreitung einer kritischen Grenze (75 %) erscheint ein modaler Dialog; in beiden Fällen wird empfohlen, sich mit der Hotline in Verbindung zu setzen</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.3 Planungseinheiten (Stammsätze), 2.2.3 Konto (Stammsätze), 2.3.3 Zeiteinheiten (Stammsätze), 2.4.3 Segmente (Stammsätze)</span></p>
+<ul>
+<li class="bug">die Kennzeichnungen "&lt; Office-Objekt &gt;" und "PDF-Dokument" (wieder) genau dann angezeigt, wenn ein zugehöriger Inhalt vorhanden ist</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">Zuordnungen: bei Zuordnungen zu Verteilungsschlüsseln erscheint beim Öffnen der Registerkarte "Zuordnungen" keine Fehlermeldung "Can't Prepare, because query is empty." mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: auch bei Verwendung der Ansicht "Strukturdarstellung: Verdichtungselemente in Spalten darstellen" werden die Zellverbünde für Verdichtungselemente stets korrekt dargestellt (anstatt ggf. um eine Zeile nach unten versetzt)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe, 6.7 Berichte</span></p>
+<ul>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen werden innerhalb von Dimensionsfeldinhalten die Trennzeichen "&lt;|&gt;" (analog zur einspalten Anzeige) durch " | " ersetzt; insbesondere wird der Text nicht mehr abgeschnitten</li>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen werden innerhalb der Tabellenbeschriftung unterschiedliche Schriftarten korrekt ausgewertet; insbesondere wird nicht (mehr) die am Anfang der Tabellenbeschriftung gültige Schriftart für die gesamte Zelle verwendet</li>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen wird die Spalte "Unterelemente" für flache Listen nicht mehr exportiert</li>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen wird auch die automatische Anpassung der Zeilenhöhen angewendet</li>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen werden auch bei Verwendung der Ansicht "Strukturdarstellung: Verdichtungselemente in Spalten darstellen" die Dimensionsfeldinhalte der Verdichtungselemente ausgegeben</li>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen wird auch bei Verwendung der Ansicht "Strukturdarstellung: Verdichtungselemente in Spalten darstellen" für Verdichtungselemente nicht (mehr) u.U. nur eine Tilde ("~") ausgegeben</li>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen erscheint nicht mehr u.U. die Fehlermeldung "Integerüberlauf."</li>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen werden auch bei Verwendung der Ansicht "Strukturdarstellung: Verdichtungselemente in Spalten darstellen" die Zellverbünde für Verdichtungselemente stets korrekt gebildet</li>
+<li class="feature">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen wird das Trennzeichen "&lt;|&gt;" auch in der Tabellenbeschriftung (der zugehörigen Kopf- und Fußzeile) ausgewertet; Hinweise: (1) über den Platzhalter "&lt; automatisch &gt;" wird die Beschriftung automatisch (anhand des Inhalts der zugeörigen Spalte) ermittelt (2) über den Platzhalter "&lt; leer &gt;" wird eine leere Spaltenbeschriftung forciert (3) über aufeinanderfolgende Trennzeichen "&lt;|&gt;&lt;|&gt;" können Zellen verbunden werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">7.11 Feldvorlagen</span></p>
+<ul>
+<li class="feature">(auch) innerhalb der Feldvorlagen werden in der Tabelle und in den zugehörigen Hinweisfenstern (aka Hints) auch Feldinhalte vom Typ "RichText" als einfacher Text (d.h. ohne Formatierungen; sog. "Plain Text") angezeigt (anstatt lediglich die Kennzeichnung "&lt; RichText &gt;")</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1.1 Dateiimporte</span></p>
+<ul>
+<li class="bug">Buchungssatzimport: Caching-Mechanismus der Buchungsfeldinhalte optimiert; insbesondere bleibt Kosy beim Schritt "Der Import wird vorbereitet…" nicht mehr u.U. über eine Stunde "hängen", falls in der Zieldatei bereits mehrere Millionen Buchungsfeldinhalte vorhanden sind</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1.1 Dateiaufgaben</span></p>
+<ul>
+<li class="feature">Buchungssatzexport: die Bezeichnung der Dokumente zu Buchungsfeldinhalten und Zellinformationen (= "abhängige Daten") wurde um die Angabe aller Kurzbezeichnungen der zugehörigen Stammsätze (genauer: um die Bezeichnungen aller vier Dimensionstupel) erweitert; hierdurch lassen sich die Dokumente (auch ohne "Nachschlagen" in der KTF-Datei) den jeweiligen Strukturelementen zuordnen</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.3.3 Systemeinstellungen</span></p>
+<ul>
+<li class="feature">neue Option "Datenbank &gt; Generatoren beim Start prüfen" (kann erst nach Erreichen der kritischen Grenze und nur durch Eingabe eines Passwortes abgeschaltet werden)</li>
+</ul>
+<h2 id="55720"><span class="versionsNumber" id="5.5.7.20">5.5.7.20</span></h2>
+<p style="text-align: left">08.08.2016 14:55<span style="float:right;">Revision 47196</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Dimensionfelder &amp; Buchungsfelder: im Assistenten können Zusatzfeldinhalte vom Typ "Office- Objekt" auch dann angelegt werden, wenn keine signifikante Feldvorlage für das Zusatzfeld angegeben wurde; insbesondere werden auch im Assistenten signifikante, individuelle Feldvorlagen des zugehörigen Zusatzfeldes berücksichtigt und geladen</li>
+<li class="bug">Rechte: die geteilte Listenansicht wird (wieder) korrekt initialisiert, sodass nur die tatsächlich zugeordneten Elemente auf der jeweiligen Registerkarte angezeigt werden</li>
+<li class="bug">Dateistruktur: auch bei Lesezugriff werden die Untermenüs des Buttons "Verbindung […] ausführen" (und damit auch der Button selbst) korrekt initialisiert; insbesondere wird nicht mehr der irreführende Eintrag "die … markierten Verbindungen ausführen" angezeigt</li>
+<li class="bug">Berechnung: die Rechenregel "VerdichtungEingabewert" wurde optimiert; genauer: es werden keine (unnötigen) Abhängigkeiten (mehr) erzeugt (da grundsätzlich auf die Eingabewerte zurückgegriffen wird)</li>
+<li class="feature">Strukturen &amp; Listen: innerhalb der Strukturansichten werden im Hinweisfenster zum Stammsatz zusätzlich zur Notiz auch die Dimensionsfeldinhalte angezeigt</li>
+<li class="feature">Strukturen &amp; Listen: innerhalb der Strukturansichten können die Dimensionsfeldinhalte im Hinweisfenster (optional) von den darüberliegenden Stukturelementen "vererbt" werden; hierdurch können insbesondere Dimensionsfeldinhalte auf den Verdichtungselementen gepflegt und (automatisch) bei allen Unterelementen angezeigt werden</li>
+<li class="feature">Strukturen &amp; Listen: innerhalb der Strukturansichten werden die Stammsätze mit Dimensionsfeldinhalten (ähnlich der "blauen Ecke" oben rechts bei vorhandener Notiz) mittels einer "pinken Ecke" unten rechts hervorgehoben</li>
+<li class="feature">Berechnung: Multiplikationen und boolsche Ausdrücke werden nur bei Bedarf vollständig ausgewertet; genauer: bei der Auswertung (von links nach rechts) werden alle weiteren Ausdrücke nicht mehr ausgewertet, sobald das Ergebnis feststeht (z.B. falls ein Faktor null ist); insbesondere lässt sich hierdurch die Berechnung beschleunigen (indem rechenintensive Ausdrücke "weiter rechts" stehen)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="bug">die Höhe der Kontextmenüs "Mandantenauswahl" und "Dateiauswahl" berücksichtigt die Auflösung des aktuellen Monitors (anstatt die des primären Monitors); insbesondere werden die Kontextmenüs auch auf sekundären Monitoren mit geringerer Auflösung korrekt dargestellt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.1 Übersicht der Dateien</span></p>
+<ul>
+<li class="bug">beim Öffnen der Maske erscheint keine Zugriffsverletzung (mehr), wenn an der fokussierten Datei lediglich Lesezugriff besteht</li>
+<li class="bug">Berechnung: eine Änderung der Berechnungsart ("klassisch" oder "intelligent") nach einer Berechnung wird (wieder) sofort berücksichtigt (anstatt erst nach einem Neustart des Programms)</li>
+<li class="bug">die Funktion "Datei […] ohne Prüfung berechnen" berücksichtigt das Zugriffsrecht an der Datei</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: falls gemäß den aktuellen Anzeigeeinstellungen die Beschriftung eines Elements (aufgrund eines leeren Titels und Alternativtitels) leer ist, so wird (analog zu den Strukturansichten) die Kurzbezeichnung (in geschweiften Klammern) angezeigt</li>
+<li class="bug">Buchungsansicht: beim Öffnen der Buchungsansicht erscheint keine sporadische Zugriffsverletzung mehr</li>
+<li class="bug">Tabellenkalkulation-Export: die Tabellenbeschriftung wird auch bei eingeschalteter Option "Zeilenbeschriftungen trennen" ausgegeben</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.3 Standards, 5 Verteilung</span></p>
+<ul>
+<li class="bug">Buchungsansicht: der Wert der fokussierten Zelle und die zugehörigen Buchungssätze stimmen (wieder) überein</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="bug">in den Beschriftungen der Grafik werden die Platzhalter (z.B. "<datei.j>") (wieder) ersetzt</datei.j></li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: für Bausteine des Typs "Liste" wird die Achsenbeschriftung wird auch bei eingeschalteter Option "Zeilenbeschriftungen trennen" ausgegeben</li>
+<li class="bug">Reportgenerator: in Bausteinen mit RichText-Feldern werden die korrekten Bilder dargestellt (anstatt eines der nachfolgenden Bilder)</li>
+<li class="bug">Reportgenerator: beim Generieren des Berichts wird auch dann die korrekte Direktauswahl für die Liste verwendet, wenn diese unmittelbar zuvor geändert wurde</li>
+<li class="bug">Reportgenerator: bei Seitenumbrüchen innerhalb von Listen werden die Zeilenbeschriftungen auch auf den Folgeseiten (wieder) ausgegeben</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="bug">beim Import von sehr großen Datenmengen kommt es bei eingeschaltetem MultiThreading (siehe Konfigurationsdatei "Kosy.ini", Abschnitt "[Import]", Einstellung "MultiThreading=1") nicht mehr u.U. zur Fehlermeldung "Zu wenig Arbeitsspeicher."</li>
+</ul>
+<h2 id="55719"><span class="versionsNumber" id="5.5.7.19">5.5.7.19</span></h2>
+<p style="text-align: left">04.07.2016 17:56<span style="float:right;">Revision 46699</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.3 Planungseinheiten (Stammsätze), 2.2.3 Konto (Stammsätze), 2.3.3 Zeiteinheiten (Stammsätze), 2.4.3 Segmente (Stammsätze), 8.1.2 Mandantenimporte</span></p>
+<ul>
+<li class="bug">beim Importieren von Stammsätzen (z.B. Konten) mit Dimensionsfeldinhalten (z.B. Kontofeldinhalten) erscheint keine irreführende Fehlermeldung der Art "[…] Ambiguous field name between procedure GET_ACCOUNTFIELD_FREF and table K_ACCOUNTFIELD . ITEMFIELDUSAGE […]" mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.4 Planungsfelder, 2.2.4 Kontofelder, 2.3.4 Zeitfelder, 2.4.4 Segmentfelder, 4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">beim Hinzufügen von Stammsätze werden auch individuelle Feldvorlagen des zugehörigen Dimensionsfeldes berücksichtigt und geladen</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">Verbindung: auch für die Verbindungsart "Verteilungsschlüssel kopieren" können (wieder) Zuordnungen getroffen werden; insbesondere erscheint keine Fehlermeldung der Art "[…] Procedure unknown. CNT_APT_FORMULA_NODELEVEL. […]" mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: die Option "Zellmenü &gt; Eingabe &gt; Wertebedingungen automatisch aktualisieren" arbeitet (wieder) korrekt; insbesondere werden bei eingeschalteter Option während der Eingabe von Daten nach jeder Eingabe sofort alle Wertebedingungen (z.B. sog. "Ampeln") aktualisiert; außerdem wird bei ausgeschalteter Option über "Zeilenmenü &gt; aktualisieren &gt; automatisch (nach Größe) [F5]" die gesamte Liste inkl. aller Formatierung und Wertebedingungen manuell aktualisiert</li>
+<li class="feature">Stamminformationen: das Recht am Dimensionsfeldinhalt wird nun auch in den Stamminformationen (optional; gemäß der Mandanteneinstellung "Recht am Dimensionsfeldinhalt") nicht mehr durch das Recht am Stammsatz beschränkt; insbesondere ist es möglich, dass auch bei Lesezugriff am Stammsatz die zugehörigen Dimensionsfeldinhalte (Notizen, …) über diese Maske bearbeitet werden können</li>
+<li class="feature">Tabellenkalkulation-Export: die Zellmenü-Option "Anzeige &gt; Hinweise (Notizen) &gt; [Zeilen|(Haupt) Spalten|Unterspalten] aggregieren" wird (optional) auch beim Exportieren der Liste berücksichtigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="feature">Reportgenerator: für Bausteine des Typs "Liste" wird die Zellmenü-Option "Anzeige &gt; Hinweise (Notizen) &gt; [Zeilen|(Haupt)Spalten|Unterspalten] aggregieren" (optional) auch beim Exportieren der Liste berücksichtigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">7.7 Kopf- und Fußzeilen</span></p>
+<ul>
+<li class="bug">beim Hinzufügen und Bearbeiten über den Assistenten werden auch leere RichText-Felder (wieder) angezeigt; insbesondere ist damit die Eingabe von RichText-Inhalten über den Assistenten (wieder) möglich</li>
+</ul>
+<h2 id="55718"><span class="versionsNumber" id="5.5.7.18">5.5.7.18</span></h2>
+<p style="text-align: left">23.06.2016 16:20<span style="float:right;">Revision 46543</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="feature">Strukturen: innerhalb der Strukturansichten kann über die Option "Anzeige &gt; Hinweise (Notizen)" die automatische Anzeige der Stammsatz-Notizen eingeschaltet werden; außerdem werden Strukturelemente mit Notiz (wie in den Listen) über eine "blaue Ecke" hervorgehoben</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.1 Planungsstrukturen, 2.2.1 Kontostrukturen, 2.3.1 Zeitstrukturen, 2.4.1 Segmentstrukturen, 6.7 Berichte</span></p>
+<ul>
+<li class="bug">beim Exportieren von Strukturen werden auch die abhängigen Daten (wieder) korrekt referenziert; insbesondere können auch die zugehörigen Rechenregelgruppen, Rechenregeln, Bausteine etc. (wieder) importiert werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.3 Planungseinheiten (Stammsätze), 2.2.3 Konto (Stammsätze), 2.3.3 Zeiteinheiten (Stammsätze), 2.4.3 Segmente (Stammsätze), 4.2 Korrekturen</span></p>
+<ul>
+<li class="feature">Tabellenansichten: innerhalb der Dimensionsfeldinhalte und Buchungsfeldinhalte (z.B. Kommentare) werden in den Tabellen und in den zugehörigen Hinweisfenstern (aka Hints) auch Feldinhalte vom Typ "RichText" als einfacher Text (d.h. ohne Formatierungen; sog. "Plain Text") angezeigt (anstatt lediglich "&lt; RichText &gt;")</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: beim Öffnen der Liste kommt es nicht mehr u.U. zu einer Zugriffsverletzung (durch Zugriff auf eine noch nicht initialisierte Ad-hoc-Grafik)</li>
+<li class="bug">Tabellenkalkulation-Export: auch bei aktivierter Option "Beschriftungen einzeln" werden die Zellnotizen in der richtigen Spalte positioniert</li>
+<li class="feature">Liste: beim Anklicken der Symbole "Blatt" und "Stapel" erscheinen jeweils nicht mehr Informationen zur zugehörigen Struktur, sondern Informationen zum aktuell gewählten Strukturelement</li>
+<li class="feature">Liste: auch in den Strukturen von Blatt und Stapel kann über die Option "Anzeige &gt; Hinweise (Notizen)" die automatische Anzeige der Stammsatz-Notizen eingeschaltet werden; außerdem werden Strukturelemente mit Notiz (wie in den Zeilen und Spalten) über eine "blaue Ecke" hervorgehoben</li>
+<li class="feature">Listen: innerhalb der Dimensionsfeldinhalte und Buchungsfeldinhalte (z.B. Kommentare) werden im Hinweisfenster (aka Hint) auch Feldinhalte vom Typ "RichText" als einfacher Text (d.h. ohne Formatierungen; sog. "Plain Text") angezeigt (anstatt lediglich "&lt; RichText &gt;")</li>
+<li class="feature">Liste: die Funktion "Zellmenü &gt; Anzeige &gt; Hinweise (Notizen)" wurde um die Möglichkeit der Aggregierung in Zeilen- und Spaltenrichtung erweitert; insbesondere können auf verdichteten Elementen (optional) alle zugehörigen Zellnotizen der darunterliegenden Elemente angezeigt werden</li>
+<li class="feature">Liste: neue Option "Spaltenansicht &gt; Verdichtung" hinzugefügt</li>
+<li class="feature">Liste: mehrzeilige Notizen werden bei Darstellung in einzeiligen Feldern nicht mehr umgebrochen (wodurch vorher nur die erste Zeile angezeigt wurde); stattdessen werden Zeilenumbrüche durch ein Leerzeichen ersetzt</li>
+<li class="feature">Liste: das (neue) Trennzeichen "&lt;|&gt;" wird in der Listenansicht als " | " dargestellt</li>
+<li class="feature">Tabellenkalkulation-Export: bei aktivierter Option "Textumbruch" führen Anführungszeichen (") nicht mehr zu einem ungewollten Textumbruch</li>
+<li class="feature">Tabellenkalkulation-Export: innerhalb von Zeilenbeschriftungen wird das (neue) Trennzeichen "&lt;|&gt;" als Kennzeichen für eine neue Spalte interpretiert</li>
+<li class="feature">Tabellenkalkulation-Export: durch Verwendung der Option "Spaltenansicht &gt; Verdichtung" ist auch im OpenDocument-Export möglich; hierbei wird auch für diese Elemente das (neue) Trennzeichen "&lt;|&gt;" als Kennzeichen für eine neue Spalte interpretiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="bug">Notizen an Stammsätzen mit Zeilenumbrüchen und Sonderzeichen führen nicht mehr dazu, dass u.U. anstatt der Grafik der Hinweis "Es sind keine signifikanten Werte ausgewählt." angezeigt wird</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="feature">Zellnotizen können optional (wahlweise als Fußnoten oder Kommentare) exportiert werden; zur Steuerung der Formatierung können in der zugehörigen Feldvorlage die Formatvorlagen "Fußnotentext" (zugrundeliegendes Absatzformat für Fußnoten), "Fußnotenzeichen" (Darstellung des Zeichens, das auf die Fußnote verweist) und "Kommentartext" angelegt werden</li>
+<li class="feature">Platzhalter, die auf Feldinhalte vom Typ "RichText" verweisen, werden durch den einfachen Text (d.h. ohne Formatierungen; sog. "Plain Text") ersetzt</li>
+</ul>
+<h2 id="55717"><span class="versionsNumber" id="5.5.7.17">5.5.7.17</span></h2>
+<p style="text-align: left">11.05.2016 13:22<span style="float:right;">Revision 45911</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">5 Verteilung</span></p>
+<ul>
+<li class="bug">Berechnung: die Verteilungsfaktoren werden (wieder) stets korrekt berechnet, sodass insbesondere die Umlage (wieder) vollständig ausgeführt wird</li>
+</ul>
+<h2 id="55716"><span class="versionsNumber" id="5.5.7.16">5.5.7.16</span></h2>
+<p style="text-align: left">04.05.2016 17:59<span style="float:right;">Revision 45817</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe, 6.7 Berichte</span></p>
+<ul>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export wird bei Verwendung der Option "Beschriftungen einzeln" keine leere Zeile mehr ausgegeben, wenn keine Bezeichner in den Spalten angezeigt werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.2 Korrekturen</span></p>
+<ul>
+<li class="bug">die Suche nach Korrekturen funktioniert (wieder) korrekt; insbesondere wird bei mehreren Ergebnissen nicht mehr nur der erste Eintrag gefunden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5 Verteilung</span></p>
+<ul>
+<li class="feature">Berechnung: die Berechnung der Verteilungsfaktoren wurde optimiert, sodass Dateien mit Umlagen in speziellen Fällen mehr als 5-mal so schnell berechnet werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Bericht: beim Drucken der Reportstruktur erscheint nicht mehr u.U. die Assertion 'Die Tabelle "&lt; … bitte wählen Sie eine Tabelle … &gt;" unterstützt diese Funktion nicht.'</li>
+<li class="bug">Reportgenerator: beim Bausteintyp "Liste" wird auch die Zeilenhöhe korrekt aus der Liste übernommen</li>
+<li class="bug">Reportgenerator: auch in Zeilen- und Spaltenbeschriftungen werden Platzhalter für Dateiattribute (z.B. <datei.j>) auch dann stets korrekt ersetzt, wenn im Bericht mehrere Dateien verwendet werden</datei.j></li>
+</ul>
+<h2 id="55715"><span class="versionsNumber" id="5.5.7.15">5.5.7.15</span></h2>
+<p style="text-align: left">17.03.2016 18:58<span style="float:right;">Revision 45106</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">der Assistent erscheint stets im Vordergrund; insbesondere wird der Assistent nicht mehr u.U. durch das Hauptfenster verdeckt (sodass es "so aussieht", als sei Kosy abgestürzt)</li>
+<li class="bug">in Dateipfaden werden auch die Windows-Pfadvariablen (z.B. "%TEMP%") korrekt (als absoluter anstatt als relativer Pfad) ersetzt</li>
+<li class="bug">in Dateipfaden werden innerhalb von Platzhalterersetzungen ungültigen Zeichen (z.B. ":") durch einen Unterstrich ("_") ersetzt, damit der resultierende Pfad gültig ist</li>
+<li class="bug">Tabellenansichten: in allen Auswahlboxen wurde die automatische Nummerierung optimiert, sodass auch bei Auswahl eines anderen Eintrags weiterhin die Nummerierung angezeigt wird</li>
+<li class="feature">Dimensionsfelder &amp; Buchungsfelder: bei einem Doppelklick auf ein Dimensionsfeld oder Buchungsfeld, für das kein Kommando angegeben wurde, wird keine Meldung (über ein fehlendes Kommando) mehr angezeigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines, 3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">Berechnung: bei Verwendung von verkürzten Strukturen werden die Buchungssätze (wieder) korrekt den Elementen der untersten Ebene zugeordnet; insbesondere erscheint in diesem Fall keine irreführende Warnung über Nicht-Eingabeelemente (z.B. "keine Eingabe-Segmente") mehr (da nicht mehr fälschlicherweise versucht wird, die Buchungssätze den Verdichtungselementen zuzuordnen)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: die Dualanzeige wird stets korrekt initialisiert, sodass keine "leere Maske" (mehr) erscheint</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.5 Verteilungsansicht, 6.10 Ergebnisarten</span></p>
+<ul>
+<li class="bug">bei Verwendung der Optionen "[Saisonverteilung|Primärkostenumlage|Sekundärkostenumlage] &gt; Verteilungsschichtung &gt; 2 : vorberechnen" (anstatt "1 : ad hoc ermitteln") werden in der Funktion "6.5 Verteilungsansicht" (wieder) die geschichteten Werte angezeigt; hierdurch lassen sich die Verteilungsansichten um ein Vielfaches schneller anzeigen</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Bericht: der Kontextmenüeintrag "Datei austauschen" kann (korrekterweise) nur für Bausteine mit Dateikontext gewählt werden</li>
+<li class="bug">Reportgenerator: beim Bausteintyp "Kapitel" werden beim Einbinden einer Feldvorlage die Angaben zur Formatierung korrekt übernommen</li>
+<li class="bug">Reportgenerator: zusätzlich zum "Absatzwechsel" (Steuerzeichen » ¶ «, z.B. über [Enter]) wird auch der sogenannte "einfache Zeilenumbruch" (Steuerzeichen » ↵ «, z.B. über [Shift+Enter]) aus dem RichText-Inhalt in das Dokument übernommen</li>
+<li class="feature">Bericht: für den Bausteintyp "Liste" wurde die Option "Beschriftungen einzeln" hinzugefügt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.3.1 Dateieinstellungen</span></p>
+<ul>
+<li class="feature">neue Option "Anordnung des Datenwürfels" hinzugefügt; hierüber lassen sich bei großen Datenwürfeln in bestimmten Anwendungsfällen durch Optimierung der Arbeitsspeicherauslagerungen ("Virtual Memory") die Berechnungszeiten signifikant verbessern</li>
+</ul>
+<h2 id="55714"><span class="versionsNumber" id="5.5.7.14">5.5.7.14</span></h2>
+<p style="text-align: left">19.02.2016 20:28<span style="float:right;">Revision 44606</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.4 Planungsfelder, 2.2.4 Kontofelder, 2.3.4 Zeitfelder, 2.4.4 Segmentfelder, 2.5.1 Übersicht der Buchungsfelder</span></p>
+<ul>
+<li class="feature">Import: beim Importieren von Inhalten in RichText-Felder sind (analog zum Import in das Feld "Notiz") auch mehrzeilige Texte (mit "{\n}" als Zeilenumbruch) möglich</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">Berechnung: falls die Datei mehrfach in einer Dateistruktur verwendet wird, wird nicht mehr u.U. eine irreführende Meldung über fehlende Elemente (z.B. fehlende Planungseinheiten) ausgegeben</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe</span></p>
+<ul>
+<li class="bug">Liste: bei Verwendung der Benutzereinstellung "immer (ohne Prüfung) berechnen" wird beim Öffnen (der Eingabeliste) nicht mehr (fälschlicherweise) die Berechnung (der Ausgabewerte) gestartet</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">beim Ausführen der Automatisierung mit einer nicht vorhandenen Liste erscheint keine Fehlermeldung "Can't change sql text because dataset open." mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.3 Standards</span></p>
+<ul>
+<li class="bug">Buchungsansicht: die Buchungssätze der fokussierten Zelle werden (wieder) sofort angezeigt (anstatt erst nach Eingabe einer Zahl)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5 Verteilung</span></p>
+<ul>
+<li class="bug">Berechnung: beim automatischen Aktualisieren von Verteilungsschlüsseln aus Eingabewerten derselben Datei erscheint nicht mehr u.U. die Fehlermeldung "Stack-Überlauf"</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: der Fokuswechsel einer Zelle bei aktiver Buchungsansicht wurde (z.T. erheblich) beschleunigt</li>
+<li class="bug">Liste: falls sich die Strukturen geändert haben, erscheint bei der Live-Berechung keine Assertion "(D &gt;= 0) and (D &lt; CountD)" (mBooleanCube, Zeile 236) mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="feature">die Interaktion mit Grafiken wurde optimiert; insbesondere bei aktivierter Option "vollständige Skalierung" werden dabei z.B. Achsen dynamisch skaliert und animiert</li>
+<li class="feature">Beschriftungen von Tachos lassen sich über die Option "Beschriftung" ausblenden; außerdem überlagern sich die Beschriftungen bei ähnlichen Werten in den meisten Fällen nicht mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">7.1.1 Übersicht der Listen</span></p>
+<ul>
+<li class="bug">die Maske lässt sich auch dann (wieder) schließen, wenn keine Listen vorhanden sind</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="bug">Import: beim Direktimport hängt sich Kosy beim Auftreten von (behandelten) Exceptions nicht mehr sporadisch auf; insbesondere hängt sich Kosy beim Starten des zweiten Imports nicht mehr sporadisch auf (z.B. falls im ersten Import eine behandelte Exception aufgetreten ist)</li>
+<li class="bug">Stammsatzimport: beim Import von Stammdaten werden auch die Dimensionsfeldinhalte (wieder) importiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1.2 Mandantenimporte</span></p>
+<ul>
+<li class="feature">Stammsatzimport: beim Import von Stammdaten können auch individuelle (d.h. dateibezogene) Dimensionsfeldinhalte importiert werden; hierfür kann in der Übersicht als "Zieldatensatz" die zugehörige Datei ausgewählt werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1 Aufgaben</span></p>
+<ul>
+<li class="bug">bei Verwendung der Aufgabenart "Zuordnungen direkt importieren" steht der Schritt "Typ des Imports" (korrekterweise) nicht mehr zur Verfügung; insbesondere kann "benutzerdefinierter Import" nicht mehr ausgewählt werden (und führt damit nicht mehr zu einer Fehlermeldung der Art "Invalid Token. […] Token unknown. […] Where. […]")</li>
+<li class="bug">in der Aufgabenart "Stammdaten drucken" wird beim Drucken von Strukturen das Ausgabeformat "OpenDocument (.ods)" (korrekterweise) nicht mehr angeboten</li>
+<li class="feature">in der Aufgabenart "Stammdaten drucken" ist nun auch im Ausgabeformat "Word (.doc)" die Auswahl einer "Exportart" ("nur öffnen", "speichern und öffnen", "nur speichern") möglich; insbesondere ist hiermit ein automatisierbarer Export von Stammdaten als Word-Dokumente in vorgegebene Zieldateien möglich</li>
+<li class="feature">die Aufgabenarten "[…]abhängige Zuordnungen importieren" und "[…]abhängige Zuordnungen exportieren" wurde in "Zuordnungen direkt importieren" resp. "Zuordnungen direkt exportieren" umbenannt</li>
+</ul>
+<h2 id="55713"><span class="versionsNumber" id="5.5.7.13">5.5.7.13</span></h2>
+<p style="text-align: left">25.01.2016 09:59<span style="float:right;">Revision 44081</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Listenansichten: innerhalb der "einfachen Listenansichten" und "geteilten Listenansichten" wird die Option "vereinfachte Mehrfachauswahl" (wieder) korrekt initialisiert</li>
+<li class="bug">Tabellenansichten: bei horizontaler Teilung der Detailansicht werden durch das Speichern eines Datensatzes nicht mehr u.U. (genauer: falls es gruppierte Spalten gibt und mindestens eine Spalte ausgeblendet ist) alle Eingabefelder der Detailansicht nach rechts verschoben</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: die Reihenfolge im Navigationsmodus "Suchergebnis" (Suchfunktion über "Zeilenmenü &gt; […] suchen" oder [Strg+F]) ist auch bei Verwendung der Option "Zellmenü &gt; Anzeige &gt; Sortierung &gt; flache Liste" korrekt</li>
+<li class="bug">Liste: die rechten Rahmenlinien der Hauptspalten werden nicht mehr u.U. in jeder Unterspalte angezeigt</li>
+<li class="bug">Buchungsansicht: beim Wechseln der Liste werden die Buchungssätze (der fokussierten Zelle) stets aktualisiert</li>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export mit "alle Blätter des aktuellen Stapels" wird die Fortschrittsanzeige korrekt angezeigt</li>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export mit "alle Blätter des aktuellen Stapels" wird die Fortschrittsanzeige bei einem manuellen Abbruch durch den Benutzer korrekt geschlossen</li>
+<li class="bug">Druck: die Ansicht der Spalten der Strukturansicht wird korrekt wiederhergestellt, wenn diese für den Druck über "Anzeige &gt; Spaltenansicht" geändert wurde</li>
+<li class="bug">Liste: der Zellrechner berücksichtigt das Zugriffsrecht aller relevanten Zellen</li>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export mit zugeklappten Spalten werden die Werte (wieder) in der korrekten Spalte dargestellt</li>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export mehrerer Blätter werden die Klappzustände für alle Blätter korrekt angewendet</li>
+<li class="bug">Direktauswahl: beim Wechsel des Mandanten werden die aktuell fokussierten Strukturelemente korrekt wiederhergestellt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5.1 Verteilungsschlüssel</span></p>
+<ul>
+<li class="bug">empfangende Werte: nach dem Wechsel des Verteilungsschlüssels kommt es beim Laden der Verteilungswerte u.U. zu einer Zugriffsverletzung</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5.6 Verteilungsübersicht</span></p>
+<ul>
+<li class="bug">Liste: im Navigationsmodus "Suchergebnis" (Suchfunktion über "Zeilenmenü &gt; […] suchen" oder [Strg+F]) werden die Navigationsbuttons (bei Bedarf) korrekt aktiviert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="bug">Import: beim Direktimport hängt sich Kosy bei "Laden der Datenquelle" oder "Der Import wurde abgeschlossen." nicht mehr sporadisch auf; wichtig: hierfür wird die zugehörige Schnittstellen-DLL mit RecVersion '2016.01.22' (oder höher) benötigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1 Aufgaben</span></p>
+<ul>
+<li class="bug">bei Aufgaben der Art "[…] Zuordnungen importieren" wird der (im diesem Kontext nicht implementierte) Schritt "Typ des Imports" nicht mehr angezeigt; insbesondere kann die ungültige Einstellung "benutzerdefinierter Import" nicht mehr ausgewählt werden kann, sodass keine Fehlermeldung der Art "Invalid token. […] Token unknown. […] Where." mehr erscheint</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">10 Hilfe</span></p>
+<ul>
+<li class="feature">kontextsensitive Hilfe aktualisiert</li>
+</ul>
+<h2 id="55712"><span class="versionsNumber" id="5.5.7.12">5.5.7.12</span></h2>
+<p style="text-align: left">21.12.2015 19:07<span style="float:right;">Revision 43778</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="feature">bei Verwendung der Konfigurationseinstellung "EMail=" (siehe Konfigurationsdatei "Kosy.ini", Abschnitt "[ErrorLog]") werden im Fall eines Programmfehlers keine E-Mails mehr versendet</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.3.2 Mandanteneinstellungen</span></p>
+<ul>
+<li class="feature">neue Option "Größenermittlung von Textdateien" hinzugefügt; hierdurch kann die automatische Ermittlung der in einer Textdatei enthaltenen Datensätze (z.B. für Transferdateien aus SAP) abgeschaltet werden</li>
+</ul>
+<h2 id="55711"><span class="versionsNumber" id="5.5.7.11">5.5.7.11</span></h2>
+<p style="text-align: left">17.12.2015 17:37<span style="float:right;">Revision 43730</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.1 Planungsstrukturen, 2.2.1 Kontostrukturen, 2.3.1 Zeitstrukturen, 2.4.1 Segmentstrukturen</span></p>
+<ul>
+<li class="bug">das Importieren von Strukturen aus einer KTF-Datei schlägt nicht mehr mit der irreführenden Fehlermeldung "Das System kann die angegebene Datei nicht finden." fehl</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="bug">Übersicht: das Drucken über den Button "Start" ist (wieder) möglich</li>
+<li class="bug">bei der Auswahl von Elementen, die nicht im Ergebnis enthalten sind (z.B. weil sie neu oder inaktiv sind), erscheint keine Zugriffsverletzung mehr</li>
+<li class="feature">innerhalb der Grafik erscheint der Hinweis "Es sind keine signifikanten Werte ausgewählt.", falls keine Daten vorhanden sind</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: Platzhalter in Feldvorlagen werden auch dann ersetzt, wenn innerhalb der Platzhalter Formatierungen (o.a. Steuerzeichen) vorhanden sind</li>
+<li class="bug">Reportgenerator: bei Bausteinen des Typs "Dokument" funktioniert die Einstellung "neues Seitenlayout hinzufügen" auch dann korrekt, wenn zuvor ein Dokument ohne "Seitenumbruch nachher" eingefügt wurde</li>
+<li class="feature">Bericht: für die Bausteintypen "Dokument" und "Inhaltsverzeichnis" wurde in der Option "Seitenumbrüche" der Standardwert von "nur vorher" auf "vorher und nachher" geändert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1.1 Dateiaufgaben</span></p>
+<ul>
+<li class="feature">Buchungssatzexport: über die neue Option "Buchungsarten" können die Buchungssätze anhand der jeweiligen Buchungsart gefiltert werden; hierüber können z.B. nur die Zellnotizen exportiert werden</li>
+</ul>
+<h2 id="55710"><span class="versionsNumber" id="5.5.7.10">5.5.7.10</span></h2>
+<p style="text-align: left">10.12.2015 12:53<span style="float:right;">Revision 43601</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">2.5 Buchungsfelder</span></p>
+<ul>
+<li class="feature">die einzelnen Bestandteile des Kommandos (genauer: das aufzurufende Programm und die Parameter) werden beim Ausführen (jeweils) genau dann in Anführungszeichen ("…") gesetzt, wenn diese Anführungszeichen aufgrund von Leerzeichen innerhalb des Programmpfads resp. des Parameters notwendig sind und nicht bereits auf einem Anführungszeichen enden; insb. ist es damit möglich, innerhalb eines Parameters mit Leerzeichen nur einen Teil des Parameters in Anführungszeichen zu setzen (z.B. '-command="FB17 BELNR=0815"')</li>
+</ul>
+<h2 id="5579"><span class="versionsNumber" id="5.5.7.9">5.5.7.9</span></h2>
+<p style="text-align: left">09.12.2015 18:19<span style="float:right;">Revision 43581</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="feature">Tabellenansichten: neue Option "Spalten an Gesamtbreite anpassen" hinzugefügt; insb. kann bei Verwendung sehr vieler Spalten (z.B. bei vielen Buchungsfeldern innerhalb der Buchungsansicht) die automatische Anpassung an die verfügbare Gesamtbreite abgeschaltet werden, wodurch die Spalten beliebig verbreitert werden können</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.5 Buchungsfelder</span></p>
+<ul>
+<li class="bug">die einzelnen Bestandteile des Kommandos (genauer: das aufzurufende Programm und die Parameter) werden beim Ausführen (jeweils) genau dann in Anführungszeichen ("…") gesetzt, wenn diese Anführungszeichen aufgrund von Leerzeichen innerhalb des Programmpfads resp. des Parameters notwendig sind; insb. werden für jeden Bestandteil grundsätzlich keine Anführungszeichen (mehr) verwendet, wenn in dem Bestandteil kein Leerzeichen enthalten ist</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">beim Öffnen eines Berichts mit Word mittels der Option "nur öffnen" erscheint nicht mehr u.U. die Fehlermeldung "Dieses Dokument konnte von Word nicht gelesen werden."</li>
+<li class="bug">beim Öffnen eines gespeicherten Berichts mit Word erscheint nicht mehr u.U. die Fehlermeldung "Die Datei '[…].odt' kann nicht geöffnet werden, da ihr Inhalt Probleme verursacht."</li>
+<li class="bug">beim Hinzufügen von Bausteinen der Bausteintypen "Dokument" und "Inhaltsverzeichnis" werden im Assistenten alle verfügbaren Schritte direkt angezeigt; insb. wird der Schritt "Einstellungen" nicht erst beim Bearbeiten solcher Bausteine sichtbar</li>
+<li class="bug">bei der gleichzeitigen Bearbeitung mehrerer Bausteine erscheint nicht mehr u.U. die Assertion "Step nicht gefunden. (mWizard, Zeile 3454).", falls den Bausteinen unterschiedliche Bausteintypen zugrunde liegen</li>
+<li class="feature">Bericht: neue Option "Seitenumbrüche" für die Bausteintypen "Dokument" und "Inhaltsverzeichnis" hinzugefügt; insb. kann explizit angegeben werden, an welcher Stelle ("vorher", "nachher") Seitenumbrüche eingefügt werden sollen; hierüber können u.a. das Seitenlayout und die Kopf- und Fußzeile gesteuert werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1.1 Dateiimporte</span></p>
+<ul>
+<li class="bug">Buchungssatzimport: nach dem Hinzufügen von Strukturelementen über die Picklist erscheint nicht mehr u.U. eine Zugriffsverletzung</li>
+<li class="bug">Buchungssatzimport: Dimensionsfeldinhalte werden gemäß der Einstellung zur Option "Feldaktualisierung" des Importelements korrekt aktualisiert (anstatt stets die globale Einstellung "Feldaktualisierung" des Imports zu verwenden)</li>
+<li class="bug">Buchungssatzimport: auch für Importelemente mit einem Dimensionsfeld als Ziel wird ein vollständiger Alternativtitel angezeigt</li>
+</ul>
+<h2 id="5578"><span class="versionsNumber" id="5.5.7.8">5.5.7.8</span></h2>
+<p style="text-align: left">24.11.2015 20:35<span style="float:right;">Revision 43420</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="bug">bei eingeschalteter Systemeinstellung "Allgemein &gt; Hauptmenü &gt; Menüpunkte ohne Zugriffsrecht ausblenden" bleiben die mandanten- und dateiabhängigen Menüpunkte auch dann (korrekterweise) sichtbar, wenn kein Mandant bzw. keine Datei gewählt wurde</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: bei der Eingabe und Bearbeitung von Zellnotizen erscheint keine irritierende Warnmeldung "Die Buchungsfelder können nicht bearbeitet werden. Die Datenbank meldet folgende Ursache: Listenindex überschreitet das Maximum (-1)" mehr, falls die Option "Anzeige &gt; Hinweise (Notizen)" in allen Bereichen der Liste (Zeilen, Spalten und Zellen) ausgeschaltet ist</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5 Verteilung</span></p>
+<ul>
+<li class="bug">das automatische Kopieren von Werten (über eine Basis) wird auch dann zuverlässig ausgeführt, wenn es Dateiverbindungen gibt, die vor dem Verteilungsschlüssel angelegt wurden; beim manuellen Kopieren erscheint in diesem Fall keine Assertion (mCalcStructure, Zeile 1917) mehr</li>
+</ul>
+<h2 id="5577"><span class="versionsNumber" id="5.5.7.7">5.5.7.7</span></h2>
+<p style="text-align: left">19.11.2015 21:20<span style="float:right;">Revision 43341</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Strukturansichten: auch bei sehr schnellem Wechsel des fokussierten Strukturelements (per Mausklick) wird in der Detailansicht stets das aktuell fokussierte Element angezeigt</li>
+<li class="bug">die Konfigurationseinstellung "Calculation &gt; PreAllocateMemorySize" (der Datei "Kosy.ini") wird im Versionshinweis unter "Verschiedenes &gt; vorreservierter Speicher" korrekt angezeigt</li>
+<li class="bug">das Laden eines Zitats schlägt nicht mehr sporadisch fehl, falls aktuell mehrere Kosy-Instanzen laufen; insb. beginnt in diesem Fall die Anzeige der Zitate nicht mehr von vorne (bei Zitat Nr. 1)</li>
+<li class="feature">Strukturansichten: das gleichzeitige Hinzufügen mehrerer Strukturelemente (sog. MultiInsert) wurde um etwa 60 % beschleunigt</li>
+<li class="feature">während der unbeaufsichtigten Automatisierung wird keine Modullizenz mehr belegt</li>
+<li class="feature">Berechnung: nach einem (manuellen) Abbruch innerhalb der Aktion "Transformierung des Datenwürfels" wird die Berechnung sofort (anstatt erst nach Beendigung dieser Aktion) abgebrochen</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="bug">beim Wechsel des Moduls wird die Farbe des Benutzers (wieder) sofort aktualisiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">Berechnung: während der Berechnung als fehlend angewarnte Elemente werden auch dann (wieder) in der Picklist angezeigt, wenn die Benutzereinstellung "Änderungen nach der Berechnung automatisch übernehmen" verwendet wird</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: beim direkten Wechseln der Liste (d.h. ohne Wechsel auf die Registerkarte "Übersicht") erscheint nicht mehr u.U. die Fehlermeldung "Can't load tree. Source is not valid."</li>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export werden leere Bereiche der Kopf- und Fußzeile ohne XML-Tag exportiert; insb. erscheint unter Excel 2007 im linken Bereich nicht mehr (scheinbar ohne Grund) der Pfad zum Dokument, wenn der mittlere Bereich leer bleibt</li>
+<li class="bug">Liste: die Auswertung des Filters "nur Eingabeelemente" im Blatt ist unabhängig vom aktuell gewählten Element im Stapel; insb. werden bei eingeschaltetem Filter nicht mehr fälschlicherweise keine Elemente angezeigt, falls das gewählte Stapelelement kein Eingabeelement ist</li>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export mit zugeklappten Unterspalten werden die Werte auch dann in der korrekten Spalte dargestellt, wenn Filter aktiv sind</li>
+<li class="feature">Liste: neue Option "Zellmenü &gt; Eingabe &gt; Wertebedingungen automatisch aktualisieren" (Default: ausgeschaltet), um während der Eingabe von Daten optional nach jeder Eingabe sofort alle Wertebedingungen (z.B. sog. "Ampeln") zu aktualisieren; Hinweis: bei ausgeschalteter Option kann über "Zeilenmenü &gt; aktualisieren &gt; automatisch (nach Größe) [F5]" die gesamte Liste inkl. aller Formatierung und Wertebedingungen manuell aktualisiert werden</li>
+<li class="feature">Tabellenkalkulation-Export: im OpenDocument-Export wurden die Optionen "Außenrahmen" und "Überschriftslinien" hinzugefügt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.3 Standards</span></p>
+<ul>
+<li class="bug">Eingabe: in der Liste werden (wieder) nur die zum Standard gehörenden Werte berücksichtigt; außerdem verändern sich durch Ein- und Ausblenden der Buchungsansicht nicht mehr sporadisch die angezeigten Werte</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5 Verteilung</span></p>
+<ul>
+<li class="bug">empfangende Werte: in der Liste werden (wieder) nur die zum Verteilungsschlüssel gehörenden Werte berücksichtigt; außerdem verändern sich durch Ein- und Ausblenden der Buchungsansicht nicht mehr sporadisch die angezeigten Werte</li>
+<li class="bug">das automatische Kopieren von Werten (über eine Basis) wird (wieder) ausgeführt</li>
+<li class="feature">das gleichzeitige Bearbeiten mehrerer Verteilungsschlüssel (sog. MultiEdit) ist bis zu 64-mal so schnell</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: berechnete Werte werden (wieder) sofort (anstatt ggf. erst nach der ersten Eingabe eines Wertes) angezeigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Bericht: durch das Ändern der Einstellung "Mandant" innerhalb der Detailansicht kommt es nicht mehr zu einem heftigen Flackern</li>
+<li class="feature">Bericht: der Fokuswechsel zwischen Bausteinen ist etwa doppelt so schnell</li>
+<li class="feature">Bericht: das Schließen des Assistenten (zum Hinzufügen und Bearbeiten von Bausteinen) ist etwa doppelt so schnell</li>
+<li class="feature">Bericht: für die Bausteintypen "Liste", "Grafik" und "Bild" wurde eine neue Option "Außenrahmen" (inkl. benutzerdefinierter Breite) hinzugefügt</li>
+<li class="feature">Bericht: für den Bausteintyp "Liste" wurde eine neue Option "Überschriftslinien" hinzugefügt</li>
+<li class="feature">Bericht: das Öffnen der Struktur ist etwa 2- bis 3-mal so schnell</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.3.2 Mandanteneinstellungen</span></p>
+<ul>
+<li class="feature">neue Einstellungen "Recht am Dimensionsfeldinhalt" hinzugefügt; damit kann das Recht am Dimensionsfeldinhalt (optional) nicht mehr durch das Recht am Stammsatz eingeschränkt werden; insb. ist es damit möglich, dass auch bei Lesezugriff am Stammsatz die zugehörigen Dimensionsfeldinhalte (Notizen, …) bearbeitet werden dürfen</li>
+</ul>
+<h2 id="5576"><span class="versionsNumber" id="5.5.7.6">5.5.7.6</span></h2>
+<p style="text-align: left">03.11.2015 20:35<span style="float:right;">Revision 43045</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Berechnung: auch Strukturelemente, die erst kurz zuvor unterhalb eines inaktiven Strukturelementes angelegt wurden, werden bei der nächsten Berechnung korrekterweise als vorhanden erkannt; insb. erscheint im Berechnungsreport keine irreführende Meldung über (angeblich) "nicht vorhanden" Elemente mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="bug">Schnellansichten: bei der Anzeige der zugehörigen Listenansicht erscheinen nicht mehr irreführenderweise Et-Zeichen (Kaufmanns-Und, '&amp;') vor und hinter der Bezeichnung der Listenansicht; außerdem wird zur besseren Übersicht das Wort "Listenansicht" nicht mehr angezeigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.1 Planungsstrukturen, 2.2.1 Kontostrukturen, 2.3.1 Zeitstrukturen, 2.4.1 Segmentstrukturen</span></p>
+<ul>
+<li class="bug">Struktur: im Hinweisfenster des Strukturelements wird im Abschnitt "3. Rechenregeln" die Information "Das Element wird in x Rechenregel(n) für die Berechnung anderer Elemente verwendet" (wieder) angezeigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: das (nicht erlaubte) Kopieren von Strukturelementen (mittels Drag&amp;Drop) wird korrekterweise unterbunden</li>
+<li class="bug">Tabellenkalkulation-Export: der Export eines Blattes mit vielen Zellen wurde beschleunigt</li>
+<li class="bug">Tabellenkalkulation-Export: beim Export von Listen erscheint keine Assertion "Der Assistent wurde nicht korrekt gestartet. (mWizard, Zeile 4xyz)." mehr</li>
+<li class="bug">Liste: das Bearbeiten von Werten auf verdichteten Strukturelementen ist auch dann stets korrekt, wenn das Element mehrfach in der Struktur vorkommt</li>
+<li class="bug">Ad-hoc-Grafik: auch Grafiken der Reihenarten "Kreis" und "Ring" werden stets sofort angezeigt</li>
+<li class="bug">Liste: innerhalb der Dualanzeigen "Stammsatzinformationen" und "Zellnotizen" werden Änderungen an Office-Objekten auch dann korrekt übernommen, wenn anschließend sofort das Blattelement oder Stapelelement gewechselt wird</li>
+<li class="bug">Buchungsansicht: die Anzeige auf verdichteten Strukturelementen ist auch dann korrekt, wenn das Element mehrfach in der Struktur vorkommt</li>
+<li class="bug">Buchungsansicht: gelöschte Buchungssätze werden auch in der Dateieingabe sofort (d.h. ohne erneute Berechnung) nicht mehr angezeigt</li>
+<li class="bug">Buchungsansicht: beim Druck mit Optionen erscheint keine Assertion "Der Assistent wurde nicht korrekt gestartet. (mWizard, Zeile 4xyz)." mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe, 6.5 Verteilungsansicht</span></p>
+<ul>
+<li class="bug">Liste: die Option "Spaltenmenü &gt; Anzeige &gt; Unterspalten &gt; Titel &amp; Alternativtitel" wird korrekt initialisiert</li>
+<li class="bug">Tabellenkalkulation-Export: die Beschriftungen der Unterspalten (Bezeichner, Titel und Alternativtitel) werden auch dann korrekt exportiert, wenn die Option "Beschriftungen einzeln" verwendet wird</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5 Verteilung</span></p>
+<ul>
+<li class="bug">empfangende Werte: in der Buchungsansicht werden auch bei Verwendung von verkürzten Strukturen alle relevanten Buchungssätze angezeigt</li>
+<li class="bug">empfangende Werte: auch nach dem erneuten Füllen eines Verteilungsschlüssels über eine Basis enthält dieser (weiterhin) Werte</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="bug">die Grafik wird nicht mehr u.U. durch die Wertetabelle überlagert</li>
+<li class="bug">außerhalb der Grafik werden keine Gitterlinien mehr angezeigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Bericht: die Option "Papier" wird (korrekterweise) nur für den Bausteintyp "Seitenumbruch" angezeigt</li>
+<li class="bug">Reportgenerator: beim Generieren von Berichten erscheint keine Assertion "Der Assistent wurde nicht korrekt gestartet. (mWizard, Zeile 4xyz)." mehr</li>
+<li class="bug">Reportgenerator: bei Verwendung eines Deckblatts mit Farbverlauf wird dieser Farbverlauf (auch in Word) nicht auf das darauffolgende Inhaltsverzeichnis angewendet</li>
+<li class="bug">Reportgenerator: die Grafiken werden mit einer höheren Genauigkeit umgerechnet, sodass sie nicht mehr u.U. unscharf wirken</li>
+<li class="bug">Reportgenerator: nach dem Generieren eines Berichts mit Daten einer "fremden Datei" (d.h. einer Datei aus einem anderen Mandanten) gilt diese Datei anschließend nicht sofort als veraltet</li>
+<li class="bug">Reportgenerator: bei Verwendung des Platzhalters "<wert.[…]>" wird die vorgegebene Ergebnisart (anstatt immer "001 : Standard") angewendet</wert.[…]></li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="bug">innerhalb der Übersicht wurde das Bearbeiten der Importe beschleunigt</li>
+</ul>
+<h2 id="5575"><span class="versionsNumber" id="5.5.7.5">5.5.7.5</span></h2>
+<p style="text-align: left">09.10.2015 21:07<span style="float:right;">Revision 42722</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Strukturansichten: Änderungen an der Beschriftung eines Strukturelements (Bezeichner, Titel, …) werden (wieder) sofort in der Struktur sichtbar</li>
+<li class="bug">Berechnung: im MultiUser-Betrieb erscheint nicht mehr u.U. eine Fehlermeldung der Art "Lock conflict […] At procedure 'CLR_CUBEVALUE' […]"</li>
+<li class="bug">Berechnung: bei Verwendung der Ergebnisart "005 : nur Umlage" werden die Werteflüsse (wieder) korrekt ermittelt; insb. sind die Werte nicht mehr genau doppelt so hoch wie erwartet und es erscheinen keine nicht-verteilten Werte mehr</li>
+<li class="bug">Berechnung: die Berechnung der Verteilungsfaktoren wurde für sehr große Verteilungsmatrizen optimiert, sodass bei Bedarf mehr Arbeitsspeicher zur Verfügung gestellt wird; insbesondere hängt sich Kosy nicht mehr u.U. im Schritt "Berechnung der Verteilungsfaktoren" auf</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="bug">in den Kontextmenüs zur Mandantenauswahl und Dateiauswahl werden zuvor gewählte Mandanten resp. Dateien nicht mehr (fälschlicherweise) durch Fettschrift hervorgehoben</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">nach dem Verlassen der Maske über die Funktion "Änderungen verwerfen" werden die letzten vorgenommenen Änderungen an den Optionen der Verbindung nicht mehr (fälschlicherweise) trotzdem gespeichert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export erscheint nicht mehr u.U. die Fehlermeldung "Integerüberlauf."</li>
+<li class="bug">Liste: beim Öffnen der Liste erscheint keine Assertion (mProgressManager, Zeile 1864) mehr</li>
+<li class="bug">Liste: nach Änderung der Listenansicht innerhalb der Liste werden weiterhin die Werte der im Blattund Stapelbereich gewählten Elemente angezeigt (anstatt die Werte eines anderen Blatt- bzw. Stapelelements)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.3 Standards</span></p>
+<ul>
+<li class="bug">Eingabe: die signifikanten Elemente werden (wieder) korrekt erkannt; insb. arbeitet der Filter "nur signifikante Elemente" (wieder) korrekt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5 Verteilung</span></p>
+<ul>
+<li class="bug">empfangende Werte: die signifikanten Elemente werden (wieder) korrekt erkannt; insb. arbeiten der Filter "nur signifikante Elemente" und die Navigation "empfangende […]" (wieder) korrekt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.1 Ergebnisse</span></p>
+<ul>
+<li class="bug">Liste: die Live-Berechnung wird (wieder) korrekterweise in Abhängigkeit der Berechnungsart automatisch deaktiviert; insb. stürzt Kosy beim Löschen von Eingabewerten auf einem Verdichtungselement nicht mehr (durch eine rechenaufwändige Aktualisierung der Liste durch die Live-Berechnung) "scheinbar" ab</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="bug">Grafik: bei Verwendung der Option "Wertetabelle" werden Grafik und Wertetabelle auch nach einer Größenanpassung des Fensters weiterhin korrekt dargestellt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Bericht: beim gleichzeitigen Bearbeiten mehrerer Bausteine steht der Bereich "Einstellungen" nicht mehr zur Verfügung; insb. werden beim gleichzeitigen Bearbeiten mehrerer Bausteine diese Einstellungen nicht mehr auf die jeweiligen Grundeinstellungen zurückgesetzt</li>
+<li class="feature">Bericht: für den Bausteintyp "Seitenumbruch" kann über die neue Option "Papierformat" die Seitengröße (DIN A4, DIN A3, …) verändert werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1 Aufgaben</span></p>
+<ul>
+<li class="bug">nach dem Verlassen der Maske über die Funktion "Änderungen verwerfen" werden die letzten vorgenommenen Änderungen an den Einstellungen der Aufgabe nicht mehr (fälschlicherweise) trotzdem gespeichert</li>
+</ul>
+<h2 id="5574"><span class="versionsNumber" id="5.5.7.4">5.5.7.4</span></h2>
+<p style="text-align: left">25.09.2015 19:15<span style="float:right;">Revision 42571</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Strukturen: beim Aufklappen einer Struktur erscheint nicht mehr u.U. eine Assertion (mTupleTypes- AndConsts, Zeile 160)</li>
+<li class="bug">Berechnung: bei der Berechnung erscheint nicht mehr u.U. der Berechnungsfehler "[…] Violation of PRIMARY or UNIQUE KEY constraint "UNQ_K_CUBEVALUE" on table "K_CUBEVALUE". […] At procedure 'INS_CUBEVALUE' line: 50, col: 3."</li>
+<li class="bug">Assistent: in gruppierten Schritten werden keine unnötigen Linien von ausgeblendeten Schritten (mehr) angezeigt</li>
+<li class="feature">RichText-Felder: über die u.a. aus Word bekannte Tastenkombination [Strg+Shift+Leertaste] können sog. "geschützte Leerzeichen" eingefügt werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: nach einem Wechsel der Liste bzw. Änderung der Listenansicht werden nicht mehr sporadisch keine Werte mehr angezeigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5 Verteilung</span></p>
+<ul>
+<li class="bug">beim Kopieren von Verteilungsschlüsseln innerhalb derselben Datei werden die empfangenen Werte korrekt ermittelt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: nach einer erneuten Berechnung innerhalb der Liste erscheint nicht mehr sporadisch eine Zugriffsverletzung</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="bug">auch bei Verwendung der neuen Grafikbibliothek (analog zum Webmodul) werden die Platzhalter im Titel der Grafik (z.B. "<datei.j>") bei der Darstellung als Überschrift ersetzt</datei.j></li>
+<li class="feature">über die neue Option "Wertetabelle" können unterhalb der Grafik sämtliche Werte in Tabellenform dargestellt werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Bericht: neue Option "Titelanzeige" für die Bausteintypen "Bild", "Liste" und "Grafik" hinzugefügt; hierüber kann der Titel des Bausteins wahlweise als Überschrift oder Beschriftung (mit Positionierung) in den Bericht übernommen werden</li>
+<li class="bug">Reportgenerator: im Fortschrittsdialog und allen Meldungen werden die eindeutigen Bausteinnummerierungen (inkl. der zugehörigen übergeordneten Bausteine) verwendet</li>
+<li class="bug">Reportgenerator: bei der automatischen Skalierung von Listen wird (zusätzlich zur Schriftgröße und Spaltenbreite) auch die Zeilenhöhe angepasst</li>
+<li class="bug">Bericht: im Assistenten "Baustein bearbeiten" wurden die Beschriftungen und Nummerierungen diverser Schritte überarbeitet</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">7.7 Kopf- und Fußzeilen</span></p>
+<ul>
+<li class="bug">Reportgenerator: beim Erzeugen eines Berichtes bleibt innerhalb der Kopf- und Fußzeilen auch ein einzelnes Leerzeichen, das auf den Platzhalter "&lt;Seite&gt;" folgt, (korrekterweise) erhalten</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1.2 Mandantenaufgaben</span></p>
+<ul>
+<li class="bug">bei Aufgaben vom Typ "Buchungssätze bereinigen" wird die Auswahl der Buchungsblöcke (wieder) korrekt geladen und gespeichert</li>
+</ul>
+<h2 id="5573"><span class="versionsNumber" id="5.5.7.3">5.5.7.3</span></h2>
+<p style="text-align: left">18.09.2015 18:07<span style="float:right;">Revision 42454</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Detailansichten: das Verschieben gruppierter Felder (mittels Drag&amp;Drop) ist (wieder) funktionsfähig</li>
+<li class="bug">Detailansichten: beim Wechsel in die horizontale Ansicht werden aller Steuerelemente korrekt ausgerichtet</li>
+<li class="bug">Detailansichten: beim Ein- und Ausblenden und beim Verschieben von Feldern bleibt die Position der vertikalen Bildlaufleiste (Scrollbar) und damit die aktuelle Ansicht erhalten</li>
+<li class="bug">Tabellenansichten: beim gleichzeitigen Bearbeiten mehrerer Datensätze über den Assistenten werden auch die Mehrfachauswahlen für alle gewählten Datensätze (anstatt nur für den ersten Datensatz) gespeichert; insb. wird beim gleichzeitigen Bearbeiten mehrerer Dateien die Auswahl der Buchungsfelder für alle gewählten Dateien (anstatt nur für die erste Datei) übernommen</li>
+<li class="bug">Detailansichten: bei Änderung der Darstellung der Felder erscheint nicht mehr u.U. die Fehlermeldung "Komponente mit der Bezeichnung […] existiert bereits."</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">Verbindungen werden auch dann (wieder) angewendet, wenn auf der Registerkarte "Optionen" für die jeweilige Verbindung noch nie Änderungen vorgenommen wurden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export mehrerer Hundert Blätter bzw. Stapel erscheint nicht mehr die Fehlermeldung "Für diesen Befehl ist nicht genügend Speicher verfügbar."</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe, 6.7 Berichte</span></p>
+<ul>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen werden auch die Standardränder berücksichtigt und die Ränder des zugehörigen Listenformats korrekt berechnet</li>
+<li class="bug">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen werden auch die Linien der Spaltenüberschriften korrekt exportiert</li>
+<li class="feature">Tabellenkalkulation-Export &amp; Reportgenerator: beim OpenDocument-Export von Listen besitzen alle drei Bereiche der Fußzeile die gleiche Mindesthöhe</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">5 Verteilung</span></p>
+<ul>
+<li class="bug">Verteilungsschlüssel: die Aktualisierung der Verteilungswerte über die zugehörige "Basis" ist (wieder) funktionsfähig</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: bei Verwendung des Bausteins "Inhaltsverzeichnis" mit leerer Feldvorlage bleiben die Formatvorlagen für die Überschriften (korrekterweise) erhalten (anstatt überschrieben zu werden)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1 Importe</span></p>
+<ul>
+<li class="bug">innerhalb eines Importvorgangs können (wieder) über Wildcards mehrere Textdateien auf einmal eingelesen werden</li>
+</ul>
+<h2 id="5572"><span class="versionsNumber" id="5.5.7.2">5.5.7.2</span></h2>
+<p style="text-align: left">10.09.2015 23:55<span style="float:right;">Revision 42334</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Tabellenansichten: beim gleichzeitigen Bearbeiten mehrerer Datensätze über den Assistenten können auch Datumsfelder (wieder) verändert werden</li>
+<li class="bug">beim Öffnen von Rechtezuordnungen und Funktionen mit hinterlegten Rechten kommt es nicht mehr u.U. zu einer Zugriffsverletzung</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.1 Planungsstrukturen, 2.2.1 Kontostrukturen, 2.3.1 Zeitstrukturen, 2.4.1 Segmentstrukturen</span></p>
+<ul>
+<li class="bug">Struktur: beim Hinzufügen von Strukturelementen über den Assistenten kommt es nicht mehr u.U. zu einer Zugriffsverletzung, wenn der Wert des Felds "Kurzbezeichnung" geändert wird</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">bei Änderung der Notiz einer Verbindung über den Assistenten erscheint keine Fehlermeldung "[…] ist kein gültiger Integerwert für Feld '_SLC_DFLD'."' mehr</li>
+<li class="bug">Zuordnungen: beim Öffnen der Registerkarte hängt Kosy sich nicht mehr auf, wenn zuvor Verteilungsschlüsselwerte kopiert wurden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export und CSV-Export werden in den entsprechenden Listenansichten auch dann die Unterspalten exportiert, wenn der Filter "nur signifikante Elemente" eingeschaltet ist oder wenn eine Listenart genutzt wird, die vom Standard abweicht</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.6.1 Übersicht der Planungsstatus</span></p>
+<ul>
+<li class="bug">Matrixansicht: das Speichern der Planungsstatus ist (wieder) möglich; insb. erscheint nicht mehr die Fehlermeldung "[…] Output parameter mismatch. At procedure 'INS_LINK_DATA_BLOCK'. […]"</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: Bilder und Grafiken werden auch unter Office 2013 in der "normalen Helligkeit" übernommen, anstatt mit der Einstellung "Helligkeit =</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">50 %"</span></p>
+<ul>
+<li class="bug">Reportgenerator: die in den Kopf- und Fußzeilen verwendete Schriftart bleibt beim Export erhalten</li>
+<li class="feature">Bericht: für die Bausteintypen "Kopf- und Fußzeile" und "Seitenumbruch" wurde die neue Option "Seitennummerierung" hinzugefügt, wodurch die Nummerierung optional mit einem vordefinierten Wert begonnen werden kann</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.3.3 Systemeinstellungen</span></p>
+<ul>
+<li class="feature">über die neue Systemeinstellung "Allgemein &gt; Hauptmenü &gt; Menüpunkte ohne Zugriffsrecht ausblenden" können Menüpunkte ohne Zugriffsrecht (optional) ausgeblendet werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.3.4 Benutzereinstellungen</span></p>
+<ul>
+<li class="bug">innerhalb der Gruppierungen der Registerkarte "Berechnung" wird eine einheitliche Schriftgröße verwendet</li>
+</ul>
+<h2 id="5571"><span class="versionsNumber" id="5.5.7.1">5.5.7.1</span></h2>
+<p style="text-align: left">31.08.2015 10:39<span style="float:right;">Revision 42207</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">beim Öffnen der Masken erscheint keine Zugriffsverletzung (durch die Erzeugung der Formulare für die Detailansicht) mehr</li>
+</ul>
+<h2 id="5570"><span class="versionsNumber" id="5.5.7.0">5.5.7.0</span></h2>
+<p style="text-align: left">28.08.2015 20:58<span style="float:right;">Revision 42203</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Detailansichten: für die Anzeige und Bearbeitung von RichText-Feldern wird die verfügbare Höhe der Detailansicht vollständig ausgenutzt</li>
+<li class="bug">Notizen und RichText-Felder: in allen Memofeldern werden die Inhalte automatisch umgebrochen; bei Bedarf kann der automatische Zeilenumbruch über die neue Benutzereinstellung "Allgemein &gt; Darstellung von Memofeldern &gt; automatischer Zeilenumbruch" abgeschaltet werden, sodass (automatisch) eine horizontale Bildlaufleiste (Scrollbar) angezeigt wird, falls die Breite des Inhalts größer ist als die verfügbare Anzeigebreite</li>
+<li class="feature">Berechnung: der Schritt "Ermittlung der Verbindungen" ist, falls es innerhalb der Dateiverbindungen sehr viele Makros gibt (&gt; 1.000), etwa 8-mal so schnell</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.1 Planungsstrukturen, 2.2.1 Kontostrukturen, 2.3.1 Zeitstrukturen, 2.4.1 Segmentstrukturen</span></p>
+<ul>
+<li class="bug">Strukturen: das Importieren von Rechenregelgruppen und Rechenregeln (als abhängige Daten beim Import von Strukturelementen zu einer Struktur) ist (wieder) möglich; insb. erscheint im Report nicht mehr die irreführende Hinweismeldung "Der Import kann zurzeit nicht ausgeführt werden, da bereits ein anderer Benutzer diesen Import ausführt."</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">PDF-Export: Grafiken in der Kopf- und Fußzeile mit den Ausrichtungen "zentriert" und "rechtsbündig" werden nicht nur in der Vorschau, sondern auch im Druck korrekt angezeigt</li>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export werden die Spaltenbreiten auch dann korrekt berechnet, wenn alle Formatierungsoptionen deaktiviert sind</li>
+<li class="bug">Liste &gt; Zellnotizen: nach dem Speichern eines Office-Objekts kommt es nicht mehr u.U. zu einer Exception "%1 wurde nicht gefunden.", falls das Office-Objekt zuvor im Bearbeiten-Modus war</li>
+<li class="feature">Ad-hoc-Grafik: Verwendung einer neuen Grafikbibliothek (analog zum Webmodul)</li>
+<li class="feature">Ad-hoc-Grafik: neue Icons für die Auswahl der Reihenart hinzugefügt</li>
+<li class="bug">Tabellenkalkulation-Export: beim OpenDocument-Export sind die vertikalen Linien der Tabelle nicht mehr u.U. etwas breiter als in der Ausgabe am Bildschirm</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="feature">Verwendung einer neuen Grafikbibliothek (analog zum Webmodul)</li>
+<li class="feature">Assistent: fehlerhafte Groß-/Kleinschreibung korrigiert und fehlende Satzzeichen ergänzt</li>
+<li class="feature">die Grafik wird auch dann geladen und angezeigt, wenn zuvor eine Grafik ohne Reihen geöffnet war</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: für den Bausteintyp "Liste" sind die vertikalen Linien der Tabelle nicht mehr u.U. etwas breiter als in der Ausgabe am Bildschirm</li>
+<li class="bug">auch der Farbverlauf eines im Baustein "Dokument" (ehemals "Deckblatt") eingebundenen Dokuments wird in den Report übernommen; Hinweis: hierfür muss die Option "ja, auch die Kopf- und Fußzeile aus der Feldvorlage übernehmen" gewählt sein</li>
+<li class="bug">Bausteintyp "Deckblatt" in "Dokument" umbenannt</li>
+<li class="bug">Assistent: Hinweistexte für die Bearbeitung von Bausteinen hinzugefügt</li>
+<li class="bug">Reportgenerator: beim Generieren des Berichts erscheint für den Bausteintyp "Dokument" (ehemals "Deckblatt") bei korrektem Feldvorlagenformat nicht mehr sporadisch die Fehlermeldung "Beim Einlesen der Vorlage für Baustein » […] « sind Fehler aufgetreten. Die Feldvorlage liegt nicht im OpenDocument-Text-Format vor."</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1.2 Mandantenaufgaben</span></p>
+<ul>
+<li class="bug">für Aufgaben der Art "Dateiverbindung ausführen" wird die Auswahl der Verbindung korrekt geladen</li>
+</ul>
+<h2 id="5570-rc4"><span class="versionsNumber" id="5.5.7.0RC4">5.5.7.0 RC4</span></h2>
+<p style="text-align: left">24.08.2015 09:39<span style="float:right;">Revision 42096</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Tabellenansichten: der Mauszeiger wird nach dem Anlegen des ersten Datensatzes (wieder) korrekt zurückgesetzt; außerdem ist in diesem Fall das anschließende Bearbeiten des Datensatzes möglich</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="bug">Dateistruktur: das Ausführen von Verbindungen über den Button "Start" ist (wieder) möglich</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste: bei Verwendung von festen Spaltenbreiten wird die vorgegebene Breite auch für die letzte Unterspalte korrekt gesetzt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="feature">neue Option "Reihen stapeln" für die Reihenarten "Linie", "Säule" und "Fläche" hinzugefügt</li>
+<li class="feature">die Beschriftungen der y-Achsen können auf beiden Seiten (einzeln) ein- und ausgeblendet werden</li>
+<li class="feature">für die Beschriftung der x-Achse und der Legende können (analog zur Liste) jeweils die Anzeige von Kurzbezeichnung, Titel und Alternativtitel eingestellt werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: in den Bausteintypen "Liste" und "Grafik" werden die zugehörigen Werte korrekt angefragt; insb. sind im generierten Bericht nicht mehr sporadisch einzelne Tabellen oder Grafiken ohne Werte (also bis auf die Beschriftungen leer)</li>
+<li class="bug">Bericht: im Assistenten zum Baustein kommt es beim Ändern des Dateikontextes nicht mehr sporadisch zu einer Zugriffsverletzung</li>
+</ul>
+<h2 id="5570-rc3"><span class="versionsNumber" id="5.5.7.0RC3">5.5.7.0 RC3</span></h2>
+<p style="text-align: left">19.08.2015 13:14<span style="float:right;">Revision 42041</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Berechnung: Optimierung der Berechnung bei Verwendung der Konfigurationseinstellung "Ram- MemoryChunkSize=256 MB" (siehe Konfigurationsdatei "Kosy.ini", Abschnitt "[Calculation]")</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">Liste &gt; Zellnotizen: nach dem Speichern eines Office-Objekts kommt es nicht mehr u.U. zu einer Exception "%1 wurde nicht gefunden.", falls das Office-Objekt zuvor im Bearbeiten-Modus war</li>
+<li class="bug">Liste &gt; Zellnotizen: beim Öffnen eines Office-Objekts erscheint nicht mehr u.U. die Fehlermeldung: "Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird.", falls das Dokument unmittelbar davor bereits geöffnet war</li>
+</ul>
+<h2 id="5570-rc2"><span class="versionsNumber" id="5.5.7.0RC2">5.5.7.0 RC2</span></h2>
+<p style="text-align: left">17.08.2015 20:31<span style="float:right;">Revision 41977</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">6 Ausgabe</span></p>
+<ul>
+<li class="bug">bei der Ermittlung des Standes einer Datei erscheint (durch die Prüfung der Dateistrukturen) nicht mehr u.U. die Fehlermeldung "Die Verbindung zur Datenbank wurde unterbrochen."; hierfür wird (lediglich) ein Update auf "FirebirdServer 2015.08.17" (oder höher) benötigt</li>
+</ul>
+<h2 id="5570-rc1"><span class="versionsNumber" id="5.5.7.0RC1">5.5.7.0 RC1</span></h2>
+<p style="text-align: left">14.08.2015 08:36<span style="float:right;">Revision 41944</span></p>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines</span></p>
+<ul>
+<li class="bug">Detailansichten: die in der Tabellenansicht gruppierten Felder werden auch in der Detailansicht gruppiert dargestellt (so z.B. in der Funktion "6.10 Ergebnisarten" die Einstellungen zu den Verteilungsarten "Saisonverteilung", "Primärkostenumlage" und "Sekundärkostenumlage")</li>
+<li class="bug">Zuordnungen: das Speichern (der tatsächlich geänderten Zellen) der Zuordnungsmatrix ist etwa 3- mal so schnell</li>
+<li class="bug">Berechnung: bei Verwendung der Berechnungsart "intelligent" erscheint nicht mehr u.U. die Fehlermeldung "Integerüberlauf."</li>
+<li class="bug">Assistent: in allen RichText-Feldern wird nun (automatisch) eine horizontale Bildlaufleiste (Scrollbar) angezeigt, falls die Breite des Inhalts größer ist als die verfügbare Anzeigebreite</li>
+<li class="feature">innerhalb von Dateipfaden sind nun (neben Pfadvariablen) auch alle (im Kontext sinnvollen) Platzhalter möglich (z.B. "[Transferpfad]\Export\<mandant.titel>\<benutzer.kürzel>\<liste.titel>.ods")</liste.titel></benutzer.kürzel></mandant.titel></li>
+<li class="feature">Tabellenansichten: die durch den Typ des Stammsatzes vererbte Farbe wird korrekterweise auf die globale Färbung des Assistenten angewendet</li>
+<li class="feature">Berechnung: Caching-Mechanismus für die vier Dimensionsstrukturen des Datenwürfels hinzugefügt; hierdurch ist das Laden unveränderter Strukturen in vielen Fällen fast 10-mal so schnell</li>
+<li class="feature">Berechnung: das Laden der Dateistrukturen wurde intelligenter gestaltet, sodass die Auswertung der Dateistrukturen nur dann ausgeführt wird, wenn die zu berechnende Datei als relevante Zieldatei in mindestens einer Dateistruktur des Mandanten vorkommt; andernfalls werden sämtliche Dateistrukturen nicht weiter untersucht</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0 Allgemeines, 5 Verteilung</span></p>
+<ul>
+<li class="bug">Berechnung: innerhalb der Verteilungsberechnung sind (über die Konfigurationsdatei "Kosy.ini", Abschnitt "[Calculation]", Einträge "RamMemoryChunkSize=256 MB" und "SharedMemoryChunk- Size=256 MB") wesentlich größere Verteilungsmatrizen möglich (z.B. 30.000 Planungseinheiten × 660 Konten); insb. erscheint in diesem Fall keine Assertion (mApportionmentDimFactorsExecutor, Zeile 445) mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">0.0 Hauptmaske</span></p>
+<ul>
+<li class="feature">die Kontextmenüs "Mandantenauswahl" und "Dateiauswahl" können (optional) nach beliebigen Feldern und in bis zu drei Ebenen gruppiert darstellt werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">1.2.1 Benutzerübersicht</span></p>
+<ul>
+<li class="feature">der Filter "Benutzer ohne Zugriffsrecht verbergen" ist standardmäßig deaktiviert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">1.2.1 Benutzerübersicht, 3.1 Übersicht der Dateien</span></p>
+<ul>
+<li class="bug">Benutzerübersicht: beim Kopieren eines Benutzers werden auch das Passwort und die Benutzereinstellungen kopiert; Übersicht der Dateien: beim Kopieren einer Datei werden (bei Verwendung der Option "weitere Daten &gt; Dateieinstellungen") auch die Dateieinstellungen (inkl. aller benutzerbezogenen Einstellungen zur Datei) kopiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">1.4.1 Planungstypen</span></p>
+<ul>
+<li class="bug">beim Importieren von Planungstypen werden auch Einheit und Dezimalstellen korrekt berücksichtigt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">1.4.1 Planungstypen, 1.4.2 Kontotypen, 1.4.3 Zeittypen, 1.4.4 Segmenttypen, 2.1.3 Planungseinheiten (Stammsätze), 2.2.3 Konto (Stammsätze), 2.3.3 Zeiteinheiten (Stammsätze), 2.4.3 Segmente (Stammsätze)</span></p>
+<ul>
+<li class="feature">neue Option "Tausendertrennzeichen" mit den Auswahlmöglichkeiten "&lt; ohne &gt;", "Punkt", "schmales Leerzeichen" und "Leerzeichen" hinzugefügt</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.1 Planungsstrukturen, 2.2.1 Kontostrukturen, 2.3.1 Zeitstrukturen, 2.4.1 Segmentstrukturen</span></p>
+<ul>
+<li class="bug">beim Löschen von nicht importierten Rechenregeln erscheint nicht mehr u.U. eine Fehlermeldung der Art "Overflow occured during data type conversion. […] At procedure 'IMP_S_A_FORMULA_ FIN' […]"</li>
+<li class="bug">Rechenregeln: ein Bezeichner wird nicht mehr irreführenderweise als "unbekannter Bezeichner" aufgeführt, wenn ein Konflikt mit einem anderen Benutzer die eigentliche Ursache ist; insb. erscheint in diesem Fall eine Warnmeldung "Die aktuelle Rechenregel kann nicht gespeichert werden, da zurzeit von einem anderen Benutzer an einem der Elemente Änderungen vorgenommen werden." inkl. Auflistung des betroffenen Elements</li>
+<li class="feature">Rechenregeln: die Warnung bei ungültiger Rechenregel wurde überarbeitet; insb. können nun durch Rotfärbung der zugehörigen Zeilennummern die ungültigen Stellen leichter identifiziert werden; zusätzlich werden alle ungültigen Stellen mit Zeilennummer und Position einzeln aufgelistet</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">2.1.3 Planungseinheiten (Stammsätze), 2.2.3 Konto (Stammsätze), 2.3.3 Zeiteinheiten (Stammsätze), 2.4.3 Segmente (Stammsätze)</span></p>
+<ul>
+<li class="feature">Export: beim Export von Stammsätzen in eine KTF-Datei können die zu exportierenden Dimensionsfelder über die Option "Umfang" einzeln ausgewählt werden (anstatt nur über die Attribute "global" und "individuell"); insb. werden die globalen Dimensionsfeldinhalte nicht mehr unabhängig von der Einstellung "Umfang" immer exportiert</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.3 Dateistrukturen</span></p>
+<ul>
+<li class="feature">Verbindung ausführen: der Abschluss des Kopiervorgangs wurde in vielen Fällen wesentlich beschleunigt; insb. erscheint nicht mehr u.U. die Fehlermeldung "Die Verbindung zur Datenbank wurde unterbrochen."</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">3.9 Dimensionszuordnungen</span></p>
+<ul>
+<li class="bug">beim Öffnen der Funktionen "Rechte auf […]-Kombinationen" erscheint keine Assertion "Master- IDs.MasterDetailType ist nicht vom Typ 'mdStructure'." (mDatabaseCache, Zeile 3258) mehr</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.1 Dateieingabe, 6 Ausgabe</span></p>
+<ul>
+<li class="bug">beim Öffnen der Maske wird (bei abgeschalteter Option "Registerkarte wiederherstellen") die Registerkarte "Direktauswahl" (wieder) aktiviert; außerdem arbeitet die Option "Registerkarte wiederherstellen" (wieder) zuverlässig</li>
+<li class="bug">Tabellenkalkulation-Export: der Export von Zellnotizen führt nicht mehr dazu, dass Kommentare außerhalb des Datenbereichs dargestellt werden</li>
+<li class="feature">Tabellenkalkulation-Export: neue Option "Vorlage" zum Exportieren der Listen in vordefinierte Vorlagen hinzugefügt; hierbei können sowohl (in der Datenbank vorhandene) Feldvorlagen als auch Quelldateien von der Festplatte als Vorlagen verwendet werden; Hinweis: die Makro-Funktionalität in OpenDocument-Dateien wird von Excel leider nicht unterstützt; die in Vorlagen enthaltenen Makros sind daher nur in LibreOffice und Apache OpenOffice verwendbar</li>
+<li class="feature">Liste: die Bereiche "Blatt" und "Stapel" passen sich in der Darstellung an die verfügbare Gesamtgröße an, sodass auch bei einer geringen Auflösung (z.B. 1.024 × 768 Pixeln) die Maske übersichtlich bleibt; hierzu werden bei Bedarf die Bilder ausgeblendet und die Schriftgrößen verringert</li>
+<li class="feature">Liste: die Ermittlung der aktuellen Buchungsinformationen (vor der ersten Bearbeitung einer Zelle) ist etwa doppelt so schnell</li>
+<li class="feature">Liste: die Wertefortschreibung wurde erheblich beschleunigt; in manchen Fällen ist die Wertefortschreibung bis zu 30-mal so schnell</li>
+<li class="feature">Liste: das Speichern von Werten (über die Zellen) wurde in vielen Fällen erheblich beschleunigt; in manchen Fällen ist das Speichern mehr als 400-mal so schnell</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">4.3 Standards, 5 Verteilung, 7.2 Direktauswahlen</span></p>
+<ul>
+<li class="feature">Strukturauswahlen: analog zu den Strukturansichten ist die (optionale) Anzeige des Rechenregelsymbols ("f") möglich, um "Strukturelemente mit Rechenregeln" kenntlich zu machen</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6 Ausgabe</span></p>
+<ul>
+<li class="feature">Liste: nach dem Schließen und erneuten Öffnen der Maske werden zuvor manuell eingegebene Werte auch ohne eine erneute Berechnung angezeigt; im Vergleich zur (vollständigen) erneuten Berechnung (zur Anzeige der zuvor eingegebenen Werte) ist das erneute Öffnen der Liste damit in vielen Fällen mehr als 6-mal so schnell</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.6 Grafiken</span></p>
+<ul>
+<li class="bug">Grafik: in der Option "vollständige Skalierung" wurde der Eintrag "nein, nicht teilweise skalieren" in "nein, teilweise skalieren" korrigiert</li>
+<li class="feature"><li class="bug">die Bezeichnung die Reihenart "Torte" wurde in "Kreis" korrigiert</li>
+<li class="bug">die Bezeichnung die Reihenart "Balken" wurde in "Säule" korrigiert</li>
+<li class="feature">neue Reihenarten "Ring" und "Tacho" hinzugefügt</li></li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">6.7 Berichte</span></p>
+<ul>
+<li class="bug">Reportgenerator: der (über die Liste geltende) aktuelle Fokus von Blatt und Stapel wird korrekt ermittelt und bleibt auch nach dem Generieren erhalten</li>
+<li class="bug">im Assistenten "Bericht generieren" wurde der Schritt "optimiert für" in "Optimierung" umbenannt und der Hinweistext überarbeitet</li>
+<li class="bug">Reportgenerator: das Aussehen der Grafiken ist unabhängig von den Benutzereinstellungen zur Funktion "6.6 Grafiken"; insb. wird dieselbe Grafik für unterschiedliche Benutzer nicht mehr unterschiedlich (oder sogar gar nicht) dargestellt</li>
+<li class="bug">Reportgenerator: für den Bausteintyp "Bild" wird die Einstellung "Skalierung &gt; absolut" korrekt berücksichtigt</li>
+<li class="feature">Bericht: für den Bausteintyp "Grafik" kann über die neue Option "Ansichtszoom" das genaue Aussehen der Grafik eingestellt werden</li>
+<li class="feature">Bericht: für die Bausteintypen "Grafik" und "Bilder" wurde die Skalierung überarbeitet und eine neue Option "Bildbegrenzung" hinzugefügt</li>
+<li class="feature">Bericht: im Expertenmodus können Dateien anderer Mandanten (sog. "fremde Dateien") ausgewählt werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">8.1.1 Dateiimporte</span></p>
+<ul>
+<li class="feature">Buchungssatzimport: der Schritt "Der Import wird abgeschlossen…" wurde für die meisten Fälle wesentlich beschleunigt; insb. erscheint nicht mehr u.U. die Fehlermeldung "Die Verbindung zur Datenbank wurde unterbrochen."</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.1.2 Mandantenaufgaben</span></p>
+<ul>
+<li class="bug">beim Anlegen einer neuen Mandantenaufgabe vom Typ "Buchungssätze bereinigen" wird in der Mandantenaufgabe nicht mehr u.U. zunächst ein leerer Schritt angezeigt (z.B. wenn zuvor eine Aufgabe vom Typ "Strukturpflege (generieren)" gewählt war)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.3.3 Systemeinstellungen</span></p>
+<ul>
+<li class="feature">neue Systemeinstellung "automatische Aktualisierung der Indizierung" hinzugefügt; insb. ist bei einer regelmäßigen Reorganisation der Datenbank (z.B. mittels BaRD) keine (automatische) Aktualisierung der Indizierung während des Arbeitens mit Kosy mehr notwendig</li>
+<li class="feature">neue Systemeinstellungen "Benutzervorgaben" hinzugefügt, sodass vordefinierte Benutzereinstellungen vergeben werden können (die beim Hinzufügen neuer Benutzer automatisch angewendet werden)</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.3.4 Benutzereinstellungen</span></p>
+<ul>
+<li class="feature">neue Benutzereinstellung "Berechnung &gt; Prüfung und Nachfrage &gt; Berechnung vor der Anzeige einer Liste" hinzugefügt; insb. kann vor der Anzeige der Ergebnisse die Datei (optional) ohne Nachfrage berechnet werden</li>
+<li class="feature">neue Benutzereinstellungen "Berechnung &gt; Änderungen nach der Berechnung automatisch übernehmen &gt; […]" hinzugefügt</li>
+<li class="feature">neue Benutzereinstellung "Berechnung &gt; Prüfung und Nachfrage &gt; Nachfragedialog anzeigen" hinzugefügt; darüber kann die Nachfragehäufigkeit zu einer notwendigen Berechnung vor der Anzeige der Ergebnisse festgelegt werden</li>
+</ul>
+<p><span style="font-variant: small-caps; font-weight: bold">9.4 Onlinebericht</span></p>
+<ul>
+<li class="feature">der Menüpunkt steht auch in den "ViewOnly"-Modulen zur Verfügung</li>
+</ul>
+<p>Diese Version enthält außerdem alle Änderungen der Version <a href="../5.5.6/#55611">5.5.6.11</a>.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Zurück zum Seitenanfang
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.footer", "navigation.instant", "navigation.top", "navigation.indexes", "toc.follow", "content.code.copy", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+<script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+<script src="../../../javascripts/extra.js"></script>
+</body>
+</html>
