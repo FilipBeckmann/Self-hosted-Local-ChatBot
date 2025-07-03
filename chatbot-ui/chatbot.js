@@ -9,7 +9,7 @@ async function sendMessage() {
     userMessage.textContent = message;
     chatBox.appendChild(userMessage);
     try {
-        let response = await fetch("http://localhost:11434/api/generate", {
+        let response = await fetch("http://10.10.2.69:8000/api/generate", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
