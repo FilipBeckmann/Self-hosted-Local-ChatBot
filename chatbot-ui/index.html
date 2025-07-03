@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot Test</title>
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+  <div><h1>Testseite für lokalen Chatbot</h1></div>
+  <br>
+  <br>
+  <div> Dies ist eine einfache HTML-Seite zum Testen des Chatbot-Interfaces.</div>
+
+  <!-- Container für das UI -->
+  <div id="chatbot-root"></div>
+
+
+  <script>
+  fetch('chatbot.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('chatbot-root').innerHTML = html;
+
+      // Button einfügen
+      const button = document.createElement('button');
+      button.textContent = "💬 Chat öffnen";
+      button.id = 'chat-toggle-button';
+      button.style.position = "fixed";
+      button.style.bottom = "20px";
+      button.style.right = "20px";
+      button.style.zIndex = 10000;
+      button.onclick = () => showChatbot();
+
+      document.body.appendChild(button);
+    });
+</script>
+
+</body>
+<script src="chatbot.js"></script>
+</html>
