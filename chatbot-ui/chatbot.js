@@ -1,13 +1,31 @@
-﻿
-async function sendMessage() {
+﻿async function sendMessage() {
     let inputField = document.getElementById("userInput");
     let message = inputField.value.trim();
     if (message === "") return;
     let chatBox = document.getElementById("chatBox");
+
+    // User Nachricht anzeigen
     let userMessage = document.createElement("div");
     userMessage.className = "message user";
     userMessage.textContent = message;
     chatBox.appendChild(userMessage);
+
+    // Lade-Spinner anzeigen
+    let loadingMessage = document.createElement("div");
+    loadingMessage.className = "message bot loading";
+    loadingMessage.textContent = "|"; // Startsymbol
+    chatBox.appendChild(loadingMessage);
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    const spinnerChars = ["|", "/", "-", "\\"];
+    let spinnerIndex = 0;
+
+    // Spinner Intervall starten
+    let spinnerInterval = setInterval(() => {
+        spinnerIndex = (spinnerIndex + 1) % spinnerChars.length;
+        loadingMessage.textContent = spinnerChars[spinnerIndex];
+    }, 200);
+
     try {
         let response = await fetch("http://10.10.2.69:8000/api/generate", {
             method: "POST",
@@ -19,9 +37,14 @@ async function sendMessage() {
                 prompt: message
             })
         });
-        const text = await response.text(); // Read as text first
+        const text = await response.text(); // Text zuerst lesen
         console.log("Raw response:", text);
-        // Split the response into separate JSON objects (assuming they're space-separated)
+
+        // Spinner stoppen & entfernen
+        clearInterval(spinnerInterval);
+        chatBox.removeChild(loadingMessage);
+
+        // JSON-Objekte aus der Antwort parsen (line-separated)
         const jsonObjects = text.split("\n").filter(line => line.trim() !== "");
         let fullResponse = "";
         for (let jsonString of jsonObjects) {
@@ -32,20 +55,24 @@ async function sendMessage() {
                 console.error("Fehler beim Parsen der Antwort:", jsonError);
             }
         }
-        // Display the full response
-        console.log("Bot full response:", fullResponse);
-        // Create and append bot message
+
+        // Antwort anzeigen
         let botMessage = document.createElement("div");
         botMessage.className = "message bot";
         botMessage.textContent = fullResponse;
         chatBox.appendChild(botMessage);
         chatBox.scrollTop = chatBox.scrollHeight;
+
     } catch (error) {
-    console.error("Error fetching response:", error);
+        clearInterval(spinnerInterval);
+        chatBox.removeChild(loadingMessage);
+        console.error("Error fetching response:", error);
     }
+
     inputField.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
-    }
+}
+
 
 async function closeonclick() {
   console.log("Schließen Button wurde gedrückt!!!");
